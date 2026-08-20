@@ -24,8 +24,8 @@ export function Hero() {
   };
 
   return (
-    <section aria-labelledby="hero-h" className="bg-gradient-to-b from-surface-off to-white to-80%">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-2 md:items-center md:py-16">
+    <section aria-labelledby="hero-h" className=" min-h-[calc(100vh-106px)] bg-gradient-to-b from-surface-off to-white to-80%">
+      <div className=" min-h-[calc(100vh-106px)] mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-2 md:items-center md:py-16">
         {/* Copy + pack finder */}
         <div>
           <Tag>
@@ -66,11 +66,10 @@ export function Hero() {
                       setQuery("");
                     }}
                     aria-pressed={active}
-                    className={`flex items-center gap-2 rounded-full border-2 px-3.5 py-2 text-sm font-semibold transition-all ${
-                      active
-                        ? "border-brand-green bg-brand-green-light text-brand-green-dark"
-                        : "border-line bg-white text-ink-2"
-                    }`}
+                    className={`flex items-center gap-2 rounded-full border-2 px-3.5 py-2 text-sm font-semibold transition-all ${active
+                      ? "border-brand-green bg-brand-green-light text-brand-green-dark"
+                      : "border-line bg-white text-ink-2"
+                      }`}
                   >
                     <Icon size={15} aria-hidden="true" />
                     {f.label}

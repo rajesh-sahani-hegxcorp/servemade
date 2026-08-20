@@ -13,7 +13,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center gap-5 px-5">
+      <div className="mx-auto flex h-24 max-w-6xl items-center gap-5 px-5">
         <Link href="/" className="flex items-center gap-2 text-xl font-extrabold tracking-tight" aria-label="Verdano home">
           <svg width="28" height="28" viewBox="0 0 30 30" role="img" aria-label="Verdano logo">
             <rect width="30" height="30" rx="9" fill="#2E8B57" />
