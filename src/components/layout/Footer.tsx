@@ -13,7 +13,7 @@ export function Footer() {
               <rect width="30" height="30" rx="9" fill="#2E8B57" />
               <path d="M9 21c0-6.5 4-10.5 12-12-1.5 8.5-5.5 12-12 12Z" fill="#fff" />
             </svg>
-            Verdano
+            Serve Made
           </div>
           {/* GEO: same entity description as the Organization JSON-LD, in crawlable prose. */}
           <p className="mt-3 max-w-xs">{COMPANY_DESCRIPTION}</p>

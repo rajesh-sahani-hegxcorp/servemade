@@ -19,7 +19,7 @@ export function Header() {
             <rect width="30" height="30" rx="9" fill="#2E8B57" />
             <path d="M9 21c0-6.5 4-10.5 12-12-1.5 8.5-5.5 12-12 12Z" fill="#fff" />
           </svg>
-          Verdano
+          Serve MAde
         </Link>
 
         <nav className="ml-auto hidden gap-1 md:flex" aria-label="Primary">
