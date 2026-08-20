@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+}
+
+@layer components {
+  /* Accessible skip-to-content link: off-screen until keyboard-focused. */
+  .skip-link {
+    @apply absolute z-[999] rounded-full bg-white px-4 py-2.5 font-bold;
+    left: -9999px;
+  }
+
+  .skip-link:focus {
+    left: 12px;
+    top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

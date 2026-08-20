@@ -1,0 +1,51 @@
+// Prisma schema — Postgres
+// Run `npm run db:migrate` locally to create these tables,
+// and `npm run db:deploy` in CI/production (applies committed migrations only).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// A single quote/lead submitted from the site (pack-finder "Add kit" button
+/// or the /quote page form). One request can bundle several line items.
+model QuoteRequest {
+  id          String            @id @default(cuid())
+  name        String
+  company     String?
+  email       String
+  phone       String?
+  country     String?
+  message     String?
+  source      String            @default("website") // e.g. "pack-finder", "quote-page"
+  status      QuoteRequestStatus @default(NEW)
+  items       QuoteRequestItem[]
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@index([createdAt])
+  @@index([email])
+}
+
+/// One product line inside a quote request (e.g. "Paper Hot Cups").
+model QuoteRequestItem {
+  id             String       @id @default(cuid())
+  quoteRequest   QuoteRequest @relation(fields: [quoteRequestId], references: [id], onDelete: Cascade)
+  quoteRequestId String
+  label          String
+  quantityHint   String?
+
+  @@index([quoteRequestId])
+}
+
+enum QuoteRequestStatus {
+  NEW
+  CONTACTED
+  QUOTED
+  WON
+  LOST
+}
