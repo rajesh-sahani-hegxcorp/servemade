@@ -4,7 +4,7 @@ import { QuoteForm } from "@/components/quote/QuoteForm";
 
 export const metadata: Metadata = {
   title: "Request Samples",
-  description: "Request physical samples of Verdano's certified compostable food packaging before you order.",
+  description: "Request physical samples of Serve Made's certified compostable food packaging before you order.",
 };
 
 export default function SamplesPage() {

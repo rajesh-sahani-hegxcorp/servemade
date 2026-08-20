@@ -22,6 +22,6 @@ export function isLikelyEmail(value: string): boolean {
 }
 
 export function siteUrl(path = ""): string {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.verdano.example";
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.servemade.example";
   return `${base}${path}`;
 }

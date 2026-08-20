@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-8 pb-8 text-[#C4CBD0] md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 text-xl font-extrabold text-white">
-            <svg width="26" height="26" viewBox="0 0 30 30" role="img" aria-label="Verdano logo">
+            <svg width="26" height="26" viewBox="0 0 30 30" role="img" aria-label="Serve Made logo">
               <rect width="30" height="30" rx="9" fill="#2E8B57" />
               <path d="M9 21c0-6.5 4-10.5 12-12-1.5 8.5-5.5 12-12 12Z" fill="#fff" />
             </svg>
@@ -36,7 +36,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 pt-5 text-xs text-ink-3">
-        <span>© {new Date().getFullYear()} Verdano · Page updated: {BUILD_MONTH}</span>
+        <span>© {new Date().getFullYear()} Serve Made · Page updated: {BUILD_MONTH}</span>
         <span>
           <Link href="/privacy" className="hover:text-white">
             Privacy

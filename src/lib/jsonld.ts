@@ -11,15 +11,15 @@ function buildOrganizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": ORG_ID(),
-    name: "Verdano",
+    name: "Serve Made",
     url: siteUrl(),
     logo: siteUrl("/logo.png"),
     description:
-      "Verdano is an India-based B2B exporter of certified compostable food packaging — bagasse tableware, paper cups, takeaway boxes, bags, cutlery and straws — serving importers, distributors and food-service groups across the GCC and beyond.",
+      "Serve Made is an India-based B2B exporter of certified compostable food packaging — bagasse tableware, paper cups, takeaway boxes, bags, cutlery and straws — serving importers, distributors and food-service groups across the GCC and beyond.",
     address: { "@type": "PostalAddress", addressCountry: "IN", addressLocality: "Mumbai" },
     areaServed: ["AE", "SA", "QA", "OM", "BH", "KW"],
     contactPoint: { "@type": "ContactPoint", contactType: "sales", availableLanguage: ["en", "ar"] },
-    sameAs: ["https://www.linkedin.com/company/verdano-example"],
+    sameAs: ["https://www.linkedin.com/company/serve-made-example"],
   };
 }
 
@@ -34,7 +34,7 @@ export function buildHomeJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     url: siteUrl(),
-    name: "Verdano",
+    name: "Serve Made",
     publisher: { "@id": ORG_ID() },
     potentialAction: {
       "@type": "SearchAction",
@@ -46,7 +46,7 @@ export function buildHomeJsonLd() {
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Verdano product categories",
+    name: "Serve Made product categories",
     itemListElement: CATEGORIES.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
@@ -83,7 +83,7 @@ export function buildProductJsonLd(product: Product) {
     "@id": `${url}#product`,
     name: product.name,
     description: product.summary,
-    brand: { "@type": "Brand", name: "Verdano" },
+    brand: { "@type": "Brand", name: "Serve Made" },
     manufacturer: { "@id": ORG_ID() },
     category: product.categoryName,
     material: product.material,

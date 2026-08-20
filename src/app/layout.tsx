@@ -19,8 +19,8 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: {
-    default: "Verdano — Certified Sustainable Food Packaging, Exported from India",
-    template: "%s · Verdano",
+    default: "Serve Made — Certified Sustainable Food Packaging, Exported from India",
+    template: "%s · Serve Made",
   },
   description:
     "B2B supplier of compostable plates, cups, takeaway boxes and cutlery. Clear MOQs from 10k pieces, FDA/EU/FSC® certified, quotes within one business day. India → GCC in 5–9 days.",
@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     languages: { en: siteUrl("/"), ar: siteUrl("/ar/") },
   },
   openGraph: {
-    title: "Verdano — Sustainable Packaging, Made Simple",
+    title: "Serve Made — Sustainable Packaging, Made Simple",
     description: "Certified compostable food packaging with clear MOQs and 1-day quotes.",
     type: "website",
     locale: "en_AE",
-    images: [{ url: "/og/verdano-home.png", width: 1200, height: 630, alt: "Verdano sustainable food packaging range" }],
+    images: [{ url: "/og/serve-made-home.png", width: 1200, height: 630, alt: "Serve Made sustainable food packaging range" }],
   },
   twitter: { card: "summary_large_image" },
 };

@@ -35,7 +35,7 @@ export function generateMetadata({ params }: Props): Metadata {
       languages: { en: url, ar: siteUrl(`/ar/products/${product.slug}`) },
     },
     openGraph: {
-      title: `${product.name} | Verdano`,
+      title: `${product.name} | Serve Made`,
       description: product.tagline,
       type: "website",
       images: [{ url: `/og/${product.slug}.png`, width: 1200, height: 630, alt: product.name }],

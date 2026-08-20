@@ -27,7 +27,7 @@ export const FOOTER_COLUMNS: { heading: string; links: { label: string; href: st
   {
     heading: "Company",
     links: [
-      { label: "Why us", href: "/why-verdano" },
+      { label: "Why us", href: "/why-serve-made" },
       { label: "Sustainability", href: "/sustainability" },
       { label: "Resources", href: "/resources" },
     ],
@@ -43,4 +43,4 @@ export const FOOTER_COLUMNS: { heading: string; links: { label: string; href: st
 ];
 
 export const COMPANY_DESCRIPTION =
-  "Verdano is an India-based B2B exporter of certified compostable food packaging — bagasse tableware, paper cups, takeaway boxes, bags, cutlery and straws — serving importers, distributors and food-service groups across the GCC and beyond.";
+  "Serve Made is an India-based B2B exporter of certified compostable food packaging — bagasse tableware, paper cups, takeaway boxes, bags, cutlery and straws — serving importers, distributors and food-service groups across the GCC and beyond.";

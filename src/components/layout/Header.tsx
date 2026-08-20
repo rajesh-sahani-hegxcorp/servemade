@@ -14,12 +14,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-24 max-w-6xl items-center gap-5 px-5">
-        <Link href="/" className="flex items-center gap-2 text-xl font-extrabold tracking-tight" aria-label="Verdano home">
-          <svg width="28" height="28" viewBox="0 0 30 30" role="img" aria-label="Verdano logo">
+        <Link href="/" className="flex items-center gap-2 text-xl font-extrabold tracking-tight" aria-label="Serve Made home">
+          <svg width="28" height="28" viewBox="0 0 30 30" role="img" aria-label="Serve Made logo">
             <rect width="30" height="30" rx="9" fill="#2E8B57" />
             <path d="M9 21c0-6.5 4-10.5 12-12-1.5 8.5-5.5 12-12 12Z" fill="#fff" />
           </svg>
-          Serve MAde
+          Serve Made
         </Link>
 
         <nav className="ml-auto hidden gap-1 md:flex" aria-label="Primary">

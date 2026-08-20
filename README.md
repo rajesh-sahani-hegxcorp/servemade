@@ -1,6 +1,6 @@
-# Verdano — Next.js + Tailwind + PostgreSQL
+# Serve Made — Next.js + Tailwind + PostgreSQL
 
-Production-structured rewrite of the Verdano homepage wireframe: React (Next.js
+Production-structured rewrite of the Serve Made homepage wireframe: React (Next.js
 14 App Router) on the frontend, Next.js Route Handlers as the backend, and
 PostgreSQL (via Prisma) for storing quote/sample requests.
 
@@ -57,7 +57,7 @@ npm run dev                  # http://localhost:3000
 You need a Postgres database for `DATABASE_URL`. Easiest local option:
 
 ```bash
-docker run --name verdano-db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=verdano -p 5432:5432 -d postgres:16
+docker run --name serve-made-db -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=servemade -p 5432:5432 -d postgres:16
 ```
 
 Or use a free hosted instance (Neon, Supabase) — see `.env.example` for
@@ -125,7 +125,7 @@ then `npm run start`.
 
 - `src/data/testimonials.ts` — swap in named, verifiable references.
 - `/ar` — stub page; build out full Arabic content/routing when ready.
-- `public/og/verdano-home.png` and `public/logo.png` — add real brand assets
+- `public/og/serve-made-home.png` and `public/logo.png` — add real brand assets
   (referenced in `layout.tsx` metadata and `lib/jsonld.ts`).
 - `src/app/privacy`, `src/app/terms` — replace placeholder legal copy.
 - Real product photography to replace the `ProductArt` SVG placeholders.

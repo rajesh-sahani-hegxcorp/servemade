@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: siteUrl("/quote"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: siteUrl("/samples"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: siteUrl("/custom-packaging"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: siteUrl("/why-verdano"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: siteUrl("/why-serve-made"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: siteUrl("/sustainability"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: siteUrl("/resources"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
   ];
