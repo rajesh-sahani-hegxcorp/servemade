@@ -64,6 +64,15 @@ export interface ProductSize {
   note: string; // "espresso & small"
 }
 
+export interface ProductVariant {
+  size: string; // "240 mL", "4 in", "3 compartment"
+  dimension: string | null; // "110 mm diameter", "4 in square", etc.
+  capacityMl: number | null;
+  capacityOz: number | null;
+  qtyPerBox: number | null;
+  qtyPerPkt: number | null;
+}
+
 export interface SpecRow {
   label: string;
   value: string;
@@ -97,14 +106,18 @@ export type ProductGallery =
   | { type: "static"; art: ProductArtType };
 
 export interface Product {
-  slug: string; // "paper-hot-cups" — used in the URL /products/[slug]
+  slug: string; // "double-wall-paper-cup" — used in the URL /products/[slug]
   name: string;
   categorySlug: string; // links back to /categories/[categorySlug]
   categoryName: string;
+  sourceSheetCategory?: string;
+  variantType: "capacity" | "dimension";
+  variants: ProductVariant[];
+  moqPieces: number | null; // null for TBD
   tagline: string; // one-line, used in <meta description> and OG tags
   summary: string; // answer-first paragraph (AEO)
   ratingLabel: string;
-  quickFacts: QuickFact[];
+  quickFacts?: QuickFact[];
   sizes: ProductSize[];
   baseMoq: number; // 50000 — quantity tiers/options are derived from this, see lib/pricing.ts
   moqUnit: string; // "pieces"
@@ -113,9 +126,9 @@ export interface Product {
   endOfLife: string;
   heatRating?: string;
   lidFit?: string;
-  cartonPack: string;
-  cartonVolume: string;
-  hsCode: string;
+  cartonPack?: string;
+  cartonVolume?: string;
+  hsCode?: string;
   leadTime: string;
   shipsFrom: string;
   overview: OverviewColumn[];
@@ -123,5 +136,6 @@ export interface Product {
   faqs: Faq[];
   relatedSlugs: string[];
   gallery: ProductGallery;
+  isDraftCopy?: boolean; // [DRAFT — verify] flag for factual/claims review
 }
 

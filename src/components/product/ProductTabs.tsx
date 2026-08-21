@@ -12,9 +12,21 @@ export function ProductTabs({ product }: { product: Product }) {
   const [tab, setTab] = useState(0);
   const tiers = buildQuantityTiers(product.baseMoq);
 
+  const sizeList =
+    product.variants && product.variants.length > 0
+      ? product.variants
+          .map((v) => {
+            if (v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())) {
+              return v.size !== v.dimension ? `${v.size} (${v.dimension})` : v.dimension;
+            }
+            return v.size;
+          })
+          .join(" · ")
+      : product.sizes.map((s) => s.label).join(" · ");
+
   const productSpecs: [string, string][] = [
     ["Material", product.material],
-    ["Sizes", product.sizes.map((s) => s.label).join(" · ")],
+    [product.variantType === "capacity" ? "Sizes / Capacities" : "Sizes / Dimensions", sizeList],
     ...(product.heatRating ? ([["Heat rating", product.heatRating]] as [string, string][]) : []),
     ...(product.lidFit ? ([["Lid fit", product.lidFit]] as [string, string][]) : []),
     ["Printing", product.printing],
@@ -22,9 +34,9 @@ export function ProductTabs({ product }: { product: Product }) {
   ];
 
   const logisticsSpecs: [string, string][] = [
-    ["Carton pack", product.cartonPack],
-    ["Carton volume", product.cartonVolume],
-    ["HS code", product.hsCode],
+    ...(product.cartonPack ? ([["Carton pack", product.cartonPack]] as [string, string][]) : []),
+    ...(product.cartonVolume ? ([["Carton volume", product.cartonVolume]] as [string, string][]) : []),
+    ...(product.hsCode ? ([["HS code", product.hsCode]] as [string, string][]) : []),
     ["Production time", product.leadTime],
     ["Ships from", product.shipsFrom],
     ["Shipping options", "FOB · CIF · DDP — your choice"],

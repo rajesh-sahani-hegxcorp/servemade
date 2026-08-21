@@ -93,10 +93,14 @@ export function buildProductJsonLd(product: Product) {
       audienceType: "Importers, distributors, cafés, food-service groups",
     },
     additionalProperty: [
-      { "@type": "PropertyValue", name: "Minimum order quantity", value: `${product.baseMoq.toLocaleString()} ${product.moqUnit}` },
-      { "@type": "PropertyValue", name: "Carton pack", value: product.cartonPack },
-      { "@type": "PropertyValue", name: "Carton volume", value: product.cartonVolume },
-      { "@type": "PropertyValue", name: "HS code", value: product.hsCode },
+      {
+        "@type": "PropertyValue",
+        name: "Minimum order quantity",
+        value: product.moqPieces ? `${product.moqPieces.toLocaleString()} ${product.moqUnit}` : "TBD",
+      },
+      ...(product.cartonPack ? [{ "@type": "PropertyValue", name: "Carton pack", value: product.cartonPack }] : []),
+      ...(product.cartonVolume ? [{ "@type": "PropertyValue", name: "Carton volume", value: product.cartonVolume }] : []),
+      ...(product.hsCode ? [{ "@type": "PropertyValue", name: "HS code", value: product.hsCode }] : []),
       { "@type": "PropertyValue", name: "Production lead time", value: product.leadTime },
       { "@type": "PropertyValue", name: "Shipping terms", value: "FOB, CIF, DDP" },
       { "@type": "PropertyValue", name: "Ships from", value: product.shipsFrom },
