@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PRODUCTS } from "@/data/products";
 import { Tag } from "@/components/ui/Tag";
-import { ProductCardGrid } from "@/components/product/ProductCardGrid";
+import { ProductCatalogueExplorer } from "@/components/product/ProductCatalogueExplorer";
 
 export const metadata: Metadata = {
   title: "All Products",
@@ -10,19 +10,15 @@ export const metadata: Metadata = {
 
 export default function ProductsIndexPage() {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-16">
+    <section className="mx-auto max-w-6xl px-5 py-12">
       <Tag>Full catalogue</Tag>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">Every product, one supplier.</h1>
       <p className="mt-3 max-w-xl text-ink-2">
-        Browse by product below, or start from{" "}
-        <a href="/#products" className="font-bold text-brand-green-dark underline">
-          category
-        </a>{" "}
-        if you know what section you need.
+        Browse our complete range of certified compostable packaging for cafés, QSR, catering, and export. Filter
+        by category or search live across all 42 product families below.
       </p>
-      <div className="mt-8">
-        <ProductCardGrid products={PRODUCTS} />
-      </div>
+
+      <ProductCatalogueExplorer products={PRODUCTS} />
     </section>
   );
 }

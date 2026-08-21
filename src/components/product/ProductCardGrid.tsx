@@ -25,7 +25,10 @@ export function ProductCardGrid({ products }: { products: Product[] }) {
             <p className="mt-1 text-sm text-ink-2">{product.tagline}</p>
             <div className="mt-3 flex items-center justify-between border-t border-line pt-3 text-xs font-bold">
               <span className="text-ink-3">
-                Min. order <span className="text-brand-blue">{product.baseMoq.toLocaleString()} {product.moqUnit}</span>
+                Min. order{" "}
+                <span className="text-brand-blue">
+                  {product.moqPieces ? `${product.moqPieces.toLocaleString()} ${product.moqUnit}` : "TBD"}
+                </span>
               </span>
               <span className="flex items-center gap-1 text-brand-green-dark">
                 View <ArrowRight size={12} aria-hidden="true" />
