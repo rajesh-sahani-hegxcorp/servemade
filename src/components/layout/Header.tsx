@@ -23,15 +23,76 @@ export function Header() {
         </Link>
 
         <nav className="ml-auto hidden gap-1 md:flex" aria-label="Primary">
-          {PRIMARY_NAV.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="rounded-full px-4 py-2 text-sm font-semibold text-ink-2 transition-colors hover:bg-brand-green-light hover:text-brand-green-dark"
-            >
-              {item.label}
-            </a>
-          ))}
+          {PRIMARY_NAV.map((item) => {
+            if (item.label === "Products") {
+              return (
+                <div key={item.label} className="group">
+                  <Link
+                    href="/products"
+                    className="rounded-full px-4 py-2 text-sm font-semibold text-ink-2 transition-colors hover:bg-brand-green-light hover:text-brand-green-dark inline-flex items-center gap-1.5"
+                  >
+                    {item.label}
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      className="transition-transform group-hover:rotate-180"
+                      aria-hidden="true"
+                    >
+                      <path d="M2 3.5l3 3 3-3" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+                    </svg>
+                  </Link>
+                  {/* Full-width Mega Menu Dropdown */}
+                  <div className="absolute left-0 right-0 top-full z-50 w-screen max-w-full border-t border-line bg-white shadow-xl transition-all duration-200 ease-out opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible">
+                    <div className="mx-auto max-w-6xl px-5 py-8">
+                      <div className="grid grid-cols-6 gap-6 text-left">
+                        {MEGA_MENU_COLUMNS.map((col) => (
+                          <div key={col.title} className="flex flex-col">
+                            <h3 className="text-xs font-black uppercase tracking-wider text-brand-green-dark border-b border-line pb-2 mb-3">
+                              {col.title}
+                            </h3>
+                            <ul className="space-y-1">
+                              {col.items.map((subItem, idx) => {
+                                if (subItem.isHeading) {
+                                  return (
+                                    <li
+                                      key={idx}
+                                      className="text-[10px] font-extrabold uppercase tracking-wider text-ink-3 pt-3 pb-1 border-b border-dashed border-line first:pt-0"
+                                    >
+                                      {subItem.name}
+                                    </li>
+                                  );
+                                }
+                                return (
+                                  <li key={idx}>
+                                    <Link
+                                      href={subItem.href || "#"}
+                                      className="block py-1 text-xs font-semibold text-ink-2 transition-colors hover:text-brand-green-dark hover:translate-x-0.5 transform transition-transform duration-100"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className="rounded-full px-4 py-2 text-sm font-semibold text-ink-2 transition-colors hover:bg-brand-green-light hover:text-brand-green-dark"
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
 
         <Link
@@ -80,3 +141,100 @@ export function Header() {
     </header>
   );
 }
+
+interface MegaMenuColItem {
+  name: string;
+  href?: string;
+  isHeading?: boolean;
+}
+
+interface MegaMenuCol {
+  title: string;
+  items: MegaMenuColItem[];
+}
+
+const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
+  {
+    title: "Bagasse Chuk",
+    items: [
+      { name: "Chuk Square Bowl", href: "/products/chuk-square-bowl" },
+      { name: "Chuk Bowl", href: "/products/chuk-bowl" },
+      { name: "Chuk Plate", href: "/products/chuk-plate" },
+      { name: "Chuk 3-CP Meal Plate", href: "/products/chuk-3-compartment-combo-meal-plate" },
+      { name: "Chuk 4-CP Meal Tray", href: "/products/chuk-4-compartment-meal-tray" },
+      { name: "Chuk 5-CP Meal Tray", href: "/products/chuk-5-compartment-meal-tray" },
+      { name: "Chuk Rect. Container", href: "/products/chuk-rectangular-container" }
+    ]
+  },
+  {
+    title: "Bagasse Ecolates",
+    items: [
+      { name: "Ecolates Square Kiwi Bowl", href: "/products/ecolates-square-kiwi-bowl" },
+      { name: "Ecolates Bowl", href: "/products/ecolates-bowl" },
+      { name: "Ecolates Clamshell", href: "/products/ecolates-clamshell" },
+      { name: "Ecolates Round Plate", href: "/products/ecolates-round-plate" },
+      { name: "Ecolates 3-CP Round Plate", href: "/products/ecolates-3-compartment-round-plate" },
+      { name: "Ecolates 4-CP Round Plate", href: "/products/ecolates-4-compartment-round-plate" },
+      { name: "Ecolates 3-CP Square Plate", href: "/products/ecolates-3-compartment-square-plate" },
+      { name: "Ecolates 5-CP Meal Tray", href: "/products/ecolates-5-compartment-meal-tray" }
+    ]
+  },
+  {
+    title: "Cornstarch Products",
+    items: [
+      { isHeading: true, name: "Containers" },
+      { name: "Round Container w/ Lid", href: "/products/cornstarch-round-container-with-lid" },
+      { name: "Rect. Container w/ Lid", href: "/products/cornstarch-rectangular-container-with-lid" },
+      { name: "2-CP Rect. Container", href: "/products/cornstarch-2-compartment-rectangular-container-with-lid" },
+      { name: "2-CP Round Bowl", href: "/products/cornstarch-2-compartment-round-bowl-with-lid" },
+      { name: "Oracle Meal Tray", href: "/products/cornstarch-oracle-meal-tray-with-lid" },
+      { isHeading: true, name: "Cutlery" },
+      { name: "Cornstarch Spoon", href: "/products/cornstarch-spoon" },
+      { name: "Cornstarch Fork", href: "/products/cornstarch-fork" }
+    ]
+  },
+  {
+    title: "Paper Cups & Bowls",
+    items: [
+      { isHeading: true, name: "Cups" },
+      { name: "Double-Wall Paper Cup", href: "/products/double-wall-paper-cup" },
+      { name: "Ripple Paper Cup", href: "/products/ripple-paper-cup" },
+      { isHeading: true, name: "Containers & Bowls" },
+      { name: "Plain Round Container", href: "/products/plain-round-paper-container-with-lid" },
+      { name: "Kraft Round Container", href: "/products/kraft-round-paper-container-with-lid" },
+      { name: "Kraft Paper Bowl", href: "/products/kraft-paper-bowl-with-pet-lid" }
+    ]
+  },
+  {
+    title: "Boxes, Trays & Tissues",
+    items: [
+      { isHeading: true, name: "Pizza Boxes" },
+      { name: "Top-Folding Pizza Box", href: "/products/top-folding-pizza-box" },
+      { name: "3-Ply Corrugated Pizza Box", href: "/products/3-ply-corrugated-pizza-box" },
+      { name: "3-Ply Garlic Bread Box", href: "/products/3-ply-corrugated-garlic-bread-box" },
+      { isHeading: true, name: "Trays & Takeaway" },
+      { name: "Plain Rect. Food Box", href: "/products/plain-rectangular-food-box" },
+      { name: "Kraft Boat Tray", href: "/products/kraft-boat-tray" },
+      { isHeading: true, name: "Tissue Rolls" },
+      { name: "JRT Tissue Roll", href: "/products/jrt-tissue-roll" },
+      { name: "HRT Tissue Roll", href: "/products/hrt-tissue-roll" }
+    ]
+  },
+  {
+    title: "Wooden & Straws",
+    items: [
+      { isHeading: true, name: "Cutlery & Straws" },
+      { name: "Bamboo Fruit Fork", href: "/products/bamboo-fruit-fork" },
+      { name: "Wooden Spoon", href: "/products/wooden-spoon" },
+      { name: "Wooden Spoon/Fork", href: "/products/wooden-spoon-fork" },
+      { name: "Toothpick", href: "/products/toothpick" },
+      { name: "Paper Straw", href: "/products/paper-straw" },
+      { isHeading: true, name: "Sticks & Stirrers" },
+      { name: "Bamboo Stick", href: "/products/bamboo-stick" },
+      { name: "Gun Skewer", href: "/products/gun-skewer" },
+      { name: "Chopsticks", href: "/products/chopsticks" },
+      { name: "Coffee Stirrer", href: "/products/coffee-stirrer" },
+      { name: "Round Liquor Stirrer", href: "/products/round-liquor-stirrer" }
+    ]
+  }
+];
