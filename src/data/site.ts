@@ -18,9 +18,9 @@ export const FOOTER_COLUMNS: { heading: string; links: { label: string; href: st
   {
     heading: "Products",
     links: [
-      { label: "Plates & bowls", href: "/categories/plates-bowls" },
-      { label: "Cups & lids", href: "/categories/cups-lids" },
-      { label: "Takeaway boxes", href: "/categories/takeaway-boxes" },
+      { label: "Table ware", href: "/categories/plates-bowls" },
+      { label: "Grab & Go", href: "/categories/cups-lids" },
+      { label: "Takeaway Containers", href: "/categories/takeaway-boxes" },
       { label: "Cutlery & straws", href: "/categories/cutlery-straws" },
     ],
   },

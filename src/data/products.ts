@@ -124,7 +124,7 @@ export const PRODUCTS: Product[] = [
     "slug": "chuk-square-bowl",
     "name": "Chuk Square Bowl",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
     "variantType": "dimension",
     "variants": [
@@ -238,7 +238,7 @@ export const PRODUCTS: Product[] = [
     "slug": "chuk-bowl",
     "name": "Chuk Bowl",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
     "variantType": "capacity",
     "variants": [
@@ -376,7 +376,7 @@ export const PRODUCTS: Product[] = [
     "slug": "chuk-plate",
     "name": "Chuk Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
     "variantType": "dimension",
     "variants": [
@@ -538,7 +538,7 @@ export const PRODUCTS: Product[] = [
     "slug": "chuk-3-compartment-combo-meal-plate",
     "name": "Chuk 3-Compartment Combo Meal Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
     "variantType": "dimension",
     "variants": [
@@ -652,7 +652,7 @@ export const PRODUCTS: Product[] = [
     "slug": "chuk-4-compartment-meal-tray",
     "name": "Chuk 4-Compartment Meal Tray",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
     "variantType": "dimension",
     "variants": [
@@ -766,7 +766,7 @@ export const PRODUCTS: Product[] = [
     "slug": "chuk-5-compartment-meal-tray",
     "name": "Chuk 5-Compartment Meal Tray",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
     "variantType": "dimension",
     "variants": [
@@ -880,7 +880,7 @@ export const PRODUCTS: Product[] = [
     "slug": "chuk-rectangular-container",
     "name": "Chuk Rectangular Container",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
     "variantType": "capacity",
     "variants": [
@@ -1006,7 +1006,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-square-kiwi-bowl",
     "name": "Ecolates Square Kiwi Bowl",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "dimension",
     "variants": [
@@ -1120,7 +1120,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-bowl",
     "name": "Ecolates Bowl",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "capacity",
     "variants": [
@@ -1258,7 +1258,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-clamshell",
     "name": "Ecolates Clamshell",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "dimension",
     "variants": [
@@ -1384,7 +1384,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-round-plate",
     "name": "Ecolates Round Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "dimension",
     "variants": [
@@ -1570,7 +1570,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-3-compartment-round-plate",
     "name": "Ecolates 3-Compartment Round Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "dimension",
     "variants": [
@@ -1696,7 +1696,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-4-compartment-round-plate",
     "name": "Ecolates 4-Compartment Round Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "dimension",
     "variants": [
@@ -1822,7 +1822,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-3-compartment-square-plate",
     "name": "Ecolates 3-Compartment Square Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "dimension",
     "variants": [
@@ -1936,7 +1936,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ecolates-5-compartment-meal-tray",
     "name": "Ecolates 5-Compartment Meal Tray",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
     "variantType": "dimension",
     "variants": [
@@ -2050,7 +2050,7 @@ export const PRODUCTS: Product[] = [
     "slug": "cornstarch-round-container-with-lid",
     "name": "Cornstarch Round Container with Lid",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Biodegradable Container - Cornstarch",
     "variantType": "capacity",
     "variants": [
@@ -2200,7 +2200,7 @@ export const PRODUCTS: Product[] = [
     "slug": "cornstarch-rectangular-container-with-lid",
     "name": "Cornstarch Rectangular Container with Lid",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Biodegradable Container - Cornstarch",
     "variantType": "capacity",
     "variants": [
@@ -2338,7 +2338,7 @@ export const PRODUCTS: Product[] = [
     "slug": "cornstarch-2-compartment-rectangular-container-with-lid",
     "name": "Cornstarch 2-Compartment Rectangular Container with Lid",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Biodegradable Container - Cornstarch",
     "variantType": "dimension",
     "variants": [
@@ -2452,7 +2452,7 @@ export const PRODUCTS: Product[] = [
     "slug": "cornstarch-2-compartment-round-bowl-with-lid",
     "name": "Cornstarch 2-Compartment Round Bowl with Lid",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Biodegradable Container - Cornstarch",
     "variantType": "dimension",
     "variants": [
@@ -2566,7 +2566,7 @@ export const PRODUCTS: Product[] = [
     "slug": "cornstarch-oracle-meal-tray-with-lid",
     "name": "Cornstarch Oracle Meal Tray with Lid",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Biodegradable Container - Cornstarch",
     "variantType": "dimension",
     "variants": [
@@ -2940,7 +2940,7 @@ export const PRODUCTS: Product[] = [
     "slug": "top-folding-pizza-box",
     "name": "Top-Folding Pizza Box",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Paper Boxes",
     "variantType": "dimension",
     "variants": [
@@ -3077,7 +3077,7 @@ export const PRODUCTS: Product[] = [
     "slug": "3-ply-corrugated-pizza-box",
     "name": "3-Ply Corrugated Pizza Box",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Paper Boxes",
     "variantType": "dimension",
     "variants": [
@@ -3226,7 +3226,7 @@ export const PRODUCTS: Product[] = [
     "slug": "3-ply-corrugated-garlic-bread-box",
     "name": "3-Ply Corrugated Garlic Bread Box",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Paper Boxes",
     "variantType": "dimension",
     "variants": [
@@ -3721,7 +3721,7 @@ export const PRODUCTS: Product[] = [
     "slug": "double-wall-paper-cup",
     "name": "Double-Wall Paper Cup",
     "categorySlug": "cups-lids",
-    "categoryName": "Cups & Lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Paper Cups",
     "variantType": "capacity",
     "variants": [
@@ -3857,7 +3857,7 @@ export const PRODUCTS: Product[] = [
     "slug": "ripple-paper-cup",
     "name": "Ripple Paper Cup",
     "categorySlug": "cups-lids",
-    "categoryName": "Cups & Lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Paper Cups",
     "variantType": "capacity",
     "variants": [
@@ -4005,7 +4005,7 @@ export const PRODUCTS: Product[] = [
     "slug": "plain-rectangular-food-box",
     "name": "Plain Rectangular Food Box",
     "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Boxes",
+    "categoryName": "Takeaway Containers",
     "sourceSheetCategory": "Food Box",
     "variantType": "capacity",
     "variants": [
@@ -4139,7 +4139,7 @@ export const PRODUCTS: Product[] = [
     "slug": "kraft-boat-tray",
     "name": "Kraft Boat Tray",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Boat Tray",
     "variantType": "capacity",
     "variants": [
@@ -4273,7 +4273,7 @@ export const PRODUCTS: Product[] = [
     "slug": "plain-round-paper-container-with-lid",
     "name": "Plain Round Paper Container with Lid",
     "categorySlug": "cups-lids",
-    "categoryName": "Cups & Lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Paper Container with Lid",
     "variantType": "capacity",
     "variants": [
@@ -4409,7 +4409,7 @@ export const PRODUCTS: Product[] = [
     "slug": "kraft-round-paper-container-with-lid",
     "name": "Kraft Round Paper Container with Lid",
     "categorySlug": "cups-lids",
-    "categoryName": "Cups & Lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Paper Container with Lid",
     "variantType": "capacity",
     "variants": [
@@ -4557,7 +4557,7 @@ export const PRODUCTS: Product[] = [
     "slug": "kraft-paper-bowl-with-pet-lid",
     "name": "Kraft Paper Bowl with PET Lid",
     "categorySlug": "plates-bowls",
-    "categoryName": "Plates & Bowls",
+    "categoryName": "Table ware",
     "sourceSheetCategory": "Paper Bowl with Lid (Kraft)",
     "variantType": "capacity",
     "variants": [

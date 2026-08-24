@@ -3,7 +3,7 @@ import type { ProductCategory } from "@/types";
 export const CATEGORIES: ProductCategory[] = [
   {
     "art": "plate",
-    "name": "Plates & Bowls",
+    "name": "Table ware",
     "href": "/categories/plates-bowls",
     "description": "Dine-in, events, catering",
     "moq": "20k",
@@ -11,7 +11,7 @@ export const CATEGORIES: ProductCategory[] = [
   },
   {
     "art": "cup",
-    "name": "Cups & Lids",
+    "name": "Grab & Go",
     "href": "/categories/cups-lids",
     "description": "Hot, cold and everything between",
     "moq": "50k",
@@ -19,7 +19,7 @@ export const CATEGORIES: ProductCategory[] = [
   },
   {
     "art": "clam",
-    "name": "Takeaway Boxes",
+    "name": "Takeaway Containers",
     "href": "/categories/takeaway-boxes",
     "description": "Meals that travel well",
     "moq": "10k",

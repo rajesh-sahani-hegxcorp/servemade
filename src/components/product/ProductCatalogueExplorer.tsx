@@ -11,9 +11,9 @@ interface Props {
 
 const CATEGORIES = [
   { slug: "all", label: "All Products" },
-  { slug: "plates-bowls", label: "Plates & Bowls" },
-  { slug: "cups-lids", label: "Cups & Lids" },
-  { slug: "takeaway-boxes", label: "Takeaway Boxes" },
+  { slug: "plates-bowls", label: "Table ware" },
+  { slug: "cups-lids", label: "Grab & Go" },
+  { slug: "takeaway-boxes", label: "Takeaway Containers" },
   { slug: "carry-bags", label: "Carry Bags" },
   { slug: "cutlery-straws", label: "Cutlery & Straws" },
 ];

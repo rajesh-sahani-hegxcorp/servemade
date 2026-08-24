@@ -1,8 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { CertMarquee } from "@/components/home/CertMarquee";
 import { CategoryTiles } from "@/components/home/CategoryTiles";
-import { Industries } from "@/components/home/Industries";
-import { Impact } from "@/components/home/Impact";
 import { CustomBranding } from "@/components/home/CustomBranding";
 import { Resources } from "@/components/home/Resources";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -20,8 +18,6 @@ export default function HomePage() {
       <Hero />
       <CertMarquee />
       <CategoryTiles />
-      <Industries />
-      <Impact />
       <CustomBranding />
       <Resources />
       <Testimonials />
