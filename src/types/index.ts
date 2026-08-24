@@ -26,6 +26,7 @@ export interface ProductCategory {
   href: string;
   description: string;
   moq: string;
+  image?: string;
 }
 
 export interface Faq {
