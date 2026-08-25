@@ -13,6 +13,9 @@ import { useCart } from "@/context/CartContext";
 import type { CupView } from "@/components/product/CupGalleryArt";
 import type { Product, ProductVariant } from "@/types";
 
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 function formatPackedStat(v?: ProductVariant): string {
   if (!v) return "Standard carton";
   if (v.qtyPerBox && v.qtyPerPkt) {
@@ -41,12 +44,17 @@ function getVariantDisplayLabel(v: ProductVariant, variantType: "capacity" | "di
 }
 
 export function ProductConfigurator({ product }: { product: Product }) {
+  const router = useRouter();
   const [sizeIndex, setSizeIndex] = useState(0);
+  const [selectedColor, setSelectedColor] = useState<string>(product.colors?.[0] ?? "");
   const [qtyIndex, setQtyIndex] = useState(0);
   const [shipping, setShipping] = useState<ShippingOption["value"]>("FOB");
   const [branded, setBranded] = useState(false);
   const [view, setView] = useState<CupView>("plain");
   const { addItems } = useCart();
+
+  const isBowlFamily = product.slug === "bagasse-round-bowl" || product.slug === "bagasse-square-bowl";
+  const currentShape = product.slug === "bagasse-square-bowl" ? "square" : "round";
 
   const variants = product.variants && product.variants.length > 0 ? product.variants : [];
   const hasMultipleSizes = variants.length > 1;
@@ -68,13 +76,30 @@ export function ProductConfigurator({ product }: { product: Product }) {
     { value: product.printing?.startsWith("Not printable") ? "No" : "Yes", label: "Custom print" },
   ];
 
+  let stepCounter = 1;
+  const shapeStepNum = isBowlFamily ? stepCounter++ : 0;
+  const colorStepNum = product.colors && product.colors.length > 1 ? stepCounter++ : 0;
+  const sizeStepNum = (hasMultipleSizes || isBowlFamily) ? stepCounter++ : 0;
+  const qtyStepNum = stepCounter++;
+  const shipStepNum = stepCounter++;
+  const brandStepNum = product.printing !== "Not printable — natural fibre finish only" ? stepCounter++ : 0;
+
   function setBranding(next: boolean) {
     setBranded(next);
     if (product.gallery.type === "cup") setView(next ? "branded" : "plain");
   }
 
   function addToQuote() {
-    const label = `${product.name} — ${variantLabel ? `${variantLabel}, ` : ""}${quantity?.label ?? ""}${branded ? ", branded" : ""}`;
+    const details = [
+      selectedColor || null,
+      variantLabel || null,
+      quantity?.label ?? null,
+      branded ? "branded" : null,
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    const label = `${product.name} — ${details}`;
     addItems([label], "✓ Added to your quote");
   }
 
@@ -112,11 +137,88 @@ export function ProductConfigurator({ product }: { product: Product }) {
             ))}
           </dl>
 
-          {/* Step 1: Size / Dimension selector (only shown when multi-variant) */}
-          {hasMultipleSizes && (
+          {/* Bowl Two-Level Step 1: Shape Selector */}
+          {isBowlFamily && (
+            <div className="mt-7">
+              <StepLabel n={shapeStepNum} hint="choose bowl shape">
+                Choose shape
+              </StepLabel>
+              <div className="flex flex-wrap gap-2.5" role="group" aria-label="Bowl shape">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (currentShape !== "round") router.push("/products/bagasse-round-bowl");
+                  }}
+                  className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
+                    currentShape === "round"
+                      ? "border-brand-green bg-brand-green-light text-brand-green-dark shadow-sm"
+                      : "border-line bg-white text-ink-2 hover:border-brand-green/40"
+                  }`}
+                >
+                  Round <span className="text-xs font-normal text-ink-3 ml-1">(6oz, 8oz, 12oz)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (currentShape !== "square") router.push("/products/bagasse-square-bowl");
+                  }}
+                  className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
+                    currentShape === "square"
+                      ? "border-brand-green bg-brand-green-light text-brand-green-dark shadow-sm"
+                      : "border-line bg-white text-ink-2 hover:border-brand-green/40"
+                  }`}
+                >
+                  Square <span className="text-xs font-normal text-ink-3 ml-1">(4oz)</span>
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Optional Color Selector (e.g. Double Wall Paper Cup) */}
+          {product.colors && product.colors.length > 1 && (
+            <div className="mt-7">
+              <StepLabel n={colorStepNum} hint="select cup color">
+                Choose cup color
+              </StepLabel>
+              <div className="flex flex-wrap gap-2.5" role="group" aria-label="Cup color">
+                {product.colors.map((color) => {
+                  const isActive = selectedColor === color;
+                  const isWhite = color.toLowerCase().includes("white");
+                  const isBrown = color.toLowerCase().includes("brown") || color.toLowerCase().includes("kraft");
+                  return (
+                    <button
+                      key={color}
+                      type="button"
+                      onClick={() => setSelectedColor(color)}
+                      className={`flex items-center gap-2 rounded-2xl border-2 px-4 py-2.5 text-sm font-bold transition-all ${
+                        isActive
+                          ? "border-brand-green bg-brand-green-light text-brand-green-dark shadow-sm"
+                          : "border-line bg-white text-ink-2 hover:border-brand-green/40"
+                      }`}
+                    >
+                      <span
+                        className={`h-4 w-4 rounded-full border ${
+                          isWhite
+                            ? "bg-white border-ink-3/40"
+                            : isBrown
+                            ? "bg-[#C49A6C] border-[#A0784D]"
+                            : "bg-surface-off border-line"
+                        }`}
+                        aria-hidden="true"
+                      />
+                      {color}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Size / Dimension selector */}
+          {(hasMultipleSizes || isBowlFamily) && (
             <div className="mt-7">
               <StepLabel
-                n={1}
+                n={sizeStepNum}
                 hint={
                   product.variantType === "capacity"
                     ? `most buyers start with ${variants[1]?.size ?? variants[0]?.size}`
@@ -193,9 +295,9 @@ export function ProductConfigurator({ product }: { product: Product }) {
             </div>
           )}
 
-          {/* Step 2: Order quantity ladder */}
+          {/* Order quantity ladder */}
           <div className="mt-6">
-            <StepLabel n={hasMultipleSizes ? 2 : 1} hint="bigger orders = better rates">
+            <StepLabel n={qtyStepNum} hint="bigger orders = better rates">
               How many do you need?
             </StepLabel>
             <div className="flex flex-wrap gap-2.5" role="group" aria-label="Order quantity">
@@ -214,9 +316,9 @@ export function ProductConfigurator({ product }: { product: Product }) {
             )}
           </div>
 
-          {/* Step 3: Shipping */}
+          {/* Shipping */}
           <div className="mt-6">
-            <StepLabel n={hasMultipleSizes ? 3 : 2}>How should we ship it?</StepLabel>
+            <StepLabel n={shipStepNum}>How should we ship it?</StepLabel>
             <div className="flex flex-wrap gap-2.5" role="group" aria-label="Shipping terms">
               {SHIPPING_OPTIONS.map((s) => (
                 <StepOption key={s.value} active={shipping === s.value} onClick={() => setShipping(s.value)} note={s.note}>
@@ -226,10 +328,10 @@ export function ProductConfigurator({ product }: { product: Product }) {
             </div>
           </div>
 
-          {/* Step 4: Branding */}
-          {product.printing !== "Not printable — natural fibre finish only" && (
+          {/* Branding */}
+          {brandStepNum > 0 && (
             <div className="mt-6">
-              <StepLabel n={hasMultipleSizes ? 4 : 3}>Add your branding?</StepLabel>
+              <StepLabel n={brandStepNum}>Add your branding?</StepLabel>
               <div className="flex flex-wrap gap-2.5" role="group" aria-label="Branding">
                 <StepOption active={!branded} onClick={() => setBranding(false)}>
                   Plain
@@ -245,7 +347,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
           <dl className="mt-7 rounded-2xl bg-brand-blue-light p-5" aria-live="polite">
             <Row
               k="Your selection"
-              v={`${variantLabel ? `${variantLabel} · ` : ""}${quantity?.label ?? ""}`}
+              v={`${selectedColor ? `${selectedColor} · ` : ""}${variantLabel ? `${variantLabel} · ` : ""}${quantity?.label ?? ""}`}
             />
             <Row k="Shipping" v={`${shipInfo?.label} (${shipInfo?.value})`} />
             <Row k="Branding" v={branded ? "Custom printed" : "Plain"} />

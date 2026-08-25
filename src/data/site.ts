@@ -18,10 +18,13 @@ export const FOOTER_COLUMNS: { heading: string; links: { label: string; href: st
   {
     heading: "Products",
     links: [
-      { label: "Table ware", href: "/categories/plates-bowls" },
+      { label: "Biodegradable Products", href: "/categories/plates-bowls" },
+      { label: "Paper Cups", href: "/categories/paper-cups" },
       { label: "Grab & Go", href: "/categories/cups-lids" },
       { label: "Takeaway Containers", href: "/categories/takeaway-boxes" },
-      { label: "Cutlery & straws", href: "/categories/cutlery-straws" },
+      { label: "Carry Bags", href: "/categories/carry-bags" },
+      { label: "Cutlery & Straws", href: "/categories/cutlery-straws" },
+      { label: "Custom & Private Label", href: "/custom-packaging" },
     ],
   },
   {

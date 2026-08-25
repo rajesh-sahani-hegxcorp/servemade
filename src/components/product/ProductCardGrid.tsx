@@ -22,6 +22,11 @@ export function ProductCardGrid({ products }: { products: Product[] }) {
           </div>
           <div className="p-5">
             <h3 className="text-lg font-extrabold">{product.name}</h3>
+            {product.sizes && product.sizes.length > 0 && (
+              <p className="mt-1 text-xs font-semibold text-brand-green-dark">
+                Available: {product.sizes.map((s) => s.label).join(", ")}
+              </p>
+            )}
             <p className="mt-1 text-sm text-ink-2">{product.tagline}</p>
             <div className="mt-3 flex items-center justify-between border-t border-line pt-3 text-xs font-bold">
               <span className="text-ink-3">

@@ -121,33 +121,166 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "chuk-square-bowl",
-    "name": "Chuk Square Bowl",
+    "slug": "bagasse-round-bowl",
+    "name": "Bagasse Round Bowl",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
+    "categoryName": "Biodegradable Products",
+    "variantType": "capacity",
+    "variants": [
+      {
+        "size": "180 mL",
+        "dimension": null,
+        "capacityMl": 180,
+        "capacityOz": 6.09,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "240 mL",
+        "dimension": null,
+        "capacityMl": 240,
+        "capacityOz": 8.12,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "360 mL",
+        "dimension": null,
+        "capacityMl": 360,
+        "capacityOz": 12.17,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable sugarcane bagasse round bowls for dine-in, soups, and takeaways.",
+    "summary": "Premium quality bagasse round bowls crafted from 100% renewable sugarcane fibers. Heavy-duty, leak-resistant, and grease-proof design built for hot soups, salads, curries, and commercial food service. Certified 100% compostable and food-safe.",
+    "ratingLabel": "Top choice for restaurants & catering",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "1,000 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "6 oz",
+        "note": "180 mL"
+      },
+      {
+        "label": "8 oz",
+        "note": "240 mL"
+      },
+      {
+        "label": "12 oz",
+        "note": "360 mL"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom embossing or branded sleeve available",
+    "endOfLife": "100% commercially compostable & biodegradable",
+    "heatRating": "Microwave & freezer safe (-20°C to 120°C)",
+    "cartonPack": "1,000 units per carton",
+    "cartonVolume": "0.06 m³",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Heavy-duty sugarcane construction",
+        "body": "Engineered from rapidly renewable sugarcane pulp, offering rigid structural strength without soggy bottoms or leaking when serving piping-hot liquids.",
+        "bullets": [
+          "100% natural, plastic-free & unbleached options",
+          "Oil-resistant up to 120°C and water-resistant up to 100°C",
+          "Microwave reheatable and freezer safe",
+          "Certified EN 13432 & ASTM D6400 compostable"
+        ]
+      },
+      {
+        "heading": "Commercial food-service standard",
+        "body": "Designed to nest compactly for efficient back-of-house storage and rapid service dispensing during peak meal rushes.",
+        "bullets": [
+          "Smooth rolled rim for a rigid, spill-free dining experience",
+          "Uniform stack height saves warehouse freight volume",
+          "Available in 6oz, 8oz, and 12oz capacities"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Direct food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Industrial compostable"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality manufacturing"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these bagasse bowls suitable for hot liquids and oily foods?",
+        "answer": "Yes, our bagasse bowls are engineered with natural plant fibers that resist oils up to 120°C and boiling water up to 100°C without softening or leaking."
+      },
+      {
+        "question": "What is the standard carton packaging?",
+        "answer": "Packaged 1,000 units per master shipping carton (packed in hygienically sealed poly inner sleeves of 25 or 50 pieces)."
+      }
+    ],
+    "relatedSlugs": [
+      "bagasse-square-bowl",
+      "bagasse-round-plate",
+      "bagasse-3-compartment-combo-meal-plate"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "bowl"
+    }
+  },
+  {
+    "slug": "bagasse-square-bowl",
+    "name": "Bagasse Square Bowl",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
     "variantType": "dimension",
     "variants": [
       {
         "size": "4 in",
         "dimension": "4 in square",
-        "capacityMl": null,
-        "capacityOz": null,
+        "capacityMl": 120,
+        "capacityOz": 4.06,
         "qtyPerBox": 2000,
         "qtyPerPkt": 25
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable chuk square bowl for eco-conscious businesses.",
-    "summary": "Premium quality chuk square bowl crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Certified compostable bagasse square bowls ideal for sides, desserts, and dips.",
+    "summary": "Compact 4oz square bowls crafted from 100% natural sugarcane bagasse. Modern square aesthetic tailored for side dishes, sauces, dips, tasting portions, and airline or event catering.",
+    "ratingLabel": "Popular for appetizers & condiments",
     "quickFacts": [
       {
-        "value": "50,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
@@ -161,223 +294,62 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "4 in",
+        "label": "4 oz",
         "note": "4 in square"
       }
     ],
-    "baseMoq": 50000,
+    "baseMoq": 20000,
     "moqUnit": "pieces",
     "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "printing": "Custom embossed branding available",
+    "endOfLife": "100% commercially compostable",
+    "heatRating": "-20°C to 120°C",
     "cartonPack": "2,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "cartonVolume": "0.05 m³",
     "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Chuk Square Bowl",
-        "body": "Our chuk square bowl offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Contemporary square profile",
+        "body": "The square footprint creates a high-end presentation for tapas, sushi condiments, condiments, and sampling menus.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "100% tree-free upcycled sugarcane fiber",
+          "Rigid walls with secure rim for clean handling",
+          "Space-efficient square geometry on dining trays"
         ]
       }
     ],
     "certifications": [
       {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
+        "note": "Direct food contact"
       },
       {
         "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Industrial compostable"
       }
     ],
     "faqs": [
       {
-        "question": "Are these chuk square bowl safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "What is the capacity of the square bowl?",
+        "answer": "The bagasse square bowl measures 4 inches square with approximately 4 oz (120 mL) capacity."
       }
     ],
     "relatedSlugs": [
-      "chuk-bowl",
-      "chuk-plate",
-      "chuk-3-compartment-combo-meal-plate"
+      "bagasse-round-bowl",
+      "bagasse-round-plate"
     ],
     "gallery": {
       "type": "static",
-      "art": "plate"
+      "art": "bowl"
     }
   },
   {
-    "slug": "chuk-bowl",
-    "name": "Chuk Bowl",
+    "slug": "bagasse-round-plate",
+    "name": "Bagasse Round Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "120 mL",
-        "dimension": null,
-        "capacityMl": 120,
-        "capacityOz": 4.06,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "180 mL",
-        "dimension": null,
-        "capacityMl": 180,
-        "capacityOz": 6.09,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "250 mL",
-        "dimension": null,
-        "capacityMl": 250,
-        "capacityOz": 8.45,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable chuk bowl for eco-conscious businesses.",
-    "summary": "Premium quality chuk bowl crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "25,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "1,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "120 mL",
-        "note": "4.06 fl oz"
-      },
-      {
-        "label": "180 mL",
-        "note": "6.09 fl oz"
-      },
-      {
-        "label": "250 mL",
-        "note": "8.45 fl oz"
-      }
-    ],
-    "baseMoq": 25000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "1,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Chuk Bowl",
-        "body": "Our chuk bowl offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these chuk bowl safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "chuk-square-bowl",
-      "chuk-plate",
-      "chuk-3-compartment-combo-meal-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "chuk-plate",
-    "name": "Chuk Plate",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
+    "categoryName": "Biodegradable Products",
     "variantType": "dimension",
     "variants": [
       {
@@ -410,1022 +382,6 @@ export const PRODUCTS: Product[] = [
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "12 in",
-        "dimension": "12 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable chuk plate for eco-conscious businesses.",
-    "summary": "Premium quality chuk plate crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "25,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "1,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "6 in",
-        "note": "6 in diameter"
-      },
-      {
-        "label": "7 in",
-        "note": "7 in diameter"
-      },
-      {
-        "label": "9 in",
-        "note": "9 in diameter"
-      },
-      {
-        "label": "10 in",
-        "note": "10 in diameter"
-      },
-      {
-        "label": "12 in",
-        "note": "12 in diameter"
-      }
-    ],
-    "baseMoq": 25000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "1,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Chuk Plate",
-        "body": "Our chuk plate offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these chuk plate safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "chuk-square-bowl",
-      "chuk-bowl",
-      "chuk-3-compartment-combo-meal-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "chuk-3-compartment-combo-meal-plate",
-    "name": "Chuk 3-Compartment Combo Meal Plate",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "3 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable chuk 3-compartment combo meal plate for eco-conscious businesses.",
-    "summary": "Premium quality chuk 3-compartment combo meal plate crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "12,500 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "3 compartment",
-        "note": ""
-      }
-    ],
-    "baseMoq": 12500,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "500 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Chuk 3-Compartment Combo Meal Plate",
-        "body": "Our chuk 3-compartment combo meal plate offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these chuk 3-compartment combo meal plate safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "chuk-square-bowl",
-      "chuk-bowl",
-      "chuk-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "chuk-4-compartment-meal-tray",
-    "name": "Chuk 4-Compartment Meal Tray",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "4 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable chuk 4-compartment meal tray for eco-conscious businesses.",
-    "summary": "Premium quality chuk 4-compartment meal tray crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "12,500 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "4 compartment",
-        "note": ""
-      }
-    ],
-    "baseMoq": 12500,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "500 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Chuk 4-Compartment Meal Tray",
-        "body": "Our chuk 4-compartment meal tray offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these chuk 4-compartment meal tray safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "chuk-square-bowl",
-      "chuk-bowl",
-      "chuk-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "chuk-5-compartment-meal-tray",
-    "name": "Chuk 5-Compartment Meal Tray",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "5 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable chuk 5-compartment meal tray for eco-conscious businesses.",
-    "summary": "Premium quality chuk 5-compartment meal tray crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "12,500 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "5 compartment",
-        "note": ""
-      }
-    ],
-    "baseMoq": 12500,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "500 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Chuk 5-Compartment Meal Tray",
-        "body": "Our chuk 5-compartment meal tray offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these chuk 5-compartment meal tray safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "chuk-square-bowl",
-      "chuk-bowl",
-      "chuk-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "chuk-rectangular-container",
-    "name": "Chuk Rectangular Container",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "500 mL",
-        "dimension": "rectangular",
-        "capacityMl": 500,
-        "capacityOz": 16.91,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 125
-      },
-      {
-        "size": "750 mL",
-        "dimension": "rectangular",
-        "capacityMl": 750,
-        "capacityOz": 25.36,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 125
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable chuk rectangular container for eco-conscious businesses.",
-    "summary": "Premium quality chuk rectangular container crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "1,25,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "1,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "500 mL",
-        "note": "16.91 fl oz"
-      },
-      {
-        "label": "750 mL",
-        "note": "25.36 fl oz"
-      }
-    ],
-    "baseMoq": 125000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "1,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Chuk Rectangular Container",
-        "body": "Our chuk rectangular container offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these chuk rectangular container safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "chuk-square-bowl",
-      "chuk-bowl",
-      "chuk-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "ecolates-square-kiwi-bowl",
-    "name": "Ecolates Square Kiwi Bowl",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "Kiwi",
-        "dimension": "square",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 4000,
-        "qtyPerPkt": 50
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable ecolates square kiwi bowl for eco-conscious businesses.",
-    "summary": "Premium quality ecolates square kiwi bowl crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "2,00,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "4,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "Kiwi",
-        "note": "square"
-      }
-    ],
-    "baseMoq": 200000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "4,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Ecolates Square Kiwi Bowl",
-        "body": "Our ecolates square kiwi bowl offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these ecolates square kiwi bowl safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "ecolates-bowl",
-      "ecolates-clamshell",
-      "ecolates-round-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "ecolates-bowl",
-    "name": "Ecolates Bowl",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "180 mL",
-        "dimension": null,
-        "capacityMl": 180,
-        "capacityOz": 6.09,
-        "qtyPerBox": 4000,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "240 mL",
-        "dimension": null,
-        "capacityMl": 240,
-        "capacityOz": 8.12,
-        "qtyPerBox": 4000,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "360 mL",
-        "dimension": null,
-        "capacityMl": 360,
-        "capacityOz": 12.17,
-        "qtyPerBox": 2000,
-        "qtyPerPkt": 50
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable ecolates bowl for eco-conscious businesses.",
-    "summary": "Premium quality ecolates bowl crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "2,00,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "4,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "180 mL",
-        "note": "6.09 fl oz"
-      },
-      {
-        "label": "240 mL",
-        "note": "8.12 fl oz"
-      },
-      {
-        "label": "360 mL",
-        "note": "12.17 fl oz"
-      }
-    ],
-    "baseMoq": 200000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "4,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Ecolates Bowl",
-        "body": "Our ecolates bowl offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these ecolates bowl safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "ecolates-square-kiwi-bowl",
-      "ecolates-clamshell",
-      "ecolates-round-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "ecolates-clamshell",
-    "name": "Ecolates Clamshell",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "6 x 6 in",
-        "dimension": "6 x 6 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "9 x 6 in",
-        "dimension": "9 x 6 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 250,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable ecolates clamshell for eco-conscious businesses.",
-    "summary": "Premium quality ecolates clamshell crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "12,500 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "6 x 6 in",
-        "note": "6 x 6 in"
-      },
-      {
-        "label": "9 x 6 in",
-        "note": "9 x 6 in"
-      }
-    ],
-    "baseMoq": 12500,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "500 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Ecolates Clamshell",
-        "body": "Our ecolates clamshell offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these ecolates clamshell safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "ecolates-square-kiwi-bowl",
-      "ecolates-bowl",
-      "ecolates-round-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "ecolates-round-plate",
-    "name": "Ecolates Round Plate",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "4 in",
-        "dimension": "4 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 4800,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "6 in",
-        "dimension": "6 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 2000,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "7 in",
-        "dimension": "7 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 1800,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "9 in",
-        "dimension": "9 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "10 in",
-        "dimension": "10 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 1000,
         "qtyPerPkt": 25
       },
       {
@@ -1441,25 +397,25 @@ export const PRODUCTS: Product[] = [
         "dimension": "12 in diameter",
         "capacityMl": null,
         "capacityOz": null,
-        "qtyPerBox": 600,
+        "qtyPerBox": 500,
         "qtyPerPkt": 25
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable ecolates round plate for eco-conscious businesses.",
-    "summary": "Premium quality ecolates round plate crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Sturdy, grease-resistant round bagasse plates from 6 to 12 inches for events and catering.",
+    "summary": "Comprehensive range of compostable round dinner plates molded from 100% sugarcane pulp. Ultra-sturdy construction will not bend or buckle under heavy, gravy-rich meals.",
+    "ratingLabel": "Preferred for banquets & food service",
     "quickFacts": [
       {
-        "value": "1,20,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
-        "value": "4,800 / ctn",
+        "value": "500–1000 / ctn",
         "label": "Packed"
       },
       {
@@ -1469,97 +425,71 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "4 in",
-        "note": "4 in diameter"
-      },
-      {
         "label": "6 in",
-        "note": "6 in diameter"
+        "note": "Appetizer / Snack"
       },
       {
         "label": "7 in",
-        "note": "7 in diameter"
+        "note": "Side plate"
       },
       {
         "label": "9 in",
-        "note": "9 in diameter"
+        "note": "Lunch plate"
       },
       {
         "label": "10 in",
-        "note": "10 in diameter"
+        "note": "Dinner plate"
       },
       {
         "label": "11 in",
-        "note": "11 in diameter"
+        "note": "Large dinner plate"
       },
       {
         "label": "12 in",
-        "note": "12 in diameter"
+        "note": "Platter / Buffet"
       }
     ],
-    "baseMoq": 120000,
+    "baseMoq": 20000,
     "moqUnit": "pieces",
     "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "4,800 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "printing": "Custom embossing available on rim",
+    "endOfLife": "100% commercially compostable",
+    "heatRating": "Heat safe up to 120°C",
+    "cartonPack": "500–1,000 units per carton",
+    "cartonVolume": "0.07 m³",
     "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Ecolates Round Plate",
-        "body": "Our ecolates round plate offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Rigid non-bending structure",
+        "body": "High-density molded fibers provide cut resistance and superior rigidity compared to standard paper plates.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "6 sizes covering everything from cake slices to full buffet courses",
+          "Naturally grease and moisture resistant",
+          "Certified compostable across global standards"
         ]
       }
     ],
     "certifications": [
       {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
+        "note": "Direct food contact"
       },
       {
         "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Industrial compostable"
       }
     ],
     "faqs": [
       {
-        "question": "Are these ecolates round plate safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "Are these plates cut-resistant?",
+        "answer": "Yes, the dense molded bagasse structure resists cutting from knives and forks during dining."
       }
     ],
     "relatedSlugs": [
-      "ecolates-square-kiwi-bowl",
-      "ecolates-bowl",
-      "ecolates-clamshell"
+      "bagasse-round-bowl",
+      "bagasse-3-compartment-combo-meal-plate"
     ],
     "gallery": {
       "type": "static",
@@ -1567,11 +497,277 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "ecolates-3-compartment-round-plate",
-    "name": "Ecolates 3-Compartment Round Plate",
+    "slug": "bagasse-3-compartment-combo-meal-plate",
+    "name": "Bagasse 3-Compartment Combo Meal Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
+    "categoryName": "Biodegradable Products",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "3 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Compartment meal plate keeping main dishes and gravies distinctly separated.",
+    "summary": "Three-compartment sugarcane bagasse meal plate engineered for combo platters, cafeteria dining, and set meals. Elevated dividers prevent food mixing during transport and service.",
+    "ratingLabel": "Top pick for combo meals",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "3 compartment",
+        "note": "Combo plate"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom embossed rim available",
+    "endOfLife": "100% commercially compostable",
+    "cartonPack": "500 units per carton",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Distinct divider barriers",
+        "body": "High-profile compartment walls keep sauces and sides completely separated for clean presentation.",
+        "bullets": [
+          "3 deep compartments for balanced portion control",
+          "Heat safe and oil resistant",
+          "Plastic-free sustainable dinnerware"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Direct food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do gravies leak between sections?",
+        "answer": "No, molded internal ridges effectively prevent liquid crossover."
+      }
+    ],
+    "relatedSlugs": [
+      "bagasse-4-compartment-meal-tray",
+      "bagasse-5-compartment-meal-tray"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "bagasse-4-compartment-meal-tray",
+    "name": "Bagasse 4-Compartment Meal Tray",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "4 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "4-compartment meal tray designed for full-course dining and catering portions.",
+    "summary": "Heavy-duty 4-compartment meal tray made from 100% sugarcane fiber. Perfect for corporate lunches, institutional dining, and multi-dish catering.",
+    "ratingLabel": "High capacity multi-dish tray",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "4 compartment",
+        "note": "Full meal tray"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom branding available",
+    "endOfLife": "100% compostable",
+    "cartonPack": "500 units per carton",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Optimized 4-dish layout",
+        "body": "Engineered with deep wells to hold main dishes, rice/breads, two side gravies, or dessert securely.",
+        "bullets": [
+          "Rigid rim construction",
+          "Leakproof and oil resistant",
+          "100% plant-based compostable"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Direct food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is this tray microwave safe?",
+        "answer": "Yes, it is microwave safe up to 120°C for reheating."
+      }
+    ],
+    "relatedSlugs": [
+      "bagasse-3-compartment-combo-meal-plate",
+      "bagasse-5-compartment-meal-tray"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "bagasse-5-compartment-meal-tray",
+    "name": "Bagasse 5-Compartment Meal Tray",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "5 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "5-compartment thali-style meal tray for authentic multi-course food service.",
+    "summary": "Comprehensive 5-compartment bagasse tray crafted from molded sugarcane pulp. Ideal for traditional thalis, executive executive lunches, and banquet catering requiring multiple condiments and dishes.",
+    "ratingLabel": "Top rated for thali service",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "5 compartment",
+        "note": "Thali meal tray"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom branding available",
+    "endOfLife": "100% compostable",
+    "cartonPack": "500 units per carton",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Thali style portioning",
+        "body": "5 generous wells designed to accommodate rice, bread, dal, curries, yogurt, and sweets without spillover.",
+        "bullets": [
+          "Heavyweight molded bagasse",
+          "Zero plastic or chemical coatings",
+          "Sturdy for one-handed carrying"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Direct food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can these hold heavy gravies?",
+        "answer": "Yes, the reinforced ribbed base easily supports heavy meal portions."
+      }
+    ],
+    "relatedSlugs": [
+      "bagasse-3-compartment-combo-meal-plate",
+      "bagasse-4-compartment-meal-tray"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "bagasse-3-compartment-round-plate",
+    "name": "Bagasse 3-Compartment Round Plate",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
     "variantType": "dimension",
     "variants": [
       {
@@ -1592,16 +788,16 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable ecolates 3-compartment round plate for eco-conscious businesses.",
-    "summary": "Premium quality ecolates 3-compartment round plate crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Round 3-compartment bagasse plates in 9 and 10 inch sizes for balanced meal service.",
+    "summary": "Molded round dinner plate with 3 divided sections. Made from renewable sugarcane bagasse, delivering sustainable dining with portion separation.",
+    "ratingLabel": "Popular for events & buffets",
     "quickFacts": [
       {
-        "value": "25,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
@@ -1615,77 +811,53 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "9 in / 3 compartment",
-        "note": "9 in diameter"
+        "label": "9 in",
+        "note": "3-compartment round"
       },
       {
-        "label": "10 in / 3 compartment",
-        "note": "10 in diameter"
+        "label": "10 in",
+        "note": "3-compartment round"
       }
     ],
-    "baseMoq": 25000,
+    "baseMoq": 20000,
     "moqUnit": "pieces",
     "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "printing": "Custom branding available",
+    "endOfLife": "100% compostable",
     "cartonPack": "1,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
     "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Ecolates 3-Compartment Round Plate",
-        "body": "Our ecolates 3-compartment round plate offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Round partitioned layout",
+        "body": "Combines the classic aesthetic of round dinnerware with practical 3-compartment food separation.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "9-inch and 10-inch diameter options",
+          "Grease and moisture resistant",
+          "Commercial compost certified"
         ]
       }
     ],
     "certifications": [
       {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
+        "note": "Food contact"
       },
       {
         "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Compostable"
       }
     ],
     "faqs": [
       {
-        "question": "Are these ecolates 3-compartment round plate safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "What sizes are available?",
+        "answer": "Available in 9-inch and 10-inch diameter round formats."
       }
     ],
     "relatedSlugs": [
-      "ecolates-square-kiwi-bowl",
-      "ecolates-bowl",
-      "ecolates-clamshell"
+      "bagasse-4-compartment-round-plate",
+      "bagasse-3-compartment-square-plate"
     ],
     "gallery": {
       "type": "static",
@@ -1693,11 +865,10 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "ecolates-4-compartment-round-plate",
-    "name": "Ecolates 4-Compartment Round Plate",
+    "slug": "bagasse-4-compartment-round-plate",
+    "name": "Bagasse 4-Compartment Round Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
+    "categoryName": "Biodegradable Products",
     "variantType": "dimension",
     "variants": [
       {
@@ -1718,20 +889,20 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable ecolates 4-compartment round plate for eco-conscious businesses.",
-    "summary": "Premium quality ecolates 4-compartment round plate crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Large 11 and 12 inch 4-compartment round plates for full dinner servings.",
+    "summary": "Extra-large 4-compartment round plate crafted from thick molded bagasse. Designed for feasts, banquets, and grand hospitality service.",
+    "ratingLabel": "High capacity banquet plate",
     "quickFacts": [
       {
-        "value": "20,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
-        "value": "800 / ctn",
+        "value": "600–800 / ctn",
         "label": "Packed"
       },
       {
@@ -1741,77 +912,53 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "11 in / 4 compartment",
-        "note": "11 in diameter"
+        "label": "11 in",
+        "note": "4-compartment round"
       },
       {
-        "label": "12 in / 4 compartment",
-        "note": "12 in diameter"
+        "label": "12 in",
+        "note": "4-compartment round"
       }
     ],
     "baseMoq": 20000,
     "moqUnit": "pieces",
     "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "800 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "printing": "Custom branding available",
+    "endOfLife": "100% compostable",
+    "cartonPack": "600–800 units per carton",
     "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Ecolates 4-Compartment Round Plate",
-        "body": "Our ecolates 4-compartment round plate offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Generous 4-compartment footprint",
+        "body": "Available in 11-inch and 12-inch diameters to hold generous main courses with multiple sides.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "Heavyweight molded bagasse",
+          "Wide rim for stable carrying",
+          "Completely plastic-free"
         ]
       }
     ],
     "certifications": [
       {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
+        "note": "Food contact"
       },
       {
         "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Compostable"
       }
     ],
     "faqs": [
       {
-        "question": "Are these ecolates 4-compartment round plate safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "Is this suitable for buffets?",
+        "answer": "Yes, the 11-inch and 12-inch sizes are ideal for heavy buffet service."
       }
     ],
     "relatedSlugs": [
-      "ecolates-square-kiwi-bowl",
-      "ecolates-bowl",
-      "ecolates-clamshell"
+      "bagasse-3-compartment-round-plate",
+      "bagasse-5-compartment-meal-tray"
     ],
     "gallery": {
       "type": "static",
@@ -1819,11 +966,10 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "ecolates-3-compartment-square-plate",
-    "name": "Ecolates 3-Compartment Square Plate",
+    "slug": "bagasse-3-compartment-square-plate",
+    "name": "Bagasse 3-Compartment Square Plate",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
+    "categoryName": "Biodegradable Products",
     "variantType": "dimension",
     "variants": [
       {
@@ -1836,16 +982,16 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable ecolates 3-compartment square plate for eco-conscious businesses.",
-    "summary": "Premium quality ecolates 3-compartment square plate crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Modern 9-inch square 3-compartment bagasse plate for contemporary dining.",
+    "summary": "Sleek square 3-compartment plate crafted from 100% biodegradable sugarcane bagasse. Contemporary styling suited for modern fast-casual eateries and catered events.",
+    "ratingLabel": "Modern square catering plate",
     "quickFacts": [
       {
-        "value": "25,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
@@ -1859,73 +1005,49 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "9 in / 3 compartment",
-        "note": "9 in square"
+        "label": "9 in",
+        "note": "3-compartment square"
       }
     ],
-    "baseMoq": 25000,
+    "baseMoq": 20000,
     "moqUnit": "pieces",
     "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "printing": "Custom branding available",
+    "endOfLife": "100% compostable",
     "cartonPack": "1,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
     "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Ecolates 3-Compartment Square Plate",
-        "body": "Our ecolates 3-compartment square plate offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Square modern silhouette",
+        "body": "Square shape maximizes surface area while maintaining compact plate footprint on tabletop.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "3 separated compartments",
+          "Grease-proof & sturdy",
+          "Eco-friendly sugarcane bagasse"
         ]
       }
     ],
     "certifications": [
       {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
+        "note": "Food contact"
       },
       {
         "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Compostable"
       }
     ],
     "faqs": [
       {
-        "question": "Are these ecolates 3-compartment square plate safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "What is the size?",
+        "answer": "Measures 9 inches by 9 inches square with 3 compartments."
       }
     ],
     "relatedSlugs": [
-      "ecolates-square-kiwi-bowl",
-      "ecolates-bowl",
-      "ecolates-clamshell"
+      "bagasse-3-compartment-round-plate",
+      "bagasse-square-bowl"
     ],
     "gallery": {
       "type": "static",
@@ -1933,317 +1055,44 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "ecolates-5-compartment-meal-tray",
-    "name": "Ecolates 5-Compartment Meal Tray",
+    "slug": "bagasse-rectangular-container",
+    "name": "Bagasse Rectangular Container",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
-    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "5 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable ecolates 5-compartment meal tray for eco-conscious businesses.",
-    "summary": "Premium quality ecolates 5-compartment meal tray crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "12,500 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "5 compartment",
-        "note": ""
-      }
-    ],
-    "baseMoq": 12500,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "500 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Ecolates 5-Compartment Meal Tray",
-        "body": "Our ecolates 5-compartment meal tray offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these ecolates 5-compartment meal tray safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "ecolates-square-kiwi-bowl",
-      "ecolates-bowl",
-      "ecolates-clamshell"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "cornstarch-round-container-with-lid",
-    "name": "Cornstarch Round Container with Lid",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
-    "sourceSheetCategory": "Biodegradable Container - Cornstarch",
+    "categoryName": "Biodegradable Products",
     "variantType": "capacity",
     "variants": [
       {
-        "size": "350 mL",
-        "dimension": "round",
-        "capacityMl": 350,
-        "capacityOz": 11.83,
+        "size": "500 mL",
+        "dimension": "rectangular",
+        "capacityMl": 500,
+        "capacityOz": 16.91,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "450 mL",
-        "dimension": "round",
-        "capacityMl": 450,
-        "capacityOz": 15.22,
-        "qtyPerBox": 800,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "500 mL",
-        "dimension": "round",
-        "capacityMl": 500,
-        "capacityOz": 16.91,
-        "qtyPerBox": 600,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "650 mL",
-        "dimension": "round",
-        "capacityMl": 650,
-        "capacityOz": 21.98,
-        "qtyPerBox": 600,
-        "qtyPerPkt": 50
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable cornstarch round container with lid for eco-conscious businesses.",
-    "summary": "Premium quality cornstarch round container with lid crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "50,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "1,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "350 mL",
-        "note": "11.83 fl oz"
-      },
-      {
-        "label": "450 mL",
-        "note": "15.22 fl oz"
-      },
-      {
-        "label": "500 mL",
-        "note": "16.91 fl oz"
-      },
-      {
-        "label": "650 mL",
-        "note": "21.98 fl oz"
-      }
-    ],
-    "baseMoq": 50000,
-    "moqUnit": "pieces",
-    "material": "Plant-based cornstarch resin",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "1,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Cornstarch Round Container with Lid",
-        "body": "Our cornstarch round container with lid offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these cornstarch round container with lid safe for hot foods?",
-        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "cornstarch-rectangular-container-with-lid",
-      "cornstarch-2-compartment-rectangular-container-with-lid",
-      "cornstarch-2-compartment-round-bowl-with-lid"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "clam"
-    }
-  },
-  {
-    "slug": "cornstarch-rectangular-container-with-lid",
-    "name": "Cornstarch Rectangular Container with Lid",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
-    "sourceSheetCategory": "Biodegradable Container - Cornstarch",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "500 mL",
-        "dimension": "rectangular",
-        "capacityMl": 500,
-        "capacityOz": 16.91,
-        "qtyPerBox": 750,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "650 mL",
-        "dimension": "rectangular",
-        "capacityMl": 650,
-        "capacityOz": 21.98,
-        "qtyPerBox": 600,
-        "qtyPerPkt": 50
+        "qtyPerPkt": 125
       },
       {
         "size": "750 mL",
         "dimension": "rectangular",
         "capacityMl": 750,
         "capacityOz": 25.36,
-        "qtyPerBox": 600,
-        "qtyPerPkt": 50
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable cornstarch rectangular container with lid for eco-conscious businesses.",
-    "summary": "Premium quality cornstarch rectangular container with lid crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Eco-friendly rectangular bagasse containers in 500mL and 750mL for food takeaways.",
+    "summary": "Sustainable rectangular meal containers molded from sugarcane bagasse. Ideal for pasta, curries, rice bowls, and cloud kitchen delivery packaging.",
+    "ratingLabel": "Popular takeaway food container",
     "quickFacts": [
       {
-        "value": "37,500 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
-        "value": "750 / ctn",
+        "value": "500–1000 / ctn",
         "label": "Packed"
       },
       {
@@ -2254,118 +1103,97 @@ export const PRODUCTS: Product[] = [
     "sizes": [
       {
         "label": "500 mL",
-        "note": "16.91 fl oz"
-      },
-      {
-        "label": "650 mL",
-        "note": "21.98 fl oz"
+        "note": "17 oz"
       },
       {
         "label": "750 mL",
-        "note": "25.36 fl oz"
+        "note": "25 oz"
       }
     ],
-    "baseMoq": 37500,
+    "baseMoq": 20000,
     "moqUnit": "pieces",
-    "material": "Plant-based cornstarch resin",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "750 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom embossing or branded sleeve",
+    "endOfLife": "100% compostable",
+    "cartonPack": "500–1,000 units per carton",
     "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Cornstarch Rectangular Container with Lid",
-        "body": "Our cornstarch rectangular container with lid offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Leak-resistant rectangular profile",
+        "body": "High sidewalls and reinforced rim ensure secure stacking and reliable closure for takeaway deliveries.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "500 mL and 750 mL capacities",
+          "Oil resistant up to 120°C",
+          "100% certified compostable"
         ]
       }
     ],
     "certifications": [
       {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
+        "note": "Food contact"
       },
       {
         "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Compostable"
       }
     ],
     "faqs": [
       {
-        "question": "Are these cornstarch rectangular container with lid safe for hot foods?",
-        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "Can these containers be frozen and reheated?",
+        "answer": "Yes, safe from -20°C in the freezer up to 120°C in the microwave."
       }
     ],
     "relatedSlugs": [
-      "cornstarch-round-container-with-lid",
-      "cornstarch-2-compartment-rectangular-container-with-lid",
-      "cornstarch-2-compartment-round-bowl-with-lid"
+      "bagasse-clamshell",
+      "bagasse-round-bowl"
     ],
     "gallery": {
       "type": "static",
-      "art": "clam"
+      "art": "box"
     }
   },
   {
-    "slug": "cornstarch-2-compartment-rectangular-container-with-lid",
-    "name": "Cornstarch 2-Compartment Rectangular Container with Lid",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
-    "sourceSheetCategory": "Biodegradable Container - Cornstarch",
+    "slug": "bagasse-clamshell",
+    "name": "Bagasse Clamshell",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
     "variantType": "dimension",
     "variants": [
       {
-        "size": "2 compartment",
-        "dimension": "rectangular",
+        "size": "6 x 6 in",
+        "dimension": "6 x 6 in",
         "capacityMl": null,
         "capacityOz": null,
-        "qtyPerBox": 600,
-        "qtyPerPkt": 50
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "9 x 6 in",
+        "dimension": "9 x 6 in",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 250,
+        "qtyPerPkt": 25
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable cornstarch 2-compartment rectangular container with lid for eco-conscious businesses.",
-    "summary": "Premium quality cornstarch 2-compartment rectangular container with lid crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Hinged clamshell takeaway containers in 6x6 and 9x6 inch sizes.",
+    "summary": "Molded sugarcane bagasse hinged clamshell containers. Integrated tab lock closure keeps burgers, sandwiches, fries, and hot meals warm and secure.",
+    "ratingLabel": "Essential for burger & fast casual delivery",
     "quickFacts": [
       {
-        "value": "30,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
-        "value": "600 / ctn",
+        "value": "250–500 / ctn",
         "label": "Packed"
       },
       {
@@ -2375,73 +1203,53 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "2 compartment",
-        "note": "rectangular"
+        "label": "6 x 6 in",
+        "note": "Burger / Snack"
+      },
+      {
+        "label": "9 x 6 in",
+        "note": "Meal / Sandwich"
       }
     ],
-    "baseMoq": 30000,
+    "baseMoq": 20000,
     "moqUnit": "pieces",
-    "material": "Plant-based cornstarch resin",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "600 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom embossed lid branding",
+    "endOfLife": "100% compostable",
+    "cartonPack": "250–500 units per carton",
     "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Cornstarch 2-Compartment Rectangular Container with Lid",
-        "body": "Our cornstarch 2-compartment rectangular container with lid offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Hinged single-piece design",
+        "body": "Eliminates separate lids with an intuitive click-lock tab for fast packing on the service line.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "Breathable bagasse prevents soggy fried foods",
+          "Sturdy tab lock mechanism",
+          "Commercially compostable"
         ]
       }
     ],
     "certifications": [
       {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
+        "note": "Food contact"
       },
       {
         "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Compostable"
       }
     ],
     "faqs": [
       {
-        "question": "Are these cornstarch 2-compartment rectangular container with lid safe for hot foods?",
-        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "Do the clamshells stay closed during transit?",
+        "answer": "Yes, the dual-slot tab locking mechanism securely keeps the lid closed."
       }
     ],
     "relatedSlugs": [
-      "cornstarch-round-container-with-lid",
-      "cornstarch-rectangular-container-with-lid",
-      "cornstarch-2-compartment-round-bowl-with-lid"
+      "bagasse-rectangular-container",
+      "bagasse-round-plate"
     ],
     "gallery": {
       "type": "static",
@@ -2449,37 +1257,52 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "cornstarch-2-compartment-round-bowl-with-lid",
-    "name": "Cornstarch 2-Compartment Round Bowl with Lid",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
-    "sourceSheetCategory": "Biodegradable Container - Cornstarch",
-    "variantType": "dimension",
+    "slug": "single-wall-paper-cup",
+    "name": "Single Wall Paper Cup",
+    "categorySlug": "paper-cups",
+    "categoryName": "Paper Cups",
+    "variantType": "capacity",
     "variants": [
       {
-        "size": "2 compartment",
-        "dimension": "round",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 360,
+        "size": "100 mL",
+        "dimension": null,
+        "capacityMl": 100,
+        "capacityOz": 3.38,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "150 mL",
+        "dimension": null,
+        "capacityMl": 150,
+        "capacityOz": 5.07,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "200 mL",
+        "dimension": null,
+        "capacityMl": 200,
+        "capacityOz": 6.76,
+        "qtyPerBox": 2000,
         "qtyPerPkt": 50
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable cornstarch 2-compartment round bowl with lid for eco-conscious businesses.",
-    "summary": "Premium quality cornstarch 2-compartment round bowl with lid crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "FSC® certified single wall paper cups for espresso, tasting, and beverage service.",
+    "summary": "Cost-effective and sustainable single wall paper cups crafted from certified FSC® paperboard. Lightweight yet sturdy, tailored for espresso bars, sampling, water dispensers, and catering.",
+    "ratingLabel": "Economical daily coffee & tea cup",
     "quickFacts": [
       {
-        "value": "18,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
-        "value": "360 / ctn",
+        "value": "2,000 / ctn",
         "label": "Packed"
       },
       {
@@ -2489,135 +1312,115 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "2 compartment",
-        "note": "round"
+        "label": "3.5 oz",
+        "note": "100 mL · Espresso"
+      },
+      {
+        "label": "5 oz",
+        "note": "150 mL · Small"
+      },
+      {
+        "label": "7 oz",
+        "note": "200 mL · Standard"
       }
     ],
-    "baseMoq": 18000,
+    "baseMoq": 50000,
     "moqUnit": "pieces",
-    "material": "Plant-based cornstarch resin",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "360 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "material": "FSC® certified paperboard, water-based food-safe lining",
+    "printing": "Full-colour custom CMYK / Pantone print available",
+    "endOfLife": "100% recyclable & compostable",
+    "heatRating": "Up to 90°C",
+    "cartonPack": "2,000 units per carton",
+    "cartonVolume": "0.08 m³",
+    "hsCode": "4823.69",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Cornstarch 2-Compartment Round Bowl with Lid",
-        "body": "Our cornstarch 2-compartment round bowl with lid offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "FSC® certified virgin board",
+        "body": "Made with sustainable high-yield virgin paperboard with a sealed base preventing leaks.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "Available in 3.5oz, 5oz, and 7oz sizes",
+          "Smooth rolled lip for comfortable drinking and secure lid fit",
+          "High-definition custom graphic print capabilities"
         ]
       }
     ],
     "certifications": [
       {
+        "name": "FSC certified",
+        "note": "Responsible forestry"
+      },
+      {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Direct food contact"
       }
     ],
     "faqs": [
       {
-        "question": "Are these cornstarch 2-compartment round bowl with lid safe for hot foods?",
-        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "Are lids available for single wall cups?",
+        "answer": "Yes, matched recyclable and compostable sip lids are available for all cup diameters."
       }
     ],
     "relatedSlugs": [
-      "cornstarch-round-container-with-lid",
-      "cornstarch-rectangular-container-with-lid",
-      "cornstarch-2-compartment-rectangular-container-with-lid"
+      "double-wall-paper-cup",
+      "ripple-paper-cup"
     ],
     "gallery": {
-      "type": "static",
-      "art": "clam"
+      "type": "cup"
     }
   },
   {
-    "slug": "cornstarch-oracle-meal-tray-with-lid",
-    "name": "Cornstarch Oracle Meal Tray with Lid",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
-    "sourceSheetCategory": "Biodegradable Container - Cornstarch",
-    "variantType": "dimension",
+    "slug": "double-wall-paper-cup",
+    "name": "Double Wall Paper Cup",
+    "categorySlug": "paper-cups",
+    "categoryName": "Paper Cups",
+    "variantType": "capacity",
+    "colors": [
+      "White",
+      "Brown"
+    ],
     "variants": [
       {
-        "size": "3 compartment",
+        "size": "240 mL",
         "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 450,
+        "capacityMl": 240,
+        "capacityOz": 8.12,
+        "qtyPerBox": 1000,
         "qtyPerPkt": 50
       },
       {
-        "size": "4 compartment",
+        "size": "360 mL",
         "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 210,
+        "capacityMl": 360,
+        "capacityOz": 12.17,
+        "qtyPerBox": 500,
         "qtyPerPkt": 50
       },
       {
-        "size": "5 compartment",
+        "size": "480 mL",
         "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 300,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "8 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 180,
+        "capacityMl": 480,
+        "capacityOz": 16.23,
+        "qtyPerBox": 500,
         "qtyPerPkt": 50
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable cornstarch oracle meal tray with lid for eco-conscious businesses.",
-    "summary": "Premium quality cornstarch oracle meal tray with lid crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Insulated double wall paper cups in White and Brown Kraft for hot takeaway beverages.",
+    "summary": "Premium double-wall insulated coffee cups featuring an insulating air layer that keeps drinks piping hot while remaining cool to the touch — no external cup sleeve required.",
+    "ratingLabel": "Industry standard for specialty coffee",
     "quickFacts": [
       {
-        "value": "22,500 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
-        "value": "450 / ctn",
+        "value": "500–1,000 / ctn",
         "label": "Packed"
       },
       {
@@ -2627,313 +1430,203 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
-        "label": "3 compartment",
-        "note": ""
+        "label": "8 oz",
+        "note": "240 mL · Small"
       },
       {
-        "label": "4 compartment",
-        "note": ""
+        "label": "12 oz",
+        "note": "360 mL · Regular"
       },
       {
-        "label": "5 compartment",
-        "note": ""
-      },
-      {
-        "label": "8 compartment",
-        "note": ""
+        "label": "16 oz",
+        "note": "480 mL · Large"
       }
     ],
-    "baseMoq": 22500,
+    "baseMoq": 50000,
     "moqUnit": "pieces",
-    "material": "Plant-based cornstarch resin",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "450 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "material": "FSC® certified paper, food-safe lining",
+    "printing": "Full-bleed CMYK custom branding with food-safe inks",
+    "endOfLife": "100% recyclable / compostable options",
+    "heatRating": "Up to 100°C",
+    "cartonPack": "500–1,000 units per carton",
+    "cartonVolume": "0.09 m³",
+    "hsCode": "4823.69",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Cornstarch Oracle Meal Tray with Lid",
-        "body": "Our cornstarch oracle meal tray with lid offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Thermal air pocket insulation",
+        "body": "The dual-layer wall traps an insulating barrier of air, keeping coffee hot longer without scalding hands.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "Eliminates the cost and inventory of separate cup sleeves",
+          "Available in classic Crisp White and Natural Brown Kraft finishes",
+          "Precision rolled rim ensures a 100% leak-free lid seal"
         ]
       }
     ],
     "certifications": [
       {
+        "name": "FSC certified",
+        "note": "Responsible forestry"
+      },
+      {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Direct food contact"
       }
     ],
     "faqs": [
       {
-        "question": "Are these cornstarch oracle meal tray with lid safe for hot foods?",
-        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+        "question": "Do I need sleeves with double wall cups?",
+        "answer": "No, the built-in air pocket provides superior heat insulation, making external sleeves unnecessary."
       }
     ],
     "relatedSlugs": [
-      "cornstarch-round-container-with-lid",
-      "cornstarch-rectangular-container-with-lid",
-      "cornstarch-2-compartment-rectangular-container-with-lid"
+      "single-wall-paper-cup",
+      "ripple-paper-cup"
     ],
     "gallery": {
-      "type": "static",
-      "art": "clam"
+      "type": "cup"
     }
   },
   {
-    "slug": "cornstarch-spoon",
-    "name": "Cornstarch Spoon",
-    "categorySlug": "cutlery-straws",
-    "categoryName": "Cutlery & Straws",
-    "sourceSheetCategory": "Biodegradable Cutlery - Cornstarch",
-    "variantType": "dimension",
+    "slug": "ripple-paper-cup",
+    "name": "Ripple Wall Paper Cup",
+    "categorySlug": "paper-cups",
+    "categoryName": "Paper Cups",
+    "variantType": "capacity",
+    "colors": [
+      "Brown"
+    ],
     "variants": [
       {
-        "size": "160 mm",
-        "dimension": "160 mm / 16 cm",
-        "capacityMl": null,
-        "capacityOz": null,
+        "size": "150 mL",
+        "dimension": null,
+        "capacityMl": 150,
+        "capacityOz": 5.07,
         "qtyPerBox": 3000,
         "qtyPerPkt": 50
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable cornstarch spoon for eco-conscious businesses.",
-    "summary": "Premium quality cornstarch spoon crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "1,50,000 pieces",
-        "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
-        "label": "Production time"
+        "size": "200 mL",
+        "dimension": null,
+        "capacityMl": 200,
+        "capacityOz": 6.76,
+        "qtyPerBox": 2500,
+        "qtyPerPkt": 50
       },
       {
-        "value": "3,000 / ctn",
-        "label": "Packed"
+        "size": "250 mL",
+        "dimension": null,
+        "capacityMl": 250,
+        "capacityOz": 8.45,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50
       },
       {
-        "value": "No",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "160 mm",
-        "note": "160 mm / 16 cm"
-      }
-    ],
-    "baseMoq": 150000,
-    "moqUnit": "pieces",
-    "material": "Plant-based cornstarch resin",
-    "printing": "Not printable — natural finish only",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "3,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Cornstarch Spoon",
-        "body": "Our cornstarch spoon offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
+        "size": "350 mL",
+        "dimension": null,
+        "capacityMl": 350,
+        "capacityOz": 11.83,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 50
       },
       {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these cornstarch spoon safe for hot foods?",
-        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "No, these items feature a natural rustic look and do not support direct ink printing. However, custom labels or paper sleeves can be supplied."
-      }
-    ],
-    "relatedSlugs": [
-      "cornstarch-fork"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "cutlery"
-    }
-  },
-  {
-    "slug": "cornstarch-fork",
-    "name": "Cornstarch Fork",
-    "categorySlug": "cutlery-straws",
-    "categoryName": "Cutlery & Straws",
-    "sourceSheetCategory": "Biodegradable Cutlery - Cornstarch",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "160 mm",
-        "dimension": "160 mm / 16 cm",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 3000,
+        "size": "480 mL",
+        "dimension": null,
+        "capacityMl": 480,
+        "capacityOz": 16.23,
+        "qtyPerBox": 500,
         "qtyPerPkt": 50
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable cornstarch fork for eco-conscious businesses.",
-    "summary": "Premium quality cornstarch fork crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
+    "tagline": "Corrugated ripple wall kraft paper cups providing tactile grip and ultimate heat insulation.",
+    "summary": "Three-layer corrugated ripple wall cup designed for extreme heat protection and a comfortable, slip-resistant grip. Ideal for boiling teas, specialty coffees, and grab-and-go kiosks.",
+    "ratingLabel": "Maximum heat protection & grip",
     "quickFacts": [
       {
-        "value": "1,50,000 pieces",
+        "value": "TBD",
         "label": "Minimum order"
       },
       {
-        "value": "3–4 weeks",
+        "value": "2–3 weeks",
         "label": "Production time"
       },
       {
-        "value": "3,000 / ctn",
+        "value": "500–3,000 / ctn",
         "label": "Packed"
       },
       {
-        "value": "No",
+        "value": "Yes",
         "label": "Custom print"
       }
     ],
     "sizes": [
       {
-        "label": "160 mm",
-        "note": "160 mm / 16 cm"
+        "label": "5 oz",
+        "note": "150 mL"
+      },
+      {
+        "label": "7 oz",
+        "note": "200 mL"
+      },
+      {
+        "label": "8 oz",
+        "note": "250 mL"
+      },
+      {
+        "label": "12 oz",
+        "note": "350 mL"
+      },
+      {
+        "label": "16 oz",
+        "note": "480 mL"
       }
     ],
-    "baseMoq": 150000,
+    "baseMoq": 50000,
     "moqUnit": "pieces",
-    "material": "Plant-based cornstarch resin",
-    "printing": "Not printable — natural finish only",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "3,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
+    "material": "FSC® certified paper, food-safe lining",
+    "printing": "Custom printed outer kraft ripple layer available",
+    "endOfLife": "100% recyclable / compostable",
+    "heatRating": "Up to 100°C",
+    "cartonPack": "500–3,000 units per carton",
+    "cartonVolume": "0.10 m³",
+    "hsCode": "4823.69",
+    "leadTime": "2–3 weeks",
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Why choose our Cornstarch Fork",
-        "body": "Our cornstarch fork offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "heading": "Triple layer fluted insulation",
+        "body": "Outer vertical corrugation channels dissipate exterior heat while offering an ergonomic, slip-resistant grip.",
         "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
+          "Full size range: 5oz, 7oz, 8oz, 12oz, and 16oz in rustic Natural Brown Kraft",
+          "Superior heat barrier for hot teas and extra-hot Americanos",
+          "Firm structural integrity that won't crush when gripped"
         ]
       }
     ],
     "certifications": [
       {
+        "name": "FSC certified",
+        "note": "Responsible forestry"
+      },
+      {
         "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
+        "note": "Direct food contact"
       }
     ],
     "faqs": [
       {
-        "question": "Are these cornstarch fork safe for hot foods?",
-        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "No, these items feature a natural rustic look and do not support direct ink printing. However, custom labels or paper sleeves can be supplied."
+        "question": "What color is the ripple cup available in?",
+        "answer": "The ripple wall cup is produced in natural rustic Brown Kraft finish."
       }
     ],
     "relatedSlugs": [
-      "cornstarch-spoon"
+      "single-wall-paper-cup",
+      "double-wall-paper-cup"
     ],
     "gallery": {
-      "type": "static",
-      "art": "cutlery"
+      "type": "cup"
     }
   },
   {
@@ -3475,530 +2168,13 @@ export const PRODUCTS: Product[] = [
         "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
       }
     ],
-    "relatedSlugs": [],
+    "relatedSlugs": [
+      "wooden-spoon",
+      "paper-straw"
+    ],
     "gallery": {
       "type": "static",
       "art": "straw"
-    }
-  },
-  {
-    "slug": "jrt-tissue-roll",
-    "name": "JRT Tissue Roll",
-    "categorySlug": "carry-bags",
-    "categoryName": "Carry Bags",
-    "sourceSheetCategory": "Paper Tissue Roll",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "1 kg",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": null
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable jrt tissue roll for eco-conscious businesses.",
-    "summary": "Premium quality jrt tissue roll crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "1,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "Standard",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "1 kg",
-        "note": ""
-      }
-    ],
-    "baseMoq": 1000,
-    "moqUnit": "pieces",
-    "material": "FSC® certified paper, food-safe lining",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "Carton pack varies by size",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.69",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our JRT Tissue Roll",
-        "body": "Our jrt tissue roll offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these jrt tissue roll safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "hrt-tissue-roll"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "bag"
-    }
-  },
-  {
-    "slug": "hrt-tissue-roll",
-    "name": "HRT Tissue Roll",
-    "categorySlug": "carry-bags",
-    "categoryName": "Carry Bags",
-    "sourceSheetCategory": "Paper Tissue Roll",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "1 kg",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": null
-      },
-      {
-        "size": "2 kg",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": null
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable hrt tissue roll for eco-conscious businesses.",
-    "summary": "Premium quality hrt tissue roll crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "1,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "Standard",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "1 kg",
-        "note": ""
-      },
-      {
-        "label": "2 kg",
-        "note": ""
-      }
-    ],
-    "baseMoq": 1000,
-    "moqUnit": "pieces",
-    "material": "FSC® certified paper, food-safe lining",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "Carton pack varies by size",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.69",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our HRT Tissue Roll",
-        "body": "Our hrt tissue roll offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these hrt tissue roll safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "jrt-tissue-roll"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "bag"
-    }
-  },
-  {
-    "slug": "double-wall-paper-cup",
-    "name": "Double-Wall Paper Cup",
-    "categorySlug": "cups-lids",
-    "categoryName": "Grab & Go",
-    "sourceSheetCategory": "Paper Cups",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "240 mL",
-        "dimension": null,
-        "capacityMl": 240,
-        "capacityOz": 8.12,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "360 mL",
-        "dimension": null,
-        "capacityMl": 360,
-        "capacityOz": 12.17,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "480 mL",
-        "dimension": null,
-        "capacityMl": 480,
-        "capacityOz": 16.23,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 50
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable double-wall paper cup for eco-conscious businesses.",
-    "summary": "Premium quality double-wall paper cup crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "50,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "1,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "240 mL",
-        "note": "8.12 fl oz"
-      },
-      {
-        "label": "360 mL",
-        "note": "12.17 fl oz"
-      },
-      {
-        "label": "480 mL",
-        "note": "16.23 fl oz"
-      }
-    ],
-    "baseMoq": 50000,
-    "moqUnit": "pieces",
-    "material": "FSC® certified paper, food-safe lining",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "1,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.69",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Double-Wall Paper Cup",
-        "body": "Our double-wall paper cup offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these double-wall paper cup safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "ripple-paper-cup"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "cup"
-    }
-  },
-  {
-    "slug": "ripple-paper-cup",
-    "name": "Ripple Paper Cup",
-    "categorySlug": "cups-lids",
-    "categoryName": "Grab & Go",
-    "sourceSheetCategory": "Paper Cups",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "150 mL",
-        "dimension": null,
-        "capacityMl": 150,
-        "capacityOz": 5.07,
-        "qtyPerBox": 3000,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "200 mL",
-        "dimension": null,
-        "capacityMl": 200,
-        "capacityOz": 6.76,
-        "qtyPerBox": 2500,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "250 mL",
-        "dimension": null,
-        "capacityMl": 250,
-        "capacityOz": 8.45,
-        "qtyPerBox": 2000,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "350 mL",
-        "dimension": null,
-        "capacityMl": 350,
-        "capacityOz": 11.83,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 50
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable ripple paper cup for eco-conscious businesses.",
-    "summary": "Premium quality ripple paper cup crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "1,50,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "3,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "150 mL",
-        "note": "5.07 fl oz"
-      },
-      {
-        "label": "200 mL",
-        "note": "6.76 fl oz"
-      },
-      {
-        "label": "250 mL",
-        "note": "8.45 fl oz"
-      },
-      {
-        "label": "350 mL",
-        "note": "11.83 fl oz"
-      }
-    ],
-    "baseMoq": 150000,
-    "moqUnit": "pieces",
-    "material": "FSC® certified paper, food-safe lining",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "3,000 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.69",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Ripple Paper Cup",
-        "body": "Our ripple paper cup offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these ripple paper cup safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "double-wall-paper-cup"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "cup"
     }
   },
   {
@@ -4129,7 +2305,10 @@ export const PRODUCTS: Product[] = [
         "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
       }
     ],
-    "relatedSlugs": [],
+    "relatedSlugs": [
+      "bagasse-round-plate",
+      "bagasse-round-bowl"
+    ],
     "gallery": {
       "type": "static",
       "art": "box"
@@ -4139,7 +2318,7 @@ export const PRODUCTS: Product[] = [
     "slug": "kraft-boat-tray",
     "name": "Kraft Boat Tray",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
+    "categoryName": "Biodegradable Products",
     "sourceSheetCategory": "Boat Tray",
     "variantType": "capacity",
     "variants": [
@@ -4263,7 +2442,10 @@ export const PRODUCTS: Product[] = [
         "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
       }
     ],
-    "relatedSlugs": [],
+    "relatedSlugs": [
+      "bagasse-round-plate",
+      "bagasse-round-bowl"
+    ],
     "gallery": {
       "type": "static",
       "art": "plate"
@@ -4557,7 +2739,7 @@ export const PRODUCTS: Product[] = [
     "slug": "kraft-paper-bowl-with-pet-lid",
     "name": "Kraft Paper Bowl with PET Lid",
     "categorySlug": "plates-bowls",
-    "categoryName": "Table ware",
+    "categoryName": "Biodegradable Products",
     "sourceSheetCategory": "Paper Bowl with Lid (Kraft)",
     "variantType": "capacity",
     "variants": [
@@ -4717,7 +2899,10 @@ export const PRODUCTS: Product[] = [
         "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
       }
     ],
-    "relatedSlugs": [],
+    "relatedSlugs": [
+      "bagasse-round-plate",
+      "bagasse-round-bowl"
+    ],
     "gallery": {
       "type": "static",
       "art": "bowl"

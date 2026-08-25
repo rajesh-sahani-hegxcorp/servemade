@@ -25,7 +25,7 @@ export interface ProductCategory {
   name: string;
   href: string;
   description: string;
-  moq: string;
+  moq?: string;
   image?: string;
 }
 
@@ -114,7 +114,8 @@ export interface Product {
   sourceSheetCategory?: string;
   variantType: "capacity" | "dimension";
   variants: ProductVariant[];
-  moqPieces: number | null; // null for TBD
+  colors?: string[]; // optional color variants, e.g. ["White", "Brown"]
+  moqPieces: number | null; // null for TBD / placeholder
   tagline: string; // one-line, used in <meta description> and OG tags
   summary: string; // answer-first paragraph (AEO)
   ratingLabel: string;

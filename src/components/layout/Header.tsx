@@ -49,7 +49,13 @@ export function Header() {
                         {MEGA_MENU_COLUMNS.map((col) => (
                           <div key={col.title} className="flex flex-col">
                             <h3 className="text-xs font-black uppercase tracking-wider text-brand-green-dark border-b border-line pb-2 mb-3">
-                              {col.title}
+                              {col.href ? (
+                                <Link href={col.href} className="hover:underline">
+                                  {col.title}
+                                </Link>
+                              ) : (
+                                col.title
+                              )}
                             </h3>
                             <ul className="space-y-1">
                               {col.items.map((subItem, idx) => {
@@ -77,6 +83,19 @@ export function Header() {
                             </ul>
                           </div>
                         ))}
+                      </div>
+
+                      {/* Mega Menu Footer Banner for Custom Packaging */}
+                      <div className="mt-6 flex items-center justify-between border-t border-line pt-4 text-xs font-bold">
+                        <span className="text-ink-2">
+                          Need custom sizing, shapes, or private-label embossing?
+                        </span>
+                        <Link
+                          href="/custom-packaging"
+                          className="text-brand-green-dark hover:underline flex items-center gap-1"
+                        >
+                          Explore Custom & Private Label →
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -150,86 +169,77 @@ interface MegaMenuColItem {
 
 interface MegaMenuCol {
   title: string;
+  href?: string;
   items: MegaMenuColItem[];
 }
 
 const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
   {
-    title: "Bagasse Chuk",
+    title: "Biodegradable Products",
+    href: "/categories/plates-bowls",
     items: [
-      { name: "Chuk Square Bowl", href: "/products/chuk-square-bowl" },
-      { name: "Chuk Bowl", href: "/products/chuk-bowl" },
-      { name: "Chuk Plate", href: "/products/chuk-plate" },
-      { name: "Chuk 3-CP Meal Plate", href: "/products/chuk-3-compartment-combo-meal-plate" },
-      { name: "Chuk 4-CP Meal Tray", href: "/products/chuk-4-compartment-meal-tray" },
-      { name: "Chuk 5-CP Meal Tray", href: "/products/chuk-5-compartment-meal-tray" },
-      { name: "Chuk Rect. Container", href: "/products/chuk-rectangular-container" }
+      { name: "Bagasse Round Bowl", href: "/products/bagasse-round-bowl" },
+      { name: "Bagasse Square Bowl", href: "/products/bagasse-square-bowl" },
+      { name: "Bagasse Round Plate", href: "/products/bagasse-round-plate" },
+      { name: "Bagasse 3-CP Meal Plate", href: "/products/bagasse-3-compartment-combo-meal-plate" },
+      { name: "Bagasse 4-CP Meal Tray", href: "/products/bagasse-4-compartment-meal-tray" },
+      { name: "Bagasse 5-CP Meal Tray", href: "/products/bagasse-5-compartment-meal-tray" },
+      { name: "Bagasse 3-CP Round Plate", href: "/products/bagasse-3-compartment-round-plate" },
+      { name: "Bagasse 4-CP Round Plate", href: "/products/bagasse-4-compartment-round-plate" },
+      { name: "Bagasse 3-CP Square Plate", href: "/products/bagasse-3-compartment-square-plate" },
+      { name: "Bagasse Rect. Container", href: "/products/bagasse-rectangular-container" },
+      { name: "Bagasse Clamshell", href: "/products/bagasse-clamshell" }
     ]
   },
   {
-    title: "Bagasse Ecolates",
+    title: "Paper Cups",
+    href: "/categories/paper-cups",
     items: [
-      { name: "Ecolates Square Kiwi Bowl", href: "/products/ecolates-square-kiwi-bowl" },
-      { name: "Ecolates Bowl", href: "/products/ecolates-bowl" },
-      { name: "Ecolates Clamshell", href: "/products/ecolates-clamshell" },
-      { name: "Ecolates Round Plate", href: "/products/ecolates-round-plate" },
-      { name: "Ecolates 3-CP Round Plate", href: "/products/ecolates-3-compartment-round-plate" },
-      { name: "Ecolates 4-CP Round Plate", href: "/products/ecolates-4-compartment-round-plate" },
-      { name: "Ecolates 3-CP Square Plate", href: "/products/ecolates-3-compartment-square-plate" },
-      { name: "Ecolates 5-CP Meal Tray", href: "/products/ecolates-5-compartment-meal-tray" }
-    ]
-  },
-  {
-    title: "Cornstarch Products",
-    items: [
-      { isHeading: true, name: "Containers" },
-      { name: "Round Container w/ Lid", href: "/products/cornstarch-round-container-with-lid" },
-      { name: "Rect. Container w/ Lid", href: "/products/cornstarch-rectangular-container-with-lid" },
-      { name: "2-CP Rect. Container", href: "/products/cornstarch-2-compartment-rectangular-container-with-lid" },
-      { name: "2-CP Round Bowl", href: "/products/cornstarch-2-compartment-round-bowl-with-lid" },
-      { name: "Oracle Meal Tray", href: "/products/cornstarch-oracle-meal-tray-with-lid" },
-      { isHeading: true, name: "Cutlery" },
-      { name: "Cornstarch Spoon", href: "/products/cornstarch-spoon" },
-      { name: "Cornstarch Fork", href: "/products/cornstarch-fork" }
-    ]
-  },
-  {
-    title: "Paper Cups & Bowls",
-    items: [
-      { isHeading: true, name: "Cups" },
+      { name: "Single Wall Paper Cup", href: "/products/single-wall-paper-cup" },
       { name: "Double-Wall Paper Cup", href: "/products/double-wall-paper-cup" },
-      { name: "Ripple Paper Cup", href: "/products/ripple-paper-cup" },
-      { isHeading: true, name: "Containers & Bowls" },
-      { name: "Plain Round Container", href: "/products/plain-round-paper-container-with-lid" },
-      { name: "Kraft Round Container", href: "/products/kraft-round-paper-container-with-lid" },
-      { name: "Kraft Paper Bowl", href: "/products/kraft-paper-bowl-with-pet-lid" }
+      { name: "Ripple Wall Paper Cup", href: "/products/ripple-paper-cup" }
     ]
   },
   {
-    title: "Boxes, Trays & Tissues",
+    title: "Grab & Go",
+    href: "/categories/cups-lids",
+    items: [
+      { name: "Plain Round Container", href: "/products/plain-round-paper-container-with-lid" },
+      { name: "Kraft Round Container", href: "/products/kraft-round-paper-container-with-lid" }
+    ]
+  },
+  {
+    title: "Takeaway Containers",
+    href: "/categories/takeaway-boxes",
     items: [
       { isHeading: true, name: "Pizza Boxes" },
       { name: "Top-Folding Pizza Box", href: "/products/top-folding-pizza-box" },
       { name: "3-Ply Corrugated Pizza Box", href: "/products/3-ply-corrugated-pizza-box" },
       { name: "3-Ply Garlic Bread Box", href: "/products/3-ply-corrugated-garlic-bread-box" },
-      { isHeading: true, name: "Trays & Takeaway" },
+      { isHeading: true, name: "Trays & Bowls" },
       { name: "Plain Rect. Food Box", href: "/products/plain-rectangular-food-box" },
       { name: "Kraft Boat Tray", href: "/products/kraft-boat-tray" },
-      { isHeading: true, name: "Tissue Rolls" },
-      { name: "JRT Tissue Roll", href: "/products/jrt-tissue-roll" },
-      { name: "HRT Tissue Roll", href: "/products/hrt-tissue-roll" }
+      { name: "Kraft Paper Bowl", href: "/products/kraft-paper-bowl-with-pet-lid" }
     ]
   },
   {
-    title: "Wooden & Straws",
+    title: "Carry Bags",
+    href: "/categories/carry-bags",
+    items: [
+      { name: "Kraft Paper Bags", href: "/products/kraft-paper-bags" }
+    ]
+  },
+  {
+    title: "Cutlery & Straws",
+    href: "/categories/cutlery-straws",
     items: [
       { isHeading: true, name: "Cutlery & Straws" },
-      { name: "Bamboo Fruit Fork", href: "/products/bamboo-fruit-fork" },
+      { name: "Paper Straw", href: "/products/paper-straw" },
       { name: "Wooden Spoon", href: "/products/wooden-spoon" },
       { name: "Wooden Spoon/Fork", href: "/products/wooden-spoon-fork" },
+      { name: "Bamboo Fruit Fork", href: "/products/bamboo-fruit-fork" },
       { name: "Toothpick", href: "/products/toothpick" },
-      { name: "Paper Straw", href: "/products/paper-straw" },
-      { isHeading: true, name: "Sticks & Stirrers" },
+      { isHeading: true, name: "Sticks & Skewers" },
       { name: "Bamboo Stick", href: "/products/bamboo-stick" },
       { name: "Gun Skewer", href: "/products/gun-skewer" },
       { name: "Chopsticks", href: "/products/chopsticks" },
