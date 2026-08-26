@@ -25,8 +25,8 @@ export const CATEGORIES: ProductCategory[] = [
   },
   {
     art: "clam",
-    name: "Takeaway Containers",
-    href: "/categories/takeaway-boxes",
+    name: "Biodegradable Containers",
+    href: "/categories/biodegradable-containers",
     description: "Meals that travel well",
     moq: "10k",
     image: "/images/products/takeaway-boxes.jpg",

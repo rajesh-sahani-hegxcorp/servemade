@@ -1057,8 +1057,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "bagasse-rectangular-container",
     "name": "Bagasse Rectangular Container",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "variantType": "capacity",
     "variants": [
       {
@@ -1158,8 +1158,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "bagasse-clamshell",
     "name": "Bagasse Clamshell",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "variantType": "dimension",
     "variants": [
       {
@@ -1632,8 +1632,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "top-folding-pizza-box",
     "name": "Top-Folding Pizza Box",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "sourceSheetCategory": "Paper Boxes",
     "variantType": "dimension",
     "variants": [
@@ -1769,8 +1769,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "3-ply-corrugated-pizza-box",
     "name": "3-Ply Corrugated Pizza Box",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "sourceSheetCategory": "Paper Boxes",
     "variantType": "dimension",
     "variants": [
@@ -1918,8 +1918,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "3-ply-corrugated-garlic-bread-box",
     "name": "3-Ply Corrugated Garlic Bread Box",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "sourceSheetCategory": "Paper Boxes",
     "variantType": "dimension",
     "variants": [
@@ -2180,8 +2180,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "plain-rectangular-food-box",
     "name": "Plain Rectangular Food Box",
-    "categorySlug": "takeaway-boxes",
-    "categoryName": "Takeaway Containers",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "sourceSheetCategory": "Food Box",
     "variantType": "capacity",
     "variants": [
@@ -2317,8 +2317,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kraft-boat-tray",
     "name": "Kraft Boat Tray",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "sourceSheetCategory": "Boat Tray",
     "variantType": "capacity",
     "variants": [
@@ -2738,8 +2738,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kraft-paper-bowl-with-pet-lid",
     "name": "Kraft Paper Bowl with PET Lid",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
     "sourceSheetCategory": "Paper Bowl with Lid (Kraft)",
     "variantType": "capacity",
     "variants": [

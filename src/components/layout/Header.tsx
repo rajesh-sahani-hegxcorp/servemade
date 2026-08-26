@@ -186,9 +186,7 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
       { name: "Bagasse 5-CP Meal Tray", href: "/products/bagasse-5-compartment-meal-tray" },
       { name: "Bagasse 3-CP Round Plate", href: "/products/bagasse-3-compartment-round-plate" },
       { name: "Bagasse 4-CP Round Plate", href: "/products/bagasse-4-compartment-round-plate" },
-      { name: "Bagasse 3-CP Square Plate", href: "/products/bagasse-3-compartment-square-plate" },
-      { name: "Bagasse Rect. Container", href: "/products/bagasse-rectangular-container" },
-      { name: "Bagasse Clamshell", href: "/products/bagasse-clamshell" }
+      { name: "Bagasse 3-CP Square Plate", href: "/products/bagasse-3-compartment-square-plate" }
     ]
   },
   {
@@ -209,8 +207,8 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
     ]
   },
   {
-    title: "Takeaway Containers",
-    href: "/categories/takeaway-boxes",
+    title: "Biodegradable Containers",
+    href: "/categories/biodegradable-containers",
     items: [
       { isHeading: true, name: "Pizza Boxes" },
       { name: "Top-Folding Pizza Box", href: "/products/top-folding-pizza-box" },
@@ -219,7 +217,9 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
       { isHeading: true, name: "Trays & Bowls" },
       { name: "Plain Rect. Food Box", href: "/products/plain-rectangular-food-box" },
       { name: "Kraft Boat Tray", href: "/products/kraft-boat-tray" },
-      { name: "Kraft Paper Bowl", href: "/products/kraft-paper-bowl-with-pet-lid" }
+      { name: "Kraft Paper Bowl", href: "/products/kraft-paper-bowl-with-pet-lid" },
+      { name: "Bagasse Rect. Container", href: "/products/bagasse-rectangular-container" },
+      { name: "Bagasse Clamshell", href: "/products/bagasse-clamshell" }
     ]
   },
   {

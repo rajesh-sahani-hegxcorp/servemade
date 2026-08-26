@@ -14,7 +14,7 @@ const CATEGORIES = [
   { slug: "plates-bowls", label: "Biodegradable Products" },
   { slug: "paper-cups", label: "Paper Cups" },
   { slug: "cups-lids", label: "Grab & Go" },
-  { slug: "takeaway-boxes", label: "Takeaway Containers" },
+  { slug: "biodegradable-containers", label: "Biodegradable Containers" },
   { slug: "carry-bags", label: "Carry Bags" },
   { slug: "cutlery-straws", label: "Cutlery & Straws" },
 ];
