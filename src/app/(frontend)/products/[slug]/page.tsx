@@ -11,7 +11,7 @@ import { ProductFAQ } from "@/components/product/ProductFAQ";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 // Pre-renders every product in the catalogue at build time. Add a new
@@ -21,8 +21,9 @@ export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const product = findProduct(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const product = findProduct(slug);
   if (!product) return {};
 
   const url = siteUrl(`/products/${product.slug}`);
@@ -44,8 +45,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ProductDetailPage({ params }: Props) {
-  const product = findProduct(params.slug);
+export default async function ProductDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const product = findProduct(slug);
   if (!product) notFound();
 
   const related = resolveRelatedProducts(product);

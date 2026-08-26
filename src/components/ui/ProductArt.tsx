@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { ProductArtType } from "@/types";
 
 const INK_2 = "#5C666D";
@@ -7,7 +8,7 @@ const BLUE = "#2C5F8A";
 const GREEN = "#2E8B57";
 
 /** Each entry is the inner <g> markup for one product illustration. */
-const ILLUSTRATIONS: Record<ProductArtType, JSX.Element> = {
+const ILLUSTRATIONS: Record<ProductArtType, ReactNode> = {
   cup: (
     <g>
       <path d="M76 44h68l-8 106a8 8 0 0 1-8 7H92a8 8 0 0 1-8-7Z" fill={CREAM} stroke={INK_2} strokeWidth="1.4" />

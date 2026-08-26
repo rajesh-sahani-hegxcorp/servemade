@@ -7,7 +7,7 @@ import { ProductArt } from "@/components/ui/ProductArt";
 import { ProductCardGrid } from "@/components/product/ProductCardGrid";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 function findCategory(slug: string) {
@@ -20,17 +20,19 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const category = findCategory(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const category = findCategory(slug);
   if (!category) return {};
   return { title: category.name, description: category.description };
 }
 
-export default function CategoryPage({ params }: Props) {
-  const category = findCategory(params.slug);
+export default async function CategoryPage({ params }: Props) {
+  const { slug } = await params;
+  const category = findCategory(slug);
   if (!category) notFound();
 
-  const products = findProductsByCategory(params.slug);
+  const products = findProductsByCategory(slug);
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-16">

@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 const INK_2 = "#5C666D";
 const BLUE = "#2C5F8A";
 
@@ -50,7 +52,7 @@ function Cup({
 }
 
 export function CupGalleryArt({ view, height = 300, label }: { view: CupView; height?: number; label?: string }) {
-  const views: Record<CupView, JSX.Element> = {
+  const views: Record<CupView, ReactNode> = {
     plain: <Cup y={-52} />,
     branded: <Cup y={-52} logo />,
     withlid: <Cup y={-48} logo lid />,

@@ -5,7 +5,7 @@ import { ContentPage } from "@/components/layout/ContentPage";
 import { slugify } from "@/lib/utils";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 function findIndustry(slug: string) {
@@ -16,14 +16,16 @@ export function generateStaticParams() {
   return INDUSTRIES.map((industry) => ({ slug: slugify(industry) }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const industry = findIndustry(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const industry = findIndustry(slug);
   if (!industry) return {};
   return { title: industry, description: `Compostable packaging supply for ${industry.toLowerCase()}.` };
 }
 
-export default function IndustryPage({ params }: Props) {
-  const industry = findIndustry(params.slug);
+export default async function IndustryPage({ params }: Props) {
+  const { slug } = await params;
+  const industry = findIndustry(slug);
   if (!industry) notFound();
 
   return (
