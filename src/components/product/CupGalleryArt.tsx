@@ -1,4 +1,7 @@
+import type React from "react";
+
 const INK_2 = "#5C666D";
+const CREAM = "#EFE7D4";
 const BLUE = "#2C5F8A";
 
 export type CupView = "plain" | "branded" | "withlid" | "stacked";
@@ -14,8 +17,8 @@ function Cup({
   x = 0,
   y = 0,
   scale = 1,
-  logo,
-  lid,
+  logo = false,
+  lid = false,
 }: {
   x?: number;
   y?: number;
@@ -25,16 +28,13 @@ function Cup({
 }) {
   return (
     <g transform={`translate(${x} ${y}) scale(${scale})`}>
-      <path d="M-34 0h68l-8 110a8 8 0 0 1-8 7h-36a8 8 0 0 1-8-7Z" fill="#EFE7D4" stroke={INK_2} strokeWidth="1.4" />
-      <path d="M-30 40h60M-28 74h56" stroke="#DDD2B6" strokeWidth="1.4" />
+      <path d="M76 44h68l-8 106a8 8 0 0 1-8 7H92a8 8 0 0 1-8-7Z" fill={CREAM} stroke={INK_2} strokeWidth="1.4" />
+      <ellipse cx="110" cy="44" rx="34" ry="10" fill="#F6F1E4" stroke={INK_2} strokeWidth="1.4" />
       {logo && (
-        <g>
-          <rect x="-28" y="44" width="56" height="27" rx="6" fill={BLUE} />
-          <path d="M-4 62c0-5.5 3-8.5 10-9.8-1.2 5.8-4 8.8-10 9.8Z" fill="#fff" />
-          <text x="0" y="40" textAnchor="middle" fontFamily="Figtree" fontSize="7.5" fontWeight="700" fill={INK_2}>
-            YOUR BRAND
-          </text>
-        </g>
+        <>
+          <rect x="84" y="86" width="52" height="24" rx="5" fill={BLUE} />
+          <path d="M106 103c0-4.6 2.6-7.2 8.5-8.3-1 5-3.4 7.5-8.5 8.3Z" fill="#fff" />
+        </>
       )}
       {lid ? (
         <g>
@@ -50,7 +50,7 @@ function Cup({
 }
 
 export function CupGalleryArt({ view, height = 300, label }: { view: CupView; height?: number; label?: string }) {
-  const views: Record<CupView, JSX.Element> = {
+  const views: Record<CupView, React.ReactNode> = {
     plain: <Cup y={-52} />,
     branded: <Cup y={-52} logo />,
     withlid: <Cup y={-48} logo lid />,

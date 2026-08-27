@@ -120,6 +120,7 @@ export interface Product {
   variants: ProductVariant[];
   materials?: string[]; // optional multi-material selection, e.g. ["Bagasse", "Cornstarch"]
   compartmentOptions?: string[]; // optional compartment options, e.g. ["Plain", "3-Compartment", "4-Compartment"]
+  shapeOptions?: string[]; // optional shape options, e.g. ["Round", "Square"]
   colors?: string[]; // optional color variants, e.g. ["White", "Brown"]
   moqPieces: number | null; // null for TBD / placeholder
   tagline: string; // one-line, used in <meta description> and OG tags

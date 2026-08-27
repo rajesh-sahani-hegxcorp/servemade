@@ -122,39 +122,51 @@ export const PRODUCTS: Product[] = [
   },
   {
     "slug": "bagasse-round-bowl",
-    "name": "Bagasse Round Bowl",
+    "name": "Bagasse Bowl",
     "categorySlug": "plates-bowls",
     "categoryName": "Biodegradable Products",
     "variantType": "capacity",
     "variants": [
       {
-        "size": "180 mL",
-        "dimension": null,
+        "size": "6 oz",
+        "dimension": "round",
+        "shape": "Round",
         "capacityMl": 180,
-        "capacityOz": 6.09,
+        "capacityOz": 6,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 50
       },
       {
-        "size": "240 mL",
-        "dimension": null,
+        "size": "8 oz",
+        "dimension": "round",
+        "shape": "Round",
         "capacityMl": 240,
-        "capacityOz": 8.12,
+        "capacityOz": 8,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 50
       },
       {
-        "size": "360 mL",
-        "dimension": null,
-        "capacityMl": 360,
-        "capacityOz": 12.17,
+        "size": "12 oz",
+        "dimension": "round",
+        "shape": "Round",
+        "capacityMl": 350,
+        "capacityOz": 12,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "4 oz",
+        "dimension": "square",
+        "shape": "Square",
+        "capacityMl": 120,
+        "capacityOz": 4,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 50
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable sugarcane bagasse round bowls for dine-in, soups, and takeaways.",
-    "summary": "Premium quality bagasse round bowls crafted from 100% renewable sugarcane fibers. Heavy-duty, leak-resistant, and grease-proof design built for hot soups, salads, curries, and commercial food service. Certified 100% compostable and food-safe.",
+    "tagline": "Certified compostable sugarcane bagasse bowls in Round and Square formats.",
+    "summary": "Molded sugarcane bagasse bowls crafted from upcycled plant fibres. Available in classic Round (6oz, 8oz, 12oz) and compact Square (4oz) shapes for soups, sides, and desserts.",
     "ratingLabel": "Top choice for restaurants & catering",
     "quickFacts": [
       {
@@ -176,16 +188,20 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
+        "label": "4 oz",
+        "note": "Square"
+      },
+      {
         "label": "6 oz",
-        "note": "180 mL"
+        "note": "Round"
       },
       {
         "label": "8 oz",
-        "note": "240 mL"
+        "note": "Round"
       },
       {
         "label": "12 oz",
-        "note": "360 mL"
+        "note": "Round"
       }
     ],
     "baseMoq": 20000,
@@ -245,105 +261,17 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "relatedSlugs": [
-      "bagasse-square-bowl",
       "bagasse-round-plate",
       "bagasse-3-compartment-combo-meal-plate"
     ],
     "gallery": {
       "type": "static",
       "art": "bowl"
-    }
-  },
-  {
-    "slug": "bagasse-square-bowl",
-    "name": "Bagasse Square Bowl",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "4 in",
-        "dimension": "4 in square",
-        "capacityMl": 120,
-        "capacityOz": 4.06,
-        "qtyPerBox": 2000,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable bagasse square bowls ideal for sides, desserts, and dips.",
-    "summary": "Compact 4oz square bowls crafted from 100% natural sugarcane bagasse. Modern square aesthetic tailored for side dishes, sauces, dips, tasting portions, and airline or event catering.",
-    "ratingLabel": "Popular for appetizers & condiments",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "2,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "4 oz",
-        "note": "4 in square"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom embossed branding available",
-    "endOfLife": "100% commercially compostable",
-    "heatRating": "-20°C to 120°C",
-    "cartonPack": "2,000 units per carton",
-    "cartonVolume": "0.05 m³",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Contemporary square profile",
-        "body": "The square footprint creates a high-end presentation for tapas, sushi condiments, condiments, and sampling menus.",
-        "bullets": [
-          "100% tree-free upcycled sugarcane fiber",
-          "Rigid walls with secure rim for clean handling",
-          "Space-efficient square geometry on dining trays"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Direct food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Industrial compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What is the capacity of the square bowl?",
-        "answer": "The bagasse square bowl measures 4 inches square with approximately 4 oz (120 mL) capacity."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-round-bowl",
-      "bagasse-round-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "bowl"
-    }
+    },
+    "shapeOptions": [
+      "Round",
+      "Square"
+    ]
   },
   {
     "slug": "bagasse-round-plate",
@@ -902,7 +830,7 @@ export const PRODUCTS: Product[] = [
     ],
     "relatedSlugs": [
       "bagasse-round-plate",
-      "bagasse-square-bowl"
+      "bagasse-round-bowl"
     ],
     "gallery": {
       "type": "static",

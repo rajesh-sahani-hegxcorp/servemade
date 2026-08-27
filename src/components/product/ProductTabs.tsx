@@ -15,6 +15,7 @@ export function ProductTabs({ product }: { product: Product }) {
   const hasCompartments = Boolean(product.variants && product.variants.some((v) => v.compartments));
   const hasMaterials = Boolean(product.materials && product.materials.length > 1);
   const hasCompartmentOptions = Boolean(product.compartmentOptions && product.compartmentOptions.length > 1);
+  const hasShapeOptions = Boolean(product.shapeOptions && product.shapeOptions.length > 1);
 
   let sizeList = "";
   if (hasCompartmentOptions) {
@@ -30,6 +31,18 @@ export function ProductTabs({ product }: { product: Product }) {
     });
     sizeList = Array.from(optMap.entries())
       .map(([opt, sizes]) => `${opt}: ${sizes.join(", ")}`)
+      .join(" · ");
+  } else if (hasShapeOptions) {
+    const shapeMap = new Map<string, string[]>();
+    product.variants.forEach((v) => {
+      const shape = v.shape || "Standard";
+      const list = shapeMap.get(shape) || [];
+      const label = v.capacityOz ? `${Math.round(v.capacityOz)} oz` : v.size;
+      if (!list.includes(label)) list.push(label);
+      shapeMap.set(shape, list);
+    });
+    sizeList = Array.from(shapeMap.entries())
+      .map(([shape, sizes]) => `${shape}: ${sizes.join(", ")}`)
       .join(" · ");
   } else if (hasCompartments) {
     const compMap = new Map<number, string[]>();

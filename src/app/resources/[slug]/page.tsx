@@ -4,7 +4,7 @@ import { RESOURCES } from "@/data/resources";
 import { ContentPage } from "@/components/layout/ContentPage";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 function findResource(slug: string) {
@@ -15,14 +15,16 @@ export function generateStaticParams() {
   return RESOURCES.map((r) => ({ slug: r.href.replace("/resources/", "") }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const resource = findResource(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const resource = findResource(slug);
   if (!resource) return {};
   return { title: resource.title, description: resource.description };
 }
 
-export default function ResourceDetailPage({ params }: Props) {
-  const resource = findResource(params.slug);
+export default async function ResourceDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const resource = findResource(slug);
   if (!resource) notFound();
 
   return (
