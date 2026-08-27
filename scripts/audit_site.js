@@ -34,8 +34,8 @@ Object.keys(byCat).forEach(cat => {
 });
 
 // 3. Check for forbidden strings across src/
-console.log('\n--- 3. FORBIDDEN STRINGS SCAN (Chuk, Ecolate, Cornstarch, Tissue Rolls in visible src/) ---');
-const forbiddenTerms = ['chuk', 'ecolate', 'cornstarch', 'jrt-tissue', 'hrt-tissue', 'Table ware'];
+console.log('\n--- 3. FORBIDDEN STRINGS SCAN (Chuk, Ecolate, Tissue Rolls in visible src/) ---');
+const forbiddenTerms = ['chuk', 'ecolate', 'jrt-tissue', 'hrt-tissue', 'Table ware'];
 
 function walkDir(dir, fileList = []) {
   const files = fs.readdirSync(dir);

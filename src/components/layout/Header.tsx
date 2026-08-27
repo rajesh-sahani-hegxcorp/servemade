@@ -178,15 +178,12 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
     title: "Biodegradable Products",
     href: "/categories/plates-bowls",
     items: [
-      { name: "Bagasse Round Bowl", href: "/products/bagasse-round-bowl" },
-      { name: "Bagasse Square Bowl", href: "/products/bagasse-square-bowl" },
+      { name: "Bagasse Bowl", href: "/products/bagasse-round-bowl" },
       { name: "Bagasse Round Plate", href: "/products/bagasse-round-plate" },
+      { name: "Bagasse 3-CP Square Plate", href: "/products/bagasse-3-compartment-square-plate" },
       { name: "Bagasse 3-CP Meal Plate", href: "/products/bagasse-3-compartment-combo-meal-plate" },
       { name: "Bagasse 4-CP Meal Tray", href: "/products/bagasse-4-compartment-meal-tray" },
-      { name: "Bagasse 5-CP Meal Tray", href: "/products/bagasse-5-compartment-meal-tray" },
-      { name: "Bagasse 3-CP Round Plate", href: "/products/bagasse-3-compartment-round-plate" },
-      { name: "Bagasse 4-CP Round Plate", href: "/products/bagasse-4-compartment-round-plate" },
-      { name: "Bagasse 3-CP Square Plate", href: "/products/bagasse-3-compartment-square-plate" }
+      { name: "Bagasse 5-CP Meal Tray", href: "/products/bagasse-5-compartment-meal-tray" }
     ]
   },
   {
@@ -210,16 +207,12 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
     title: "Biodegradable Containers",
     href: "/categories/biodegradable-containers",
     items: [
-      { isHeading: true, name: "Pizza Boxes" },
-      { name: "Top-Folding Pizza Box", href: "/products/top-folding-pizza-box" },
-      { name: "3-Ply Corrugated Pizza Box", href: "/products/3-ply-corrugated-pizza-box" },
-      { name: "3-Ply Garlic Bread Box", href: "/products/3-ply-corrugated-garlic-bread-box" },
-      { isHeading: true, name: "Trays & Bowls" },
-      { name: "Plain Rect. Food Box", href: "/products/plain-rectangular-food-box" },
+      { name: "Round Bowl with Lid", href: "/products/round-bowl-with-lid" },
+      { name: "Meal Tray with Lid", href: "/products/meal-tray-with-lid" },
+      { name: "Rectangle Container with Lid", href: "/products/rectangle-container-with-lid" },
+      { name: "Bagasse Clamshell", href: "/products/bagasse-clamshell" },
       { name: "Kraft Boat Tray", href: "/products/kraft-boat-tray" },
-      { name: "Kraft Paper Bowl", href: "/products/kraft-paper-bowl-with-pet-lid" },
-      { name: "Bagasse Rect. Container", href: "/products/bagasse-rectangular-container" },
-      { name: "Bagasse Clamshell", href: "/products/bagasse-clamshell" }
+      { name: "Kraft Paper Bowl with PET Lid", href: "/products/kraft-paper-bowl-with-pet-lid" },
     ]
   },
   {

@@ -31,7 +31,25 @@ function formatPackedStat(v?: ProductVariant): string {
 }
 
 function getVariantDisplayLabel(v: ProductVariant, variantType: "capacity" | "dimension"): string {
+  if (v.compartmentOption) {
+    const dim = v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())
+      ? v.dimension
+      : v.size;
+    return `${v.compartmentOption} (${dim})`;
+  }
+  if (v.compartments) {
+    if (v.compartments === 2 && v.shape) {
+      return `2 Compartment (${v.shape})`;
+    }
+    return `${v.compartments} Compartment`;
+  }
   if (variantType === "capacity") {
+    if (v.material) {
+      if (v.capacityOz && v.size && !v.size.includes("oz")) {
+        return `${v.material} — ${Math.round(v.capacityOz)} oz (${v.size})`;
+      }
+      return `${v.material} — ${v.size}`;
+    }
     if (v.capacityOz && v.size && !v.size.includes("oz")) {
       return `${Math.round(v.capacityOz)} oz (${v.size})`;
     }
@@ -46,7 +64,14 @@ function getVariantDisplayLabel(v: ProductVariant, variantType: "capacity" | "di
 export function ProductConfigurator({ product }: { product: Product }) {
   const router = useRouter();
   const [sizeIndex, setSizeIndex] = useState(0);
+  const [selectedMaterial, setSelectedMaterial] = useState<string>(product.materials?.[0] ?? "");
+  const [selectedCompartmentOption, setSelectedCompartmentOption] = useState<string>(product.compartmentOptions?.[0] ?? "");
   const [selectedColor, setSelectedColor] = useState<string>(product.colors?.[0] ?? "");
+  const [selectedCompartment, setSelectedCompartment] = useState<number>(() => {
+    const firstComp = product.variants?.find((v) => v.compartments)?.compartments;
+    return firstComp ?? 2;
+  });
+  const [selectedShape, setSelectedShape] = useState<string>("Round");
   const [qtyIndex, setQtyIndex] = useState(0);
   const [shipping, setShipping] = useState<ShippingOption["value"]>("FOB");
   const [branded, setBranded] = useState(false);
@@ -56,9 +81,25 @@ export function ProductConfigurator({ product }: { product: Product }) {
   const isBowlFamily = product.slug === "bagasse-round-bowl" || product.slug === "bagasse-square-bowl";
   const currentShape = product.slug === "bagasse-square-bowl" ? "square" : "round";
 
-  const variants = product.variants && product.variants.length > 0 ? product.variants : [];
-  const hasMultipleSizes = variants.length > 1;
-  const selectedVariant = variants[sizeIndex] ?? variants[0];
+  const isCompartmentFamily = Boolean(product.variants && product.variants.some((v) => v.compartments));
+  const hasMaterials = Boolean(product.materials && product.materials.length > 1);
+  const hasCompartmentOptions = Boolean(product.compartmentOptions && product.compartmentOptions.length > 1);
+
+  const activeVariants = hasCompartmentOptions
+    ? product.variants.filter((v) => v.compartmentOption === selectedCompartmentOption)
+    : hasMaterials
+    ? product.variants.filter((v) => v.material === selectedMaterial)
+    : product.variants && product.variants.length > 0
+    ? product.variants
+    : [];
+
+  const hasMultipleSizes = activeVariants.length > 1;
+
+  const selectedVariant = isCompartmentFamily
+    ? product.variants.find((v) => v.compartments === selectedCompartment && (selectedCompartment !== 2 || v.shape === selectedShape)) ??
+      product.variants[0]
+    : activeVariants[sizeIndex] ?? activeVariants[0] ?? product.variants[0];
+
   const variantLabel = selectedVariant ? getVariantDisplayLabel(selectedVariant, product.variantType) : "";
 
   const quantityOptions = buildQuantityOptions(product.baseMoq || 50000);
@@ -77,9 +118,13 @@ export function ProductConfigurator({ product }: { product: Product }) {
   ];
 
   let stepCounter = 1;
+  const compartmentOptionStepNum = hasCompartmentOptions ? stepCounter++ : 0;
+  const compartmentStepNum = isCompartmentFamily ? stepCounter++ : 0;
+  const shapeSubStepNum = isCompartmentFamily && selectedCompartment === 2 ? stepCounter++ : 0;
+  const materialStepNum = hasMaterials ? stepCounter++ : 0;
   const shapeStepNum = isBowlFamily ? stepCounter++ : 0;
   const colorStepNum = product.colors && product.colors.length > 1 ? stepCounter++ : 0;
-  const sizeStepNum = (hasMultipleSizes || isBowlFamily) ? stepCounter++ : 0;
+  const sizeStepNum = (!isCompartmentFamily && (hasMultipleSizes || isBowlFamily || hasMaterials || hasCompartmentOptions)) ? stepCounter++ : 0;
   const qtyStepNum = stepCounter++;
   const shipStepNum = stepCounter++;
   const brandStepNum = product.printing !== "Not printable — natural fibre finish only" ? stepCounter++ : 0;
@@ -136,6 +181,127 @@ export function ProductConfigurator({ product }: { product: Product }) {
               </div>
             ))}
           </dl>
+
+          {/* Meal Tray Compartment Step 1: Compartment Count Selector */}
+          {isCompartmentFamily && (
+            <div className="mt-7">
+              <StepLabel n={compartmentStepNum} hint="select compartment layout">
+                Choose compartment count
+              </StepLabel>
+              <div className="flex flex-wrap gap-2.5" role="group" aria-label="Compartment count">
+                {[2, 3, 4, 5].map((count) => {
+                  const isActive = selectedCompartment === count;
+                  return (
+                    <button
+                      key={count}
+                      type="button"
+                      onClick={() => {
+                        setSelectedCompartment(count);
+                        if (count === 2 && !selectedShape) setSelectedShape("Round");
+                      }}
+                      className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
+                        isActive
+                          ? "border-brand-green bg-brand-green-light text-brand-green-dark shadow-sm"
+                          : "border-line bg-white text-ink-2 hover:border-brand-green/40"
+                      }`}
+                    >
+                      {count} Compartment
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Sub-selector for 2-compartment only */}
+              {selectedCompartment === 2 && (
+                <div className="mt-5">
+                  <StepLabel n={shapeSubStepNum} hint="choose 2-compartment shape">
+                    Choose shape
+                  </StepLabel>
+                  <div className="flex flex-wrap gap-2.5" role="group" aria-label="2-compartment shape">
+                    {(["Round", "Rectangle"] as const).map((shape) => {
+                      const isActive = selectedShape === shape;
+                      return (
+                        <button
+                          key={shape}
+                          type="button"
+                          onClick={() => setSelectedShape(shape)}
+                          className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
+                            isActive
+                              ? "border-brand-green bg-brand-green-light text-brand-green-dark shadow-sm"
+                              : "border-line bg-white text-ink-2 hover:border-brand-green/40"
+                          }`}
+                        >
+                          {shape}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Compartment Options Step (e.g. Bagasse Round Plate: Plain, 3-Compartment, 4-Compartment) */}
+          {hasCompartmentOptions && (
+            <div className="mt-7">
+              <StepLabel n={compartmentOptionStepNum} hint="choose plain or divided">
+                Choose compartment
+              </StepLabel>
+              <div className="flex flex-wrap gap-2.5" role="group" aria-label="Plate compartment style">
+                {product.compartmentOptions!.map((opt) => {
+                  const isActive = selectedCompartmentOption === opt;
+                  return (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => {
+                        setSelectedCompartmentOption(opt);
+                        setSizeIndex(0);
+                      }}
+                      className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
+                        isActive
+                          ? "border-brand-green bg-brand-green-light text-brand-green-dark shadow-sm"
+                          : "border-line bg-white text-ink-2 hover:border-brand-green/40"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Material Two-Step Selector (e.g. Round Bowl with Lid, Rectangle Container with Lid) */}
+          {hasMaterials && (
+            <div className="mt-7">
+              <StepLabel n={materialStepNum} hint="select container material">
+                Choose material
+              </StepLabel>
+              <div className="flex flex-wrap gap-2.5" role="group" aria-label="Container material">
+                {product.materials!.map((mat) => {
+                  const isActive = selectedMaterial === mat;
+                  return (
+                    <button
+                      key={mat}
+                      type="button"
+                      onClick={() => {
+                        setSelectedMaterial(mat);
+                        setSizeIndex(0);
+                      }}
+                      className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
+                        isActive
+                          ? "border-brand-green bg-brand-green-light text-brand-green-dark shadow-sm"
+                          : "border-line bg-white text-ink-2 hover:border-brand-green/40"
+                      }`}
+                    >
+                      {mat === "Bagasse" ? "Sugarcane Bagasse" : mat}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Bowl Two-Level Step 1: Shape Selector */}
           {isBowlFamily && (
@@ -214,15 +380,15 @@ export function ProductConfigurator({ product }: { product: Product }) {
             </div>
           )}
 
-          {/* Size / Dimension selector */}
-          {(hasMultipleSizes || isBowlFamily) && (
+          {/* Size / Dimension selector (not shown for compartment-only family) */}
+          {!isCompartmentFamily && (hasMultipleSizes || isBowlFamily || hasMaterials) && (
             <div className="mt-7">
               <StepLabel
                 n={sizeStepNum}
                 hint={
                   product.variantType === "capacity"
-                    ? `most buyers start with ${variants[1]?.size ?? variants[0]?.size}`
-                    : `${variants.length} options available`
+                    ? `most buyers start with ${activeVariants[1]?.size ?? activeVariants[0]?.size}`
+                    : `${activeVariants.length} options available`
                 }
               >
                 {product.variantType === "capacity" ? "Choose your size" : "Select size / dimensions"}
@@ -231,12 +397,12 @@ export function ProductConfigurator({ product }: { product: Product }) {
               {product.variantType === "capacity" ? (
                 /* Capacity-style pill buttons */
                 <div className="flex flex-wrap gap-2.5" role="group" aria-label="Size capacity">
-                  {variants.map((v, i) => {
+                  {activeVariants.map((v, i) => {
                     const pillTitle = v.capacityOz ? `${Math.round(v.capacityOz)} oz` : v.size;
                     const pillNote = v.capacityMl && v.capacityOz ? `${v.capacityMl} mL` : (v.dimension ?? undefined);
                     return (
                       <StepOption
-                        key={`${v.size}-${v.dimension}-${i}`}
+                        key={`${v.material || "m"}-${v.size}-${v.dimension}-${i}`}
                         grow
                         active={sizeIndex === i}
                         onClick={() => setSizeIndex(i)}
@@ -254,7 +420,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
                   role="group"
                   aria-label="Product dimensions"
                 >
-                  {variants.map((v, i) => {
+                  {activeVariants.map((v, i) => {
                     const isCleanDim =
                       v.dimension &&
                       !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase());

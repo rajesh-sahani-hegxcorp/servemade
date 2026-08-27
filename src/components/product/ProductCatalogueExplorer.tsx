@@ -49,20 +49,30 @@ export function ProductCatalogueExplorer({ products }: Props) {
         return false;
       }
 
-      // Query filter (matches product name, category name, or variant sizes/dimensions)
+      // Query filter (matches product name, category name, material, compartmentOptions, or variant sizes/dimensions/materials)
       if (debouncedQuery) {
         const nameMatch = product.name.toLowerCase().includes(debouncedQuery);
         const categoryMatch = product.categoryName.toLowerCase().includes(debouncedQuery);
+        const materialMatch =
+          product.material.toLowerCase().includes(debouncedQuery) ||
+          (product.materials && product.materials.some((m) => m.toLowerCase().includes(debouncedQuery)));
+        const compartmentOptMatch = product.compartmentOptions
+          ? product.compartmentOptions.some((opt) => opt.toLowerCase().includes(debouncedQuery))
+          : false;
         const sourceCatMatch = product.sourceSheetCategory
           ? product.sourceSheetCategory.toLowerCase().includes(debouncedQuery)
           : false;
         const variantMatch = product.variants.some(
           (v) =>
             v.size.toLowerCase().includes(debouncedQuery) ||
-            (v.dimension && v.dimension.toLowerCase().includes(debouncedQuery))
+            (v.dimension && v.dimension.toLowerCase().includes(debouncedQuery)) ||
+            (v.material && v.material.toLowerCase().includes(debouncedQuery)) ||
+            (v.shape && v.shape.toLowerCase().includes(debouncedQuery)) ||
+            (v.compartments && `${v.compartments}`.includes(debouncedQuery)) ||
+            (v.compartmentOption && v.compartmentOption.toLowerCase().includes(debouncedQuery))
         );
 
-        if (!nameMatch && !categoryMatch && !sourceCatMatch && !variantMatch) {
+        if (!nameMatch && !categoryMatch && !materialMatch && !compartmentOptMatch && !sourceCatMatch && !variantMatch) {
           return false;
         }
       }
