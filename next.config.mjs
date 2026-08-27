@@ -15,6 +15,21 @@ const nextConfig = {
         destination: "/why-serve-made",
         permanent: true,
       },
+      {
+        source: "/products/bagasse-rectangular-container",
+        destination: "/products/rectangle-container-with-lid",
+        permanent: true,
+      },
+      {
+        source: "/products/bagasse-3-compartment-round-plate",
+        destination: "/products/bagasse-round-plate",
+        permanent: true,
+      },
+      {
+        source: "/products/bagasse-4-compartment-round-plate",
+        destination: "/products/bagasse-round-plate",
+        permanent: true,
+      },
     ];
   },
 };
