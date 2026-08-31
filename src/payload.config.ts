@@ -16,6 +16,20 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   admin: {
     user: Users.slug,
+    meta: {
+      titleSuffix: ' · Servemade Admin',
+      icons: [{ url: '/favicon.ico' }],
+      openGraph: {
+        images: [{ url: '/og/serve-made-home.png' }],
+      },
+    },
+    components: {
+      graphics: {
+        Logo: '@/components/admin/Logo#Logo',
+        Icon: '@/components/admin/Icon#Icon',
+      },
+      beforeDashboard: ['@/components/admin/BeforeDashboard#BeforeDashboard'],
+    },
     importMap: {
       baseDir: path.resolve(dirname),
     },

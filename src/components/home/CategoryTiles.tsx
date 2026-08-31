@@ -3,9 +3,11 @@ import { ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Tag";
 import { ProductArt } from "@/components/ui/ProductArt";
-import { CATEGORIES } from "@/data/categories";
+import { getAllCategories } from "@/lib/payload-data";
 
-export function CategoryTiles() {
+export async function CategoryTiles() {
+  const categories = await getAllCategories();
+
   return (
     <section id="products" aria-labelledby="cats-h" className="mx-auto max-w-6xl px-5 py-16">
       <Reveal>
@@ -18,7 +20,7 @@ export function CategoryTiles() {
       </Reveal>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {CATEGORIES.map((category, i) => (
+        {categories.map((category, i) => (
           <Reveal key={category.name} delay={i * 0.05}>
             <Link
               key={category.name}

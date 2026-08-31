@@ -1,4 +1,4 @@
-import { CATEGORIES } from "@/data/categories";
+import { getAllCategories } from "@/lib/payload-data";
 import { FAQS } from "@/data/faqs";
 import { siteUrl } from "@/lib/utils";
 import type { Product } from "@/types";
@@ -29,7 +29,9 @@ function buildOrganizationJsonLd() {
  * ItemList of categories, and FAQPage (must stay word-for-word identical to
  * the on-page FAQ — both this and <FAQ> import from data/faqs.ts).
  */
-export function buildHomeJsonLd() {
+export async function buildHomeJsonLd() {
+  const categories = await getAllCategories();
+
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -47,7 +49,7 @@ export function buildHomeJsonLd() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Serve Made product categories",
-    itemListElement: CATEGORIES.map((c, i) => ({
+    itemListElement: categories.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: c.name,

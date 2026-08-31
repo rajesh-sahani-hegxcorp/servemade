@@ -1,0 +1,550 @@
+/* ==========================================================================
+   SERVMADE ADMIN THEME & DASHBOARD CUSTOMIZATIONS
+   B2B Sustainable Packaging CMS - Clean, High-Contrast, Professional
+   ========================================================================== */
+
+:root {
+  --servemade-green: #2e8b57;
+  --servemade-green-dark: #1f6b41;
+  --servemade-green-light: #eaf5ef;
+  --servemade-green-tint: rgba(46, 139, 87, 0.08);
+  --servemade-blue: #2c5f8a;
+  --servemade-blue-light: #ebf2f8;
+  --servemade-ink-1: #1e252b;
+  --servemade-ink-2: #4a555e;
+  --servemade-ink-3: #75838d;
+  --servemade-line: #e2e8e5;
+  --servemade-surface-off: #f7f9f8;
+  --servemade-surface-card: #ffffff;
+  --servemade-radius-sm: 6px;
+  --servemade-radius-md: 10px;
+  --servemade-radius-lg: 14px;
+  --servemade-shadow-sm: 0 1px 3px rgba(30, 37, 43, 0.06);
+  --servemade-shadow-md: 0 4px 14px -3px rgba(30, 37, 43, 0.08);
+  --servemade-shadow-lg: 0 10px 30px -8px rgba(46, 139, 87, 0.12);
+
+  /* Essential Payload Core Theme Variable Overrides (High Contrast) */
+  --theme-text: #1e252b !important;
+  --theme-elevation-0: #f7f9f8 !important;
+  --theme-elevation-50: #ffffff !important;
+  --theme-elevation-100: #ffffff !important;
+  --theme-elevation-150: #f7f9f8 !important;
+  --theme-elevation-200: #ffffff !important;
+  --theme-elevation-250: #eef3f0 !important;
+  --theme-elevation-400: #8a969f !important;
+  --theme-elevation-500: #5c6872 !important;
+  --theme-elevation-600: #424e58 !important;
+  --theme-elevation-700: #2c363e !important;
+  --theme-elevation-800: #1e252b !important;
+  --theme-elevation-900: #13181c !important;
+  --theme-border-color: #e2e8e5 !important;
+}
+
+/* Base Body & Layout Refinements */
+body {
+  background-color: var(--servemade-surface-off) !important;
+  color: var(--servemade-ink-1) !important;
+  font-family: var(--font-figtree), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   1. BRAND HEADER, LOGO & NAV CUSTOMIZATIONS
+   ========================================================================== */
+
+/* Top App Header */
+.app-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--servemade-line) !important;
+
+  .graphic-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+/* Graphic Logo & Icon Scaling */
+.graphic-logo {
+  max-width: 195px !important;
+  height: 36px !important;
+  width: auto !important;
+  display: block !important;
+}
+
+.graphic-icon {
+  width: 26px !important;
+  height: 26px !important;
+  display: block !important;
+}
+
+/* Sidebar Navigation */
+.nav {
+  background-color: #ffffff !important;
+  border-right: 1px solid var(--servemade-line) !important;
+  min-width: 230px !important;
+
+  /* Prevent Logo / Brand Header Cropping */
+  &__header,
+  .nav-toggler,
+  a[href='/admin'] {
+    width: auto !important;
+    max-width: none !important;
+    overflow: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 14px 16px 12px 16px !important;
+    text-decoration: none !important;
+  }
+
+  /* Nav Group Labels */
+  .nav__group-label,
+  .nav-group__toggle,
+  .nav-group__label {
+    font-size: 11.5px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--servemade-green-dark) !important;
+    padding-top: 14px !important;
+    padding-bottom: 6px !important;
+  }
+
+  /* Nav Links */
+  .nav__link,
+  .nav-group__link,
+  a.nav__link {
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: var(--servemade-ink-1) !important;
+    border-radius: var(--servemade-radius-sm) !important;
+    transition: all 0.15s ease !important;
+    padding: 8px 12px !important;
+
+    &:hover {
+      background-color: var(--servemade-green-light) !important;
+      color: var(--servemade-green-dark) !important;
+    }
+
+    &--active,
+    &.active {
+      background-color: var(--servemade-green-light) !important;
+      color: var(--servemade-green-dark) !important;
+      font-weight: 700 !important;
+      border-left: 3px solid var(--servemade-green) !important;
+    }
+  }
+}
+
+/* ==========================================================================
+   2. PAYLOAD NATIVE DASHBOARD COLLECTION CARDS & GROUP LABELS (FIX VISIBILITY)
+   ========================================================================== */
+
+.collections {
+  margin-top: 1.5rem !important;
+
+  /* Group Heading: "System", "Catalogue", "Website" */
+  &__label,
+  .collections__label,
+  h2.collections__label {
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--servemade-green-dark) !important;
+    margin-bottom: 0.6rem !important;
+    display: block !important;
+  }
+
+  /* Collection Card Boxes */
+  .card {
+    background-color: #ffffff !important;
+    border: 1px solid var(--servemade-line) !important;
+    border-radius: var(--servemade-radius-md) !important;
+    padding: 14px 16px !important;
+    box-shadow: var(--servemade-shadow-sm) !important;
+    transition: all 0.2s ease !important;
+
+    &:hover {
+      border-color: var(--servemade-green) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: var(--servemade-shadow-md) !important;
+      background-color: #ffffff !important;
+    }
+
+    /* Card Title (e.g. "Users", "Products", "Categories", "Media", "Homepage") */
+    &__title,
+    h5.card__title,
+    a.card__click {
+      color: var(--servemade-ink-1) !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.01em !important;
+      text-decoration: none !important;
+    }
+
+    &:hover &__title {
+      color: var(--servemade-green-dark) !important;
+    }
+
+    /* Action Buttons inside Card */
+    &__actions {
+      .btn__icon {
+        border-color: var(--servemade-line) !important;
+        color: var(--servemade-ink-2) !important;
+        background-color: var(--servemade-surface-off) !important;
+
+        &:hover {
+          background-color: var(--servemade-green-light) !important;
+          color: var(--servemade-green-dark) !important;
+          border-color: var(--servemade-green) !important;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   3. SERVMADE WELCOME DASHBOARD HERO & SUMMARY CARDS
+   ========================================================================== */
+
+.servemade-dashboard-hero {
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
+
+.servemade-dashboard-hero__top {
+  background: #ffffff;
+  border: 1px solid var(--servemade-line);
+  border-top: 4px solid var(--servemade-green);
+  border-radius: var(--servemade-radius-lg);
+  padding: 1.5rem 1.85rem;
+  box-shadow: var(--servemade-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.servemade-dashboard-hero__intro {
+  max-width: 620px;
+}
+
+.servemade-dashboard-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--servemade-green-light);
+  color: var(--servemade-green-dark);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  margin-bottom: 0.4rem;
+}
+
+.servemade-dashboard-hero__badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--servemade-green);
+}
+
+.servemade-dashboard-hero__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--servemade-ink-1);
+  margin: 0 0 0.35rem 0;
+  line-height: 1.2;
+}
+
+.servemade-dashboard-hero__desc {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--servemade-ink-2);
+  margin: 0;
+}
+
+.servemade-dashboard-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.servemade-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--servemade-radius-sm);
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+
+  &__icon {
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  &__arrow {
+    font-size: 12px;
+    transition: transform 0.15s ease;
+  }
+
+  &:hover &__arrow {
+    transform: translate(2px, -2px);
+  }
+
+  &--primary {
+    background-color: var(--servemade-green);
+    color: #ffffff;
+    border: 1px solid var(--servemade-green);
+
+    &:hover {
+      background-color: var(--servemade-green-dark);
+      border-color: var(--servemade-green-dark);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(46, 139, 87, 0.25);
+    }
+  }
+
+  &--secondary {
+    background-color: #ffffff;
+    color: var(--servemade-ink-1);
+    border: 1px solid var(--servemade-line);
+
+    &:hover {
+      background-color: var(--servemade-green-light);
+      color: var(--servemade-green-dark);
+      border-color: var(--servemade-green);
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: var(--servemade-ink-2);
+    border: 1px dashed var(--servemade-line);
+
+    &:hover {
+      background-color: #ffffff;
+      color: var(--servemade-ink-1);
+      border-color: var(--servemade-ink-3);
+    }
+  }
+}
+
+/* Summary Cards Grid */
+.servemade-dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.servemade-dash-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-md);
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--servemade-shadow-sm);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--servemade-shadow-md);
+    border-color: var(--servemade-green);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+  }
+
+  &__icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+
+    &--green {
+      background-color: var(--servemade-green-light);
+      color: var(--servemade-green);
+    }
+
+    &--blue {
+      background-color: var(--servemade-blue-light);
+      color: var(--servemade-blue);
+    }
+
+    &--amber {
+      background-color: #fef5ea;
+      color: #d97706;
+    }
+  }
+
+  &__pill {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--servemade-ink-2);
+    background-color: var(--servemade-surface-off);
+    border: 1px solid var(--servemade-line);
+    padding: 2px 8px;
+    border-radius: 9999px;
+  }
+
+  &__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--servemade-ink-1);
+    margin: 0 0 0.35rem 0;
+  }
+
+  &__text {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--servemade-ink-2);
+    margin: 0 0 1rem 0;
+    flex: 1;
+  }
+
+  &__action {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--servemade-green-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+  }
+
+  &__arrow {
+    transition: transform 0.15s ease;
+  }
+
+  &:hover &__arrow {
+    transform: translateX(3px);
+  }
+}
+
+/* ==========================================================================
+   4. BUTTONS & INTERACTION CONTROLS
+   ========================================================================== */
+
+/* Primary Buttons */
+.btn--style-primary,
+button.btn--style-primary,
+a.btn--style-primary {
+  background-color: var(--servemade-green) !important;
+  border-color: var(--servemade-green) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-radius: var(--servemade-radius-sm) !important;
+  transition: all 0.15s ease !important;
+
+  &:hover,
+  &:focus {
+    background-color: var(--servemade-green-dark) !important;
+    border-color: var(--servemade-green-dark) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--servemade-shadow-md);
+  }
+}
+
+/* Secondary / Pill Buttons */
+.btn--style-secondary,
+button.btn--style-secondary,
+a.btn--style-secondary {
+  border-color: var(--servemade-line) !important;
+  color: var(--servemade-ink-1) !important;
+  font-weight: 600 !important;
+  border-radius: var(--servemade-radius-sm) !important;
+
+  &:hover {
+    background-color: var(--servemade-green-light) !important;
+    color: var(--servemade-green-dark) !important;
+    border-color: var(--servemade-green) !important;
+  }
+}
+
+/* Form Inputs & Fields */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+textarea,
+select {
+  border-radius: var(--servemade-radius-sm) !important;
+  border: 1px solid var(--servemade-line) !important;
+  background-color: #ffffff !important;
+  color: var(--servemade-ink-1) !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+
+  &:focus {
+    border-color: var(--servemade-green) !important;
+    box-shadow: 0 0 0 3px var(--servemade-green-tint) !important;
+    outline: none !important;
+  }
+}
+
+/* Checkboxes & Switches */
+input[type='checkbox']:checked {
+  background-color: var(--servemade-green) !important;
+  border-color: var(--servemade-green) !important;
+}
+
+/* ==========================================================================
+   5. COLLECTION OVERVIEW & TABLE POLISH
+   ========================================================================== */
+
+.table {
+  border-radius: var(--servemade-radius-md) !important;
+  overflow: hidden;
+  border: 1px solid var(--servemade-line) !important;
+
+  thead th {
+    background-color: var(--servemade-surface-off) !important;
+    font-size: 11.5px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: var(--servemade-ink-2) !important;
+    border-bottom: 1px solid var(--servemade-line) !important;
+    padding: 10px 14px !important;
+  }
+
+  tbody tr {
+    transition: background-color 0.1s ease !important;
+
+    &:hover {
+      background-color: rgba(46, 139, 87, 0.03) !important;
+    }
+
+    td {
+      padding: 10px 14px !important;
+      font-size: 13px !important;
+      color: var(--servemade-ink-1) !important;
+      border-bottom: 1px solid var(--servemade-line) !important;
+    }
+  }
+}

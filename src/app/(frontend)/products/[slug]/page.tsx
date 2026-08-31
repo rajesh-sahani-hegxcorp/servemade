@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { PRODUCTS, findProduct, resolveRelatedProducts } from "@/data/products";
+import { getAllProducts, findProduct, resolveRelatedProducts } from "@/lib/payload-data";
 import { buildProductJsonLd } from "@/lib/jsonld";
 import { siteUrl } from "@/lib/utils";
 import { ProductBreadcrumb } from "@/components/product/ProductBreadcrumb";
@@ -15,16 +15,15 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-// Pre-renders every product in the catalogue at build time. Add a new
-// product to src/data/products.ts and it gets a page automatically — no
-// other file needs to change.
-export function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ slug: p.slug }));
+// Pre-renders every product in the catalogue at build time from Payload.
+export async function generateStaticParams() {
+  const products = await getAllProducts();
+  return products.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const product = findProduct(slug);
+  const product = await findProduct(slug);
   if (!product) return {};
 
   const url = siteUrl(`/products/${product.slug}`);
@@ -48,10 +47,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
-  const product = findProduct(slug);
+  const product = await findProduct(slug);
   if (!product) notFound();
 
-  const related = resolveRelatedProducts(product);
+  const related = await resolveRelatedProducts(product);
   const jsonLd = buildProductJsonLd(product);
 
   return (

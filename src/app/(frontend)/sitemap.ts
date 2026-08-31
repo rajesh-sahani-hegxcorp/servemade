@@ -1,12 +1,16 @@
 import type { MetadataRoute } from "next";
-import { CATEGORIES } from "@/data/categories";
+import { getAllCategories, getAllProducts } from "@/lib/payload-data";
 import { INDUSTRIES } from "@/data/industries";
 import { RESOURCES } from "@/data/resources";
-import { PRODUCTS } from "@/data/products";
 import { siteUrl, slugify } from "@/lib/utils";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+
+  const [categories, products] = await Promise.all([
+    getAllCategories(),
+    getAllProducts(),
+  ]);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: siteUrl("/"), lastModified: now, changeFrequency: "weekly", priority: 1 },
@@ -19,14 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: siteUrl("/resources"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
   ];
 
-  const categoryRoutes: MetadataRoute.Sitemap = CATEGORIES.map((c) => ({
+  const categoryRoutes: MetadataRoute.Sitemap = categories.map((c) => ({
     url: siteUrl(c.href),
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.7,
   }));
 
-  const productRoutes: MetadataRoute.Sitemap = PRODUCTS.map((p) => ({
+  const productRoutes: MetadataRoute.Sitemap = products.map((p) => ({
     url: siteUrl(`/products/${p.slug}`),
     lastModified: now,
     changeFrequency: "monthly",

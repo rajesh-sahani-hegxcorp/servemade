@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PRODUCTS } from "@/data/products";
+import { getAllProducts } from "@/lib/payload-data";
 import { Tag } from "@/components/ui/Tag";
 import { ProductCatalogueExplorer } from "@/components/product/ProductCatalogueExplorer";
 
@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   description: "Certified compostable food packaging — plates, cups, takeaway boxes, bags, cutlery and straws.",
 };
 
-export default function ProductsIndexPage() {
+export default async function ProductsIndexPage() {
+  const products = await getAllProducts();
+
   return (
     <section className="mx-auto max-w-6xl px-5 py-12">
       <Tag>Full catalogue</Tag>
@@ -18,7 +20,7 @@ export default function ProductsIndexPage() {
         by category or search live across all 42 product families below.
       </p>
 
-      <ProductCatalogueExplorer products={PRODUCTS} />
+      <ProductCatalogueExplorer products={products} />
     </section>
   );
 }

@@ -4,8 +4,9 @@ import { ValidationError } from 'payload'
 export const Products: CollectionConfig = {
   slug: 'products',
   admin: {
+    group: 'Catalogue',
     useAsTitle: 'name',
-    defaultColumns: ['name', 'slug', 'category', 'isStandalone', 'moqPieces'],
+    defaultColumns: ['name', 'slug', 'category', 'isStandalone', 'hasFlyout', 'moqPieces'],
   },
   access: {
     read: () => true,
@@ -322,7 +323,6 @@ export const Products: CollectionConfig = {
       name: 'moqPieces',
       type: 'number',
       required: false,
-      defaultValue: null,
     },
     {
       name: 'variants',

@@ -8,8 +8,8 @@ import { FAQ } from "@/components/home/FAQ";
 import { CTA } from "@/components/home/CTA";
 import { buildHomeJsonLd } from "@/lib/jsonld";
 
-export default function HomePage() {
-  const jsonLd = buildHomeJsonLd();
+export default async function HomePage() {
+  const jsonLd = await buildHomeJsonLd();
 
   return (
     <>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CATEGORIES } from "@/data/categories";
-import { findProductsByCategory } from "@/data/products";
+import { getAllCategories, findCategory, findProductsByCategory } from "@/lib/payload-data";
 import { Tag } from "@/components/ui/Tag";
 import { ProductArt } from "@/components/ui/ProductArt";
 import { ProductCardGrid } from "@/components/product/ProductCardGrid";
@@ -10,29 +9,26 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-function findCategory(slug: string) {
-  return CATEGORIES.find((c) => c.href === `/categories/${slug}`);
-}
-
-export function generateStaticParams() {
-  return CATEGORIES.filter((c) => c.href.startsWith("/categories/")).map((c) => ({
+export async function generateStaticParams() {
+  const categories = await getAllCategories();
+  return categories.filter((c) => c.href.startsWith("/categories/")).map((c) => ({
     slug: c.href.replace("/categories/", ""),
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const category = findCategory(slug);
+  const category = await findCategory(slug);
   if (!category) return {};
   return { title: category.name, description: category.description };
 }
 
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
-  const category = findCategory(slug);
+  const category = await findCategory(slug);
   if (!category) notFound();
 
-  const products = findProductsByCategory(slug);
+  const products = await findProductsByCategory(slug);
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-16">
