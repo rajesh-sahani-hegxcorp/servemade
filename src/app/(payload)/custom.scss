@@ -136,7 +136,7 @@ body {
 }
 
 /* ==========================================================================
-   2. PAYLOAD NATIVE DASHBOARD COLLECTION CARDS & GROUP LABELS (FIX VISIBILITY)
+   2. PAYLOAD NATIVE DASHBOARD COLLECTION CARDS & GROUP LABELS (HIGH CONTRAST)
    ========================================================================== */
 
 .collections {
@@ -171,7 +171,7 @@ body {
       background-color: #ffffff !important;
     }
 
-    /* Card Title (e.g. "Users", "Products", "Categories", "Media", "Homepage") */
+    /* Card Title */
     &__title,
     h5.card__title,
     a.card__click {
@@ -204,7 +204,183 @@ body {
 }
 
 /* ==========================================================================
-   3. SERVMADE WELCOME DASHBOARD HERO & SUMMARY CARDS
+   3. QUICK SEARCH BAR WIDGET
+   ========================================================================== */
+
+.servemade-search-container {
+  position: relative;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.servemade-search-bar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-md);
+  padding: 8px 14px;
+  box-shadow: var(--servemade-shadow-sm);
+  transition: all 0.15s ease;
+
+  &:focus-within {
+    border-color: var(--servemade-green);
+    box-shadow: 0 0 0 3px var(--servemade-green-tint), var(--servemade-shadow-md);
+  }
+}
+
+.servemade-search-icon {
+  color: var(--servemade-ink-3);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.servemade-search-input {
+  border: none !important;
+  background: transparent !important;
+  padding: 4px 0 !important;
+  font-size: 13.5px !important;
+  color: var(--servemade-ink-1) !important;
+  width: 100% !important;
+  box-shadow: none !important;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  &::placeholder {
+    color: var(--servemade-ink-3);
+    font-weight: 500;
+  }
+}
+
+.servemade-search-kbd {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--servemade-ink-3);
+  background: var(--servemade-surface-off);
+  border: 1px solid var(--servemade-line);
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.servemade-search-clear {
+  border: none;
+  background: transparent;
+  color: var(--servemade-ink-3);
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 12px;
+
+  &:hover {
+    color: var(--servemade-ink-1);
+  }
+}
+
+.servemade-search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-md);
+  box-shadow: var(--servemade-shadow-lg);
+  z-index: 50;
+  overflow: hidden;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.servemade-search-results {
+  padding: 6px;
+}
+
+.servemade-search-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: var(--servemade-radius-sm);
+  text-decoration: none;
+  color: var(--servemade-ink-1);
+  font-size: 13px;
+  transition: all 0.1s ease;
+
+  &:hover {
+    background: var(--servemade-green-light);
+    color: var(--servemade-green-dark);
+  }
+}
+
+.servemade-search-result-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.servemade-search-result-name {
+  font-weight: 700;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.servemade-search-result-sub {
+  font-size: 11px;
+  color: var(--servemade-ink-3);
+  margin-left: auto;
+  margin-right: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.servemade-search-result-arrow {
+  color: var(--servemade-green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.servemade-search-empty {
+  padding: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--servemade-ink-2);
+}
+
+.servemade-search-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &--product {
+    background: var(--servemade-green-light);
+    color: var(--servemade-green-dark);
+  }
+
+  &--category {
+    background: var(--servemade-blue-light);
+    color: var(--servemade-blue);
+  }
+
+  &--global {
+    background: #fef5ea;
+    color: #d97706;
+  }
+}
+
+/* ==========================================================================
+   4. SERVMADE WELCOME DASHBOARD HERO & SUMMARY CARDS
    ========================================================================== */
 
 .servemade-dashboard-hero {
@@ -373,6 +549,10 @@ body {
     border-color: var(--servemade-green);
   }
 
+  &--attention {
+    border-left: 3px solid #e11d48;
+  }
+
   &__header {
     display: flex;
     align-items: center;
@@ -401,6 +581,16 @@ body {
       background-color: #fef5ea;
       color: #d97706;
     }
+
+    &--red {
+      background-color: #ffe4e6;
+      color: #e11d48;
+    }
+
+    &--purple {
+      background-color: #f3e8ff;
+      color: #7e22ce;
+    }
   }
 
   &__pill {
@@ -411,6 +601,12 @@ body {
     border: 1px solid var(--servemade-line);
     padding: 2px 8px;
     border-radius: 9999px;
+
+    &--warning {
+      background-color: #fff1f2;
+      color: #e11d48;
+      border-color: #fecdd3;
+    }
   }
 
   &__title {
@@ -424,7 +620,7 @@ body {
     font-size: 0.85rem;
     line-height: 1.45;
     color: var(--servemade-ink-2);
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5rem 0;
     flex: 1;
   }
 
@@ -447,11 +643,178 @@ body {
   }
 }
 
+/* Homepage Status Preview Line */
+.servemade-hero-status {
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.servemade-hero-status__badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+
+  &--set {
+    background: var(--servemade-green-light);
+    color: var(--servemade-green-dark);
+  }
+
+  &--unset {
+    background: #fef2f2;
+    color: #b91c1c;
+  }
+}
+
+/* Secondary 2-Column Grid (Needs Attention & Recent Activity) */
+.servemade-dashboard-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Needs Attention Widget Details */
+.servemade-attention-section {
+  background: var(--servemade-surface-off);
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-sm);
+  padding: 10px 12px;
+  margin-top: 0.5rem;
+}
+
+.servemade-attention-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.servemade-attention-tag {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--servemade-ink-1);
+}
+
+.servemade-attention-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.servemade-attention-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid var(--servemade-line);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: 700;
+    color: var(--servemade-ink-1);
+  }
+
+  &__note {
+    font-size: 10.5px;
+    color: var(--servemade-ink-3);
+  }
+}
+
+.servemade-attention-badge {
+  font-size: 9.5px;
+  font-weight: 700;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.servemade-attention-desc {
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--servemade-ink-2);
+  margin: 0 0 6px 0;
+}
+
+.servemade-attention-link {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--servemade-green-dark);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Recent Activity List */
+.servemade-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+
+.servemade-recent-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  background: var(--servemade-surface-off);
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-sm);
+  text-decoration: none;
+  transition: all 0.1s ease;
+
+  &:hover {
+    background: var(--servemade-green-light);
+    border-color: var(--servemade-green);
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--servemade-ink-1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__time {
+    font-size: 11px;
+    color: var(--servemade-ink-3);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+}
+
 /* ==========================================================================
-   4. BUTTONS & INTERACTION CONTROLS
+   5. BUTTONS & INTERACTION CONTROLS
    ========================================================================== */
 
-/* Primary Buttons */
 .btn--style-primary,
 button.btn--style-primary,
 a.btn--style-primary {
@@ -471,7 +834,6 @@ a.btn--style-primary {
   }
 }
 
-/* Secondary / Pill Buttons */
 .btn--style-secondary,
 button.btn--style-secondary,
 a.btn--style-secondary {
@@ -487,7 +849,6 @@ a.btn--style-secondary {
   }
 }
 
-/* Form Inputs & Fields */
 input[type='text'],
 input[type='email'],
 input[type='password'],
@@ -507,14 +868,13 @@ select {
   }
 }
 
-/* Checkboxes & Switches */
 input[type='checkbox']:checked {
   background-color: var(--servemade-green) !important;
   border-color: var(--servemade-green) !important;
 }
 
 /* ==========================================================================
-   5. COLLECTION OVERVIEW & TABLE POLISH
+   6. COLLECTION OVERVIEW & TABLE POLISH
    ========================================================================== */
 
 .table {
