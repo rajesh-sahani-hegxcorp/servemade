@@ -5,7 +5,7 @@ export const Categories: CollectionConfig = {
   slug: 'categories',
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'slug', 'displayOrder', 'hasFlyout'],
+    defaultColumns: ['name', 'slug', 'displayOrder'],
   },
   access: {
     read: () => true,
@@ -54,11 +54,6 @@ export const Categories: CollectionConfig = {
       name: 'displayOrder',
       type: 'number',
       required: false,
-    },
-    {
-      name: 'hasFlyout',
-      type: 'checkbox',
-      defaultValue: false,
     },
   ],
 }

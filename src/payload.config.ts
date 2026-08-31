@@ -8,6 +8,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Categories } from './collections/Categories'
 import { Products } from './collections/Products'
+import { Homepage } from './globals/Homepage'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,6 +21,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Categories, Products],
+  globals: [Homepage],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'servemade-payload-secret-dev-key-32chars',
   typescript: {
