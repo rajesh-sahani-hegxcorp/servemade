@@ -171,7 +171,7 @@ export function Header() {
                   {/* Full-width Mega Menu Dropdown */}
                   <div className="absolute left-0 right-0 top-full z-50 w-screen max-w-full border-t border-line bg-white shadow-xl transition-all duration-200 ease-out opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible">
                     <div className="mx-auto max-w-6xl px-5 py-8">
-                      <div className="grid grid-cols-6 gap-6 text-left">
+                      <div className="grid grid-cols-6 gap-6 text-left items-start">
                         {MEGA_MENU_COLUMNS.map((col) => (
                           <div key={col.title} className="flex flex-col">
                             <h3 className="text-xs font-black uppercase tracking-wider text-brand-green-dark border-b border-line pb-2 mb-3">
@@ -199,42 +199,43 @@ export function Header() {
                                 const hasFlyout = Boolean(subItem.flyoutOptions && subItem.flyoutOptions.length > 0);
 
                                 return (
-                                  <li key={idx} className={hasFlyout ? "relative group/flyout" : ""}>
-                                    <Link
-                                      href={subItem.href || "#"}
-                                      className={`flex items-center justify-between py-1 text-xs font-semibold text-ink-2 transition-colors hover:text-brand-green-dark hover:translate-x-0.5 transform transition-transform duration-100 ${
-                                        hasFlyout ? "pr-1" : ""
-                                      }`}
-                                    >
-                                      <span>{subItem.name}</span>
+                                  <li key={idx} className={hasFlyout ? "group/branch" : ""}>
+                                    <div className="flex items-center justify-between py-1">
+                                      <Link
+                                        href={subItem.href || "#"}
+                                        className="flex-1 text-xs font-semibold text-ink-2 transition-colors hover:text-brand-green-dark hover:translate-x-0.5 transform transition-transform duration-100"
+                                      >
+                                        {subItem.name}
+                                      </Link>
                                       {hasFlyout && (
-                                        <ChevronRight
+                                        <ChevronDown
                                           size={11}
-                                          className="text-ink-3/70 transition-transform group-hover/flyout:translate-x-0.5 group-hover/flyout:text-brand-green-dark"
+                                          className="text-ink-3/70 transition-transform duration-200 group-hover/branch:rotate-180 group-hover/branch:text-brand-green-dark ml-1 flex-shrink-0"
                                           aria-hidden="true"
                                         />
                                       )}
-                                    </Link>
+                                    </div>
 
-                                    {/* Desktop Hover Flyout Submenu */}
+                                    {/* Inline Dropdown for Branching Items */}
                                     {hasFlyout && subItem.flyoutOptions && (
-                                      <div className="absolute left-full top-0 -mt-1.5 ml-1 z-50 min-w-[152px] rounded-xl border border-line bg-white/98 backdrop-blur-md p-1.5 shadow-xl transition-all duration-150 ease-out opacity-0 translate-x-1 invisible pointer-events-none group-hover/flyout:opacity-100 group-hover/flyout:translate-x-0 group-hover/flyout:visible group-hover/flyout:pointer-events-auto focus-within:opacity-100 focus-within:translate-x-0 focus-within:visible focus-within:pointer-events-auto before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-3">
-                                        <div className="px-2.5 py-1 text-[9.5px] font-black uppercase tracking-wider text-ink-3/80 border-b border-line/60 mb-1">
-                                          Select Option
+                                      <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-200 ease-out group-hover/branch:grid-rows-[1fr] group-hover/branch:opacity-100 group-hover/branch:mb-1.5 focus-within:grid-rows-[1fr] focus-within:opacity-100 focus-within:mb-1.5">
+                                        <div className="overflow-hidden">
+                                          <ul className="ml-1.5 space-y-0.5 border-l-2 border-brand-green/30 pl-2 py-0.5">
+                                            {subItem.flyoutOptions.map((opt, optIdx) => (
+                                              <li key={optIdx}>
+                                                <Link
+                                                  href={opt.href}
+                                                  className="group/opt flex items-center justify-between rounded-md px-1.5 py-1 text-[11px] font-medium text-ink-2 transition-colors hover:bg-brand-green-light hover:text-brand-green-dark focus:bg-brand-green-light focus:text-brand-green-dark"
+                                                >
+                                                  <span>{opt.label}</span>
+                                                  <span className="text-[10px] text-brand-green opacity-0 -translate-x-1 transition-all duration-150 group-hover/opt:opacity-100 group-hover/opt:translate-x-0">
+                                                    →
+                                                  </span>
+                                                </Link>
+                                              </li>
+                                            ))}
+                                          </ul>
                                         </div>
-                                        <ul className="space-y-0.5">
-                                          {subItem.flyoutOptions.map((opt, optIdx) => (
-                                            <li key={optIdx}>
-                                              <Link
-                                                href={opt.href}
-                                                className="flex items-center justify-between rounded-lg px-2.5 py-1.5 text-xs font-semibold text-ink-2 transition-colors hover:bg-brand-green-light hover:text-brand-green-dark focus:bg-brand-green-light focus:text-brand-green-dark"
-                                              >
-                                                <span>{opt.label}</span>
-                                                <span className="text-[10px] text-brand-green">→</span>
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        </ul>
                                       </div>
                                     )}
                                   </li>
