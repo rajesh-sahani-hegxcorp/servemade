@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -62,7 +63,9 @@ export default async function ProductDetailPage({ params }: Props) {
       </div>
 
       {/* Interactive size/quantity/shipping/branding configurator + gallery */}
-      <ProductConfigurator product={product} />
+      <Suspense fallback={null}>
+        <ProductConfigurator product={product} />
+      </Suspense>
 
       {/* Overview / Specifications / Order quantities / Certifications */}
       <ProductTabs product={product} />

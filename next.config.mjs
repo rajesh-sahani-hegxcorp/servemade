@@ -16,6 +16,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/products/bagasse-square-bowl",
+        destination: "/products/bagasse-round-bowl",
+        permanent: true,
+      },
+      {
+        source: "/products/wooden-spoon-fork",
+        destination: "/products/wooden-spoonfork",
+        permanent: true,
+      },
+      {
         source: "/products/bagasse-rectangular-container",
         destination: "/products/rectangle-container-with-lid",
         permanent: true,

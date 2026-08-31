@@ -72,6 +72,10 @@ export interface ProductVariant {
   capacityOz: number | null;
   qtyPerBox: number | null;
   qtyPerPkt: number | null;
+  material?: string; // "Bagasse" | "Cornstarch"
+  shape?: string; // "Round" | "Rectangle"
+  compartments?: number; // 2 | 3 | 4 | 5
+  compartmentOption?: string; // "Plain" | "3-Compartment" | "4-Compartment"
 }
 
 export interface SpecRow {
@@ -114,6 +118,9 @@ export interface Product {
   sourceSheetCategory?: string;
   variantType: "capacity" | "dimension";
   variants: ProductVariant[];
+  materials?: string[]; // optional multi-material selection, e.g. ["Bagasse", "Cornstarch"]
+  compartmentOptions?: string[]; // optional compartment options, e.g. ["Plain", "3-Compartment", "4-Compartment"]
+  shapeOptions?: string[]; // optional shape options, e.g. ["Round", "Square"]
   colors?: string[]; // optional color variants, e.g. ["White", "Brown"]
   moqPieces: number | null; // null for TBD / placeholder
   tagline: string; // one-line, used in <meta description> and OG tags

@@ -12,21 +12,84 @@ export function ProductTabs({ product }: { product: Product }) {
   const [tab, setTab] = useState(0);
   const tiers = buildQuantityTiers(product.baseMoq);
 
-  const sizeList =
-    product.variants && product.variants.length > 0
-      ? product.variants
-          .map((v) => {
-            if (v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())) {
-              return v.size !== v.dimension ? `${v.size} (${v.dimension})` : v.dimension;
-            }
-            return v.size;
-          })
-          .join(" · ")
-      : product.sizes.map((s) => s.label).join(" · ");
+  const hasCompartments = Boolean(product.variants && product.variants.some((v) => v.compartments));
+  const hasMaterials = Boolean(product.materials && product.materials.length > 1);
+  const hasCompartmentOptions = Boolean(product.compartmentOptions && product.compartmentOptions.length > 1);
+  const hasShapeOptions = Boolean(product.shapeOptions && product.shapeOptions.length > 1);
+
+  let sizeList = "";
+  if (hasCompartmentOptions) {
+    const optMap = new Map<string, string[]>();
+    product.variants.forEach((v) => {
+      const opt = v.compartmentOption || "Standard";
+      const list = optMap.get(opt) || [];
+      const label = v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())
+        ? v.dimension
+        : v.size;
+      if (!list.includes(label)) list.push(label);
+      optMap.set(opt, list);
+    });
+    sizeList = Array.from(optMap.entries())
+      .map(([opt, sizes]) => `${opt}: ${sizes.join(", ")}`)
+      .join(" · ");
+  } else if (hasShapeOptions) {
+    const shapeMap = new Map<string, string[]>();
+    product.variants.forEach((v) => {
+      const shape = v.shape || "Standard";
+      const list = shapeMap.get(shape) || [];
+      const label = v.capacityOz ? `${Math.round(v.capacityOz)} oz` : v.size;
+      if (!list.includes(label)) list.push(label);
+      shapeMap.set(shape, list);
+    });
+    sizeList = Array.from(shapeMap.entries())
+      .map(([shape, sizes]) => `${shape}: ${sizes.join(", ")}`)
+      .join(" · ");
+  } else if (hasCompartments) {
+    const compMap = new Map<number, string[]>();
+    product.variants.forEach((v) => {
+      if (v.compartments) {
+        const shapes = compMap.get(v.compartments) || [];
+        if (v.shape && !shapes.includes(v.shape)) shapes.push(v.shape);
+        compMap.set(v.compartments, shapes);
+      }
+    });
+    sizeList = Array.from(compMap.entries())
+      .map(([comp, shapes]) => (shapes.length > 0 ? `${comp} Compartment (${shapes.join(", ")})` : `${comp} Compartment`))
+      .join(" · ");
+  } else if (hasMaterials) {
+    const matMap = new Map<string, string[]>();
+    product.variants.forEach((v) => {
+      const mat = v.material || "Standard";
+      const list = matMap.get(mat) || [];
+      const label = v.capacityOz ? `${Math.round(v.capacityOz)} oz` : v.size;
+      if (!list.includes(label)) list.push(label);
+      matMap.set(mat, list);
+    });
+    sizeList = Array.from(matMap.entries())
+      .map(([mat, sizes]) => `${mat}: ${sizes.join(", ")}`)
+      .join(" · ");
+  } else if (product.variants && product.variants.length > 0) {
+    sizeList = product.variants
+      .map((v) => {
+        if (v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())) {
+          return v.size !== v.dimension ? `${v.size} (${v.dimension})` : v.dimension;
+        }
+        return v.size;
+      })
+      .join(" · ");
+  } else {
+    sizeList = product.sizes.map((s) => s.label).join(" · ");
+  }
+
+  const specLabel = hasCompartments
+    ? "Compartment Configurations"
+    : product.variantType === "capacity"
+    ? "Sizes / Capacities"
+    : "Sizes / Dimensions";
 
   const productSpecs: [string, string][] = [
     ["Material", product.material],
-    [product.variantType === "capacity" ? "Sizes / Capacities" : "Sizes / Dimensions", sizeList],
+    [specLabel, sizeList],
     ...(product.heatRating ? ([["Heat rating", product.heatRating]] as [string, string][]) : []),
     ...(product.lidFit ? ([["Lid fit", product.lidFit]] as [string, string][]) : []),
     ["Printing", product.printing],

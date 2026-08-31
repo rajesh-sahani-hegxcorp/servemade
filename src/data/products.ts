@@ -113,7 +113,7 @@ export const PRODUCTS: Product[] = [
     ],
     "relatedSlugs": [
       "double-wall-paper-cup",
-      "plain-rectangular-food-box"
+      "rectangle-container-with-lid"
     ],
     "gallery": {
       "type": "static",
@@ -122,39 +122,51 @@ export const PRODUCTS: Product[] = [
   },
   {
     "slug": "bagasse-round-bowl",
-    "name": "Bagasse Round Bowl",
+    "name": "Bagasse Bowl",
     "categorySlug": "plates-bowls",
     "categoryName": "Biodegradable Products",
     "variantType": "capacity",
     "variants": [
       {
-        "size": "180 mL",
-        "dimension": null,
+        "size": "6 oz",
+        "dimension": "round",
+        "shape": "Round",
         "capacityMl": 180,
-        "capacityOz": 6.09,
+        "capacityOz": 6,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 50
       },
       {
-        "size": "240 mL",
-        "dimension": null,
+        "size": "8 oz",
+        "dimension": "round",
+        "shape": "Round",
         "capacityMl": 240,
-        "capacityOz": 8.12,
+        "capacityOz": 8,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 50
       },
       {
-        "size": "360 mL",
-        "dimension": null,
-        "capacityMl": 360,
-        "capacityOz": 12.17,
+        "size": "12 oz",
+        "dimension": "round",
+        "shape": "Round",
+        "capacityMl": 350,
+        "capacityOz": 12,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "4 oz",
+        "dimension": "square",
+        "shape": "Square",
+        "capacityMl": 120,
+        "capacityOz": 4,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 50
       }
     ],
     "moqPieces": null,
-    "tagline": "Certified compostable sugarcane bagasse round bowls for dine-in, soups, and takeaways.",
-    "summary": "Premium quality bagasse round bowls crafted from 100% renewable sugarcane fibers. Heavy-duty, leak-resistant, and grease-proof design built for hot soups, salads, curries, and commercial food service. Certified 100% compostable and food-safe.",
+    "tagline": "Certified compostable sugarcane bagasse bowls in Round and Square formats.",
+    "summary": "Molded sugarcane bagasse bowls crafted from upcycled plant fibres. Available in classic Round (6oz, 8oz, 12oz) and compact Square (4oz) shapes for soups, sides, and desserts.",
     "ratingLabel": "Top choice for restaurants & catering",
     "quickFacts": [
       {
@@ -176,16 +188,20 @@ export const PRODUCTS: Product[] = [
     ],
     "sizes": [
       {
+        "label": "4 oz",
+        "note": "Square"
+      },
+      {
         "label": "6 oz",
-        "note": "180 mL"
+        "note": "Round"
       },
       {
         "label": "8 oz",
-        "note": "240 mL"
+        "note": "Round"
       },
       {
         "label": "12 oz",
-        "note": "360 mL"
+        "note": "Round"
       }
     ],
     "baseMoq": 20000,
@@ -245,105 +261,17 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "relatedSlugs": [
-      "bagasse-square-bowl",
       "bagasse-round-plate",
       "bagasse-3-compartment-combo-meal-plate"
     ],
     "gallery": {
       "type": "static",
       "art": "bowl"
-    }
-  },
-  {
-    "slug": "bagasse-square-bowl",
-    "name": "Bagasse Square Bowl",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "4 in",
-        "dimension": "4 in square",
-        "capacityMl": 120,
-        "capacityOz": 4.06,
-        "qtyPerBox": 2000,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable bagasse square bowls ideal for sides, desserts, and dips.",
-    "summary": "Compact 4oz square bowls crafted from 100% natural sugarcane bagasse. Modern square aesthetic tailored for side dishes, sauces, dips, tasting portions, and airline or event catering.",
-    "ratingLabel": "Popular for appetizers & condiments",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "2,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "4 oz",
-        "note": "4 in square"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom embossed branding available",
-    "endOfLife": "100% commercially compostable",
-    "heatRating": "-20°C to 120°C",
-    "cartonPack": "2,000 units per carton",
-    "cartonVolume": "0.05 m³",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Contemporary square profile",
-        "body": "The square footprint creates a high-end presentation for tapas, sushi condiments, condiments, and sampling menus.",
-        "bullets": [
-          "100% tree-free upcycled sugarcane fiber",
-          "Rigid walls with secure rim for clean handling",
-          "Space-efficient square geometry on dining trays"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Direct food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Industrial compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What is the capacity of the square bowl?",
-        "answer": "The bagasse square bowl measures 4 inches square with approximately 4 oz (120 mL) capacity."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-round-bowl",
-      "bagasse-round-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "bowl"
-    }
+    },
+    "shapeOptions": [
+      "Round",
+      "Square"
+    ]
   },
   {
     "slug": "bagasse-round-plate",
@@ -355,6 +283,7 @@ export const PRODUCTS: Product[] = [
       {
         "size": "6 in",
         "dimension": "6 in diameter",
+        "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 1000,
@@ -363,6 +292,7 @@ export const PRODUCTS: Product[] = [
       {
         "size": "7 in",
         "dimension": "7 in diameter",
+        "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 1000,
@@ -371,6 +301,7 @@ export const PRODUCTS: Product[] = [
       {
         "size": "9 in",
         "dimension": "9 in diameter",
+        "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 500,
@@ -379,6 +310,7 @@ export const PRODUCTS: Product[] = [
       {
         "size": "10 in",
         "dimension": "10 in diameter",
+        "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 500,
@@ -387,6 +319,7 @@ export const PRODUCTS: Product[] = [
       {
         "size": "11 in",
         "dimension": "11 in diameter",
+        "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 1000,
@@ -395,15 +328,52 @@ export const PRODUCTS: Product[] = [
       {
         "size": "12 in",
         "dimension": "12 in diameter",
+        "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 500,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "9 in",
+        "dimension": "9 in diameter",
+        "compartmentOption": "3-Compartment",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "10 in",
+        "dimension": "10 in diameter",
+        "compartmentOption": "3-Compartment",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "11 in",
+        "dimension": "11 in diameter",
+        "compartmentOption": "4-Compartment",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 800,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "12 in",
+        "dimension": "12 in diameter",
+        "compartmentOption": "4-Compartment",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 600,
         "qtyPerPkt": 25
       }
     ],
     "moqPieces": null,
     "tagline": "Sturdy, grease-resistant round bagasse plates from 6 to 12 inches for events and catering.",
-    "summary": "Comprehensive range of compostable round dinner plates molded from 100% sugarcane pulp. Ultra-sturdy construction will not bend or buckle under heavy, gravy-rich meals.",
+    "summary": "Comprehensive range of compostable round dinner plates molded from 100% sugarcane pulp. Available in classic Plain, 3-Compartment, and 4-Compartment layouts that will not bend or buckle under heavy meals.",
     "ratingLabel": "Preferred for banquets & food service",
     "quickFacts": [
       {
@@ -426,27 +396,27 @@ export const PRODUCTS: Product[] = [
     "sizes": [
       {
         "label": "6 in",
-        "note": "Appetizer / Snack"
+        "note": "Plain"
       },
       {
         "label": "7 in",
-        "note": "Side plate"
+        "note": "Plain"
       },
       {
         "label": "9 in",
-        "note": "Lunch plate"
+        "note": "Plain or 3-CP"
       },
       {
         "label": "10 in",
-        "note": "Dinner plate"
+        "note": "Plain or 3-CP"
       },
       {
         "label": "11 in",
-        "note": "Large dinner plate"
+        "note": "Plain or 4-CP"
       },
       {
         "label": "12 in",
-        "note": "Platter / Buffet"
+        "note": "Plain or 4-CP"
       }
     ],
     "baseMoq": 20000,
@@ -462,12 +432,22 @@ export const PRODUCTS: Product[] = [
     "shipsFrom": "Nhava Sheva (Mumbai), India",
     "overview": [
       {
-        "heading": "Rigid non-bending structure",
+        "heading": "Plain and partitioned round layouts",
+        "body": "Available in full classic open round dinnerware as well as 3-compartment and 4-compartment divided configurations for portion-separated meals.",
+        "bullets": [
+          "Plain: 6, 7, 9, 10, 11, and 12-inch diameter sizes",
+          "3-Compartment: 9 and 10-inch diameter options",
+          "4-Compartment: 11 and 12-inch banquet diameter options",
+          "Cut and oil resistant upcycled sugarcane bagasse"
+        ]
+      },
+      {
+        "heading": "Heavy-duty structural rigidity",
         "body": "High-density molded fibers provide cut resistance and superior rigidity compared to standard paper plates.",
         "bullets": [
-          "6 sizes covering everything from cake slices to full buffet courses",
           "Naturally grease and moisture resistant",
-          "Certified compostable across global standards"
+          "Certified compostable across global standards",
+          "Freezer and microwave safe up to 120°C"
         ]
       }
     ],
@@ -494,7 +474,12 @@ export const PRODUCTS: Product[] = [
     "gallery": {
       "type": "static",
       "art": "plate"
-    }
+    },
+    "compartmentOptions": [
+      "Plain",
+      "3-Compartment",
+      "4-Compartment"
+    ]
   },
   {
     "slug": "bagasse-3-compartment-combo-meal-plate",
@@ -764,208 +749,6 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "bagasse-3-compartment-round-plate",
-    "name": "Bagasse 3-Compartment Round Plate",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "9 in / 3 compartment",
-        "dimension": "9 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "10 in / 3 compartment",
-        "dimension": "10 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Round 3-compartment bagasse plates in 9 and 10 inch sizes for balanced meal service.",
-    "summary": "Molded round dinner plate with 3 divided sections. Made from renewable sugarcane bagasse, delivering sustainable dining with portion separation.",
-    "ratingLabel": "Popular for events & buffets",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "1,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "9 in",
-        "note": "3-compartment round"
-      },
-      {
-        "label": "10 in",
-        "note": "3-compartment round"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom branding available",
-    "endOfLife": "100% compostable",
-    "cartonPack": "1,000 units per carton",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Round partitioned layout",
-        "body": "Combines the classic aesthetic of round dinnerware with practical 3-compartment food separation.",
-        "bullets": [
-          "9-inch and 10-inch diameter options",
-          "Grease and moisture resistant",
-          "Commercial compost certified"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What sizes are available?",
-        "answer": "Available in 9-inch and 10-inch diameter round formats."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-4-compartment-round-plate",
-      "bagasse-3-compartment-square-plate"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "bagasse-4-compartment-round-plate",
-    "name": "Bagasse 4-Compartment Round Plate",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "11 in / 4 compartment",
-        "dimension": "11 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 800,
-        "qtyPerPkt": 25
-      },
-      {
-        "size": "12 in / 4 compartment",
-        "dimension": "12 in diameter",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 600,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Large 11 and 12 inch 4-compartment round plates for full dinner servings.",
-    "summary": "Extra-large 4-compartment round plate crafted from thick molded bagasse. Designed for feasts, banquets, and grand hospitality service.",
-    "ratingLabel": "High capacity banquet plate",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "600–800 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "11 in",
-        "note": "4-compartment round"
-      },
-      {
-        "label": "12 in",
-        "note": "4-compartment round"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom branding available",
-    "endOfLife": "100% compostable",
-    "cartonPack": "600–800 units per carton",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Generous 4-compartment footprint",
-        "body": "Available in 11-inch and 12-inch diameters to hold generous main courses with multiple sides.",
-        "bullets": [
-          "Heavyweight molded bagasse",
-          "Wide rim for stable carrying",
-          "Completely plastic-free"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is this suitable for buffets?",
-        "answer": "Yes, the 11-inch and 12-inch sizes are ideal for heavy buffet service."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-3-compartment-round-plate",
-      "bagasse-5-compartment-meal-tray"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
     "slug": "bagasse-3-compartment-square-plate",
     "name": "Bagasse 3-Compartment Square Plate",
     "categorySlug": "plates-bowls",
@@ -1046,113 +829,12 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "relatedSlugs": [
-      "bagasse-3-compartment-round-plate",
-      "bagasse-square-bowl"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "bagasse-rectangular-container",
-    "name": "Bagasse Rectangular Container",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "500 mL",
-        "dimension": "rectangular",
-        "capacityMl": 500,
-        "capacityOz": 16.91,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 125
-      },
-      {
-        "size": "750 mL",
-        "dimension": "rectangular",
-        "capacityMl": 750,
-        "capacityOz": 25.36,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 125
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Eco-friendly rectangular bagasse containers in 500mL and 750mL for food takeaways.",
-    "summary": "Sustainable rectangular meal containers molded from sugarcane bagasse. Ideal for pasta, curries, rice bowls, and cloud kitchen delivery packaging.",
-    "ratingLabel": "Popular takeaway food container",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500–1000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "500 mL",
-        "note": "17 oz"
-      },
-      {
-        "label": "750 mL",
-        "note": "25 oz"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom embossing or branded sleeve",
-    "endOfLife": "100% compostable",
-    "cartonPack": "500–1,000 units per carton",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Leak-resistant rectangular profile",
-        "body": "High sidewalls and reinforced rim ensure secure stacking and reliable closure for takeaway deliveries.",
-        "bullets": [
-          "500 mL and 750 mL capacities",
-          "Oil resistant up to 120°C",
-          "100% certified compostable"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Can these containers be frozen and reheated?",
-        "answer": "Yes, safe from -20°C in the freezer up to 120°C in the microwave."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-clamshell",
+      "bagasse-round-plate",
       "bagasse-round-bowl"
     ],
     "gallery": {
       "type": "static",
-      "art": "box"
+      "art": "plate"
     }
   },
   {
@@ -1248,7 +930,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "relatedSlugs": [
-      "bagasse-rectangular-container",
+      "rectangle-container-with-lid",
       "bagasse-round-plate"
     ],
     "gallery": {
@@ -1630,405 +1312,6 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    "slug": "top-folding-pizza-box",
-    "name": "Top-Folding Pizza Box",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
-    "sourceSheetCategory": "Paper Boxes",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "7 x 7 x 1.5 in",
-        "dimension": "7 x 7 x 1.5 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 100
-      },
-      {
-        "size": "8 x 8 x 1.5 in",
-        "dimension": "8 x 8 x 1.5 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 100
-      },
-      {
-        "size": "10 x 10 x 1.5 in",
-        "dimension": "10 x 10 x 1.5 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 100
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable top-folding pizza box for eco-conscious businesses.",
-    "summary": "Premium quality top-folding pizza box crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "100 packs",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "Standard",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "7 x 7 x 1.5 in",
-        "note": "7 x 7 x 1.5 in"
-      },
-      {
-        "label": "8 x 8 x 1.5 in",
-        "note": "8 x 8 x 1.5 in"
-      },
-      {
-        "label": "10 x 10 x 1.5 in",
-        "note": "10 x 10 x 1.5 in"
-      }
-    ],
-    "baseMoq": 100,
-    "moqUnit": "packs",
-    "material": "FSC® certified paper, food-safe lining",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "Carton pack varies by size",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.69",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Top-Folding Pizza Box",
-        "body": "Our top-folding pizza box offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these top-folding pizza box safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "3-ply-corrugated-pizza-box",
-      "3-ply-corrugated-garlic-bread-box"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "box"
-    }
-  },
-  {
-    "slug": "3-ply-corrugated-pizza-box",
-    "name": "3-Ply Corrugated Pizza Box",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
-    "sourceSheetCategory": "Paper Boxes",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "7 x 7 x 1.5 in",
-        "dimension": "7 x 7 x 1.5 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 100
-      },
-      {
-        "size": "8 x 8 x 1.5 in",
-        "dimension": "8 x 8 x 1.5 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 100
-      },
-      {
-        "size": "10 x 10 x 1.5 in",
-        "dimension": "10 x 10 x 1.5 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 50
-      },
-      {
-        "size": "12 x 12 x 1.5 in",
-        "dimension": "12 x 12 x 1.5 in",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 50
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable 3-ply corrugated pizza box for eco-conscious businesses.",
-    "summary": "Premium quality 3-ply corrugated pizza box crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "100 packs",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "Standard",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "7 x 7 x 1.5 in",
-        "note": "7 x 7 x 1.5 in"
-      },
-      {
-        "label": "8 x 8 x 1.5 in",
-        "note": "8 x 8 x 1.5 in"
-      },
-      {
-        "label": "10 x 10 x 1.5 in",
-        "note": "10 x 10 x 1.5 in"
-      },
-      {
-        "label": "12 x 12 x 1.5 in",
-        "note": "12 x 12 x 1.5 in"
-      }
-    ],
-    "baseMoq": 100,
-    "moqUnit": "packs",
-    "material": "FSC® certified paper, food-safe lining",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "Carton pack varies by size",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.69",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our 3-Ply Corrugated Pizza Box",
-        "body": "Our 3-ply corrugated pizza box offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these 3-ply corrugated pizza box safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "top-folding-pizza-box",
-      "3-ply-corrugated-garlic-bread-box"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "box"
-    }
-  },
-  {
-    "slug": "3-ply-corrugated-garlic-bread-box",
-    "name": "3-Ply Corrugated Garlic Bread Box",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
-    "sourceSheetCategory": "Paper Boxes",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "Not stated",
-        "dimension": "not stated",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": null,
-        "qtyPerPkt": 100
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable 3-ply corrugated garlic bread box for eco-conscious businesses.",
-    "summary": "Premium quality 3-ply corrugated garlic bread box crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "100 packs",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "Standard",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "Not stated",
-        "note": "not stated"
-      }
-    ],
-    "baseMoq": 100,
-    "moqUnit": "packs",
-    "material": "FSC® certified paper, food-safe lining",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "Carton pack varies by size",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.69",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our 3-Ply Corrugated Garlic Bread Box",
-        "body": "Our 3-ply corrugated garlic bread box offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these 3-ply corrugated garlic bread box safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "top-folding-pizza-box",
-      "3-ply-corrugated-pizza-box"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "box"
-    }
-  },
-  {
     "slug": "paper-straw",
     "name": "Paper Straw",
     "categorySlug": "cutlery-straws",
@@ -2169,149 +1452,11 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "relatedSlugs": [
-      "wooden-spoon",
-      "paper-straw"
+      "wooden-spoon"
     ],
     "gallery": {
       "type": "static",
       "art": "straw"
-    }
-  },
-  {
-    "slug": "plain-rectangular-food-box",
-    "name": "Plain Rectangular Food Box",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
-    "sourceSheetCategory": "Food Box",
-    "variantType": "capacity",
-    "variants": [
-      {
-        "size": "500 mL",
-        "dimension": "rectangular",
-        "capacityMl": 500,
-        "capacityOz": 16.91,
-        "qtyPerBox": 500,
-        "qtyPerPkt": null
-      },
-      {
-        "size": "750 mL",
-        "dimension": "rectangular",
-        "capacityMl": 750,
-        "capacityOz": 25.36,
-        "qtyPerBox": 500,
-        "qtyPerPkt": null
-      },
-      {
-        "size": "1000 mL",
-        "dimension": "rectangular",
-        "capacityMl": 1000,
-        "capacityOz": 33.81,
-        "qtyPerBox": 500,
-        "qtyPerPkt": null
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Certified compostable plain rectangular food box for eco-conscious businesses.",
-    "summary": "Premium quality plain rectangular food box crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
-    "ratingLabel": "Highly rated by hospitality groups",
-    "quickFacts": [
-      {
-        "value": "1,000 pieces",
-        "label": "Minimum order"
-      },
-      {
-        "value": "3–4 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "500 mL",
-        "note": "16.91 fl oz"
-      },
-      {
-        "label": "750 mL",
-        "note": "25.36 fl oz"
-      },
-      {
-        "label": "1000 mL",
-        "note": "33.81 fl oz"
-      }
-    ],
-    "baseMoq": 1000,
-    "moqUnit": "pieces",
-    "material": "Sustainable biodegradable fibers",
-    "printing": "Custom design printing available (up to 4 colours)",
-    "endOfLife": "Commercially compostable (EN 13432 certified)",
-    "cartonPack": "500 units per carton",
-    "cartonVolume": "0.10 – 0.15 m³ depending on size",
-    "hsCode": "4823.70",
-    "leadTime": "3–4 weeks (+ print design approval)",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Why choose our Plain Rectangular Food Box",
-        "body": "Our plain rectangular food box offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
-        "bullets": [
-          "100% natural, plastic-free raw materials",
-          "Leak-proof, oil and water resistant design",
-          "Pairs perfectly with compatible lids and accessories",
-          "Fully complies with international safety and compostability standards"
-        ]
-      },
-      {
-        "heading": "Logistics and Shipping details",
-        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
-        "bullets": [
-          "Carefully packaged in robust export-grade cartons",
-          "Inspect reports and product quality sheets provided before dispatch",
-          "Assigned manager to handle customs clearance support"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "US FDA compliant"
-      },
-      {
-        "name": "EU 10/2011",
-        "note": "European standard"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable certification"
-      },
-      {
-        "name": "ISO 9001",
-        "note": "Quality management"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Are these plain rectangular food box safe for hot foods?",
-        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
-      },
-      {
-        "question": "Can we print our restaurant brand logo on them?",
-        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-round-plate",
-      "bagasse-round-bowl"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "box"
     }
   },
   {
@@ -4028,6 +3173,531 @@ export const PRODUCTS: Product[] = [
     "gallery": {
       "type": "static",
       "art": "cutlery"
+    }
+  },
+  {
+    "slug": "round-bowl-with-lid",
+    "name": "Round Bowl with Lid",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
+    "variantType": "capacity",
+    "materials": [
+      "Bagasse",
+      "Cornstarch"
+    ],
+    "variants": [
+      {
+        "size": "17 oz",
+        "dimension": "150 mm dia",
+        "capacityMl": 500,
+        "capacityOz": 17,
+        "material": "Bagasse",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "25 oz",
+        "dimension": "170 mm dia",
+        "capacityMl": 750,
+        "capacityOz": 25,
+        "material": "Bagasse",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "34 oz",
+        "dimension": "190 mm dia",
+        "capacityMl": 1000,
+        "capacityOz": 34,
+        "material": "Bagasse",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "12 oz",
+        "dimension": "135 mm dia",
+        "capacityMl": 350,
+        "capacityOz": 12,
+        "material": "Cornstarch",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "15 oz",
+        "dimension": "145 mm dia",
+        "capacityMl": 450,
+        "capacityOz": 15,
+        "material": "Cornstarch",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "17 oz",
+        "dimension": "155 mm dia",
+        "capacityMl": 500,
+        "capacityOz": 17,
+        "material": "Cornstarch",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "22 oz",
+        "dimension": "165 mm dia",
+        "capacityMl": 650,
+        "capacityOz": 22,
+        "material": "Cornstarch",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 50
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Compostable round takeaway bowls with leak-resistant matching lids in bagasse and cornstarch.",
+    "summary": "Commercial-grade biodegradable round bowls engineered for takeaway meals, grain bowls, curries, and salads. Available in sugarcane bagasse and bio-based cornstarch with tight-fitting matching lids.",
+    "ratingLabel": "Top choice for poke, grain & noodle bowls",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "12 oz",
+        "note": "350 mL"
+      },
+      {
+        "label": "15 oz",
+        "note": "450 mL"
+      },
+      {
+        "label": "17 oz",
+        "note": "500 mL"
+      },
+      {
+        "label": "22 oz",
+        "note": "650 mL"
+      },
+      {
+        "label": "25 oz",
+        "note": "750 mL"
+      },
+      {
+        "label": "34 oz",
+        "note": "1000 mL"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "Sugarcane Bagasse / Bio-based Cornstarch",
+    "printing": "Custom embossing or branded sleeve available",
+    "endOfLife": "100% Certified Compostable / Biodegradable",
+    "heatRating": "-20°C to 120°C (Microwave & freezer safe)",
+    "lidFit": "Matching snap-fit leak-resistant lids included",
+    "cartonPack": "500 units per carton (50 pcs x 10 pkts)",
+    "cartonVolume": "0.065 cbm / ctn",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Leak-resistant round profile with matching lids",
+        "body": "Engineered for hot soups, poke bowls, and saucy deliveries with secure lid closure preventing leaks during transport.",
+        "bullets": [
+          "Available in renewable Sugarcane Bagasse and Cornstarch",
+          "High sidewalls and reinforced rim for spill-free stacking",
+          "100% biodegradable and compostable"
+        ]
+      },
+      {
+        "heading": "Versatile temperature tolerance",
+        "body": "Safe for hot liquids and microwave reheating up to 120°C as well as freezer storage down to -20°C.",
+        "bullets": [
+          "Oil and water resistant without synthetic plastic liners",
+          "FDA and EN 13432 food contact approved",
+          "Stackable nesting design minimizes storage footprint"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are the lids included with the round bowls?",
+        "answer": "Yes, all orders include matching leak-resistant snap-fit lids designed specifically for each size."
+      },
+      {
+        "question": "What is the difference between Bagasse and Cornstarch options?",
+        "answer": "Sugarcane bagasse is made from upcycled sugarcane pulp and offers a natural textured matte finish, while cornstarch provides an ultra-smooth, lightweight bioplastic construction."
+      }
+    ],
+    "relatedSlugs": [
+      "rectangle-container-with-lid",
+      "meal-tray-with-lid",
+      "kraft-paper-bowl-with-pet-lid"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "bowl"
+    }
+  },
+  {
+    "slug": "rectangle-container-with-lid",
+    "name": "Rectangle Container with Lid",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
+    "variantType": "capacity",
+    "materials": [
+      "Bagasse",
+      "Cornstarch"
+    ],
+    "variants": [
+      {
+        "size": "17 oz",
+        "dimension": "rectangular",
+        "capacityMl": 500,
+        "capacityOz": 17,
+        "material": "Bagasse",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
+      },
+      {
+        "size": "22 oz",
+        "dimension": "rectangular",
+        "capacityMl": 650,
+        "capacityOz": 22,
+        "material": "Bagasse",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
+      },
+      {
+        "size": "25 oz",
+        "dimension": "rectangular",
+        "capacityMl": 750,
+        "capacityOz": 25,
+        "material": "Bagasse",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
+      },
+      {
+        "size": "34 oz",
+        "dimension": "rectangular",
+        "capacityMl": 1000,
+        "capacityOz": 34,
+        "material": "Bagasse",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
+      },
+      {
+        "size": "17 oz",
+        "dimension": "rectangular",
+        "capacityMl": 500,
+        "capacityOz": 17,
+        "material": "Cornstarch",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
+      },
+      {
+        "size": "22 oz",
+        "dimension": "rectangular",
+        "capacityMl": 650,
+        "capacityOz": 22,
+        "material": "Cornstarch",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
+      },
+      {
+        "size": "25 oz",
+        "dimension": "rectangular",
+        "capacityMl": 750,
+        "capacityOz": 25,
+        "material": "Cornstarch",
+        "qtyPerBox": 500,
+        "qtyPerPkt": 125
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Sustainable rectangular meal containers with secure matching lids in bagasse and cornstarch.",
+    "summary": "Sustainable rectangular meal containers molded from sugarcane bagasse and cornstarch. Ideal for pasta, curries, rice bowls, and cloud kitchen delivery packaging with secure leak-resistant lids.",
+    "ratingLabel": "Popular takeaway food container",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "17 oz",
+        "note": "500 mL"
+      },
+      {
+        "label": "22 oz",
+        "note": "650 mL"
+      },
+      {
+        "label": "25 oz",
+        "note": "750 mL"
+      },
+      {
+        "label": "34 oz",
+        "note": "1000 mL"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "Sugarcane Bagasse / Bio-based Cornstarch",
+    "printing": "Custom embossing or branded sleeve",
+    "endOfLife": "100% compostable",
+    "heatRating": "-20°C to 120°C (Microwave & freezer safe)",
+    "lidFit": "Matching secure stackable lid included",
+    "cartonPack": "500 units per carton",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Leak-resistant rectangular profile",
+        "body": "High sidewalls and reinforced rim ensure secure stacking and reliable closure for takeaway deliveries.",
+        "bullets": [
+          "Available in Bagasse (17oz, 22oz, 25oz, 34oz) and Cornstarch (17oz, 22oz, 25oz)",
+          "Oil resistant up to 120°C",
+          "100% certified compostable and plastic-free"
+        ]
+      },
+      {
+        "heading": "Rigid construction for heavy food delivery",
+        "body": "Sturdy engineered sidewalls prevent bowing or collapsing when stacked inside thermal courier bags.",
+        "bullets": [
+          "Microwave and freezer safe (-20°C to 120°C)",
+          "Tight lid seal prevents saucy spills",
+          "Standard carton packing of 500 units per box"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can these containers be frozen and reheated?",
+        "answer": "Yes, safe from -20°C in the freezer up to 120°C in the microwave."
+      },
+      {
+        "question": "Are matching lids included in the box?",
+        "answer": "Yes, matching stackable lids are supplied with each carton order."
+      }
+    ],
+    "relatedSlugs": [
+      "round-bowl-with-lid",
+      "meal-tray-with-lid",
+      "bagasse-clamshell"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "box"
+    }
+  },
+  {
+    "slug": "meal-tray-with-lid",
+    "name": "Meal Tray with Lid",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Biodegradable Containers",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "2 Compartment",
+        "dimension": "Round",
+        "compartments": 2,
+        "shape": "Round",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 250,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "2 Compartment",
+        "dimension": "Rectangle",
+        "compartments": 2,
+        "shape": "Rectangle",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 250,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "3 Compartment",
+        "dimension": null,
+        "compartments": 3,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 250,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "4 Compartment",
+        "dimension": null,
+        "compartments": 4,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 250,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "5 Compartment",
+        "dimension": null,
+        "compartments": 5,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 250,
+        "qtyPerPkt": 50
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Multi-compartment biodegradable meal trays with secure matching lids for portioned catering and deliveries.",
+    "summary": "Heavy-duty compostable multi-compartment meal trays with matching snap-lock lids. Engineered for catered meals, combo platters, bento deliveries, and cafeteria food services without flavour crossover.",
+    "ratingLabel": "Ideal for combo meals, bento & institutional catering",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "250 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "2 Compartment",
+        "note": "Round or Rectangle"
+      },
+      {
+        "label": "3 Compartment",
+        "note": "Combo meal"
+      },
+      {
+        "label": "4 Compartment",
+        "note": "Executive lunch"
+      },
+      {
+        "label": "5 Compartment",
+        "note": "Full course bento"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "100% Biodegradable Sugarcane Bagasse",
+    "printing": "Custom embossing or branded sleeve available",
+    "endOfLife": "100% Certified Compostable",
+    "heatRating": "-20°C to 120°C (Oil & water resistant)",
+    "lidFit": "Tight snap-on clear/compostable lid included",
+    "cartonPack": "250 units per carton (50 pcs x 5 pkts)",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Complete separation for portioned meals",
+        "body": "Deep divider walls isolate gravies, mains, breads, and sides, ensuring clean presentation with zero flavor crossover during courier transit.",
+        "bullets": [
+          "Available in 2, 3, 4, and 5 compartment layouts",
+          "2 compartment available in Round and Rectangle formats",
+          "3, 4, and 5 compartment engineered for multi-course catering"
+        ]
+      },
+      {
+        "heading": "Rigid structural rim & lid integration",
+        "body": "Constructed with a perimeter channel locking into the matching lid to prevent leaks and maintain structural integrity when stacked high.",
+        "bullets": [
+          "Matching tight-fitting lids included",
+          "Microwaveable and freezer safe up to 120°C",
+          "100% plastic-free, tree-free upcycled sugarcane bagasse"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do the divider walls seal against the lid?",
+        "answer": "Yes, the interior compartment dividers align with the lid contours to minimize sauce spillover between sections."
+      },
+      {
+        "question": "Which layouts are available?",
+        "answer": "We offer 2-compartment (in Round and Rectangle shapes), plus 3-compartment, 4-compartment, and 5-compartment formats."
+      }
+    ],
+    "relatedSlugs": [
+      "rectangle-container-with-lid",
+      "round-bowl-with-lid",
+      "bagasse-clamshell"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "box"
     }
   }
 ];
