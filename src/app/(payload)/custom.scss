@@ -908,3 +908,88 @@ input[type='checkbox']:checked {
     }
   }
 }
+
+/* ==========================================================================
+   5. LIVE PREVIEW TOGGLER BUTTON (HIGH VISIBILITY / POP)
+   ========================================================================== */
+
+#live-preview-toggler,
+.live-preview-toggler,
+button[aria-label*="Live Preview"],
+button[aria-label*="live preview"],
+button[title*="Live Preview"],
+button[title*="live preview"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #eaf5ef !important;
+  border: 1.5px solid #2e8b57 !important;
+  border-radius: 8px !important;
+  color: #1f6b41 !important;
+  box-shadow: 0 1px 3px rgba(46, 139, 87, 0.2) !important;
+  transition: all 0.15s ease !important;
+  cursor: pointer !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
+  padding: 0 !important;
+  margin-right: 6px !important;
+
+  .icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20px !important;
+    height: 20px !important;
+
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
+
+    .stroke,
+    path,
+    circle {
+      stroke: #1f6b41 !important;
+      stroke-width: 2.2px !important;
+    }
+  }
+
+  &:hover {
+    background-color: #2e8b57 !important;
+    border-color: #1f6b41 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(46, 139, 87, 0.35) !important;
+    transform: translateY(-1px) !important;
+
+    .icon {
+      .stroke,
+      path,
+      circle {
+        stroke: #ffffff !important;
+      }
+    }
+  }
+
+  &.live-preview-toggler--active,
+  &[aria-pressed="true"] {
+    background-color: #1f6b41 !important;
+    border-color: #1f6b41 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.25), 0 2px 8px rgba(46, 139, 87, 0.4) !important;
+
+    .icon {
+      .stroke,
+      path,
+      circle {
+        stroke: #ffffff !important;
+      }
+    }
+
+    &:hover {
+      background-color: #2e8b57 !important;
+    }
+  }
+}
+
