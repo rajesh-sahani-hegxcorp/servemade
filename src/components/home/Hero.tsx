@@ -8,7 +8,12 @@ import { ProductArt } from "@/components/ui/ProductArt";
 import { FOODS } from "@/data/foods";
 import { useCart } from "@/context/CartContext";
 
-export function Hero() {
+export interface HeroProps {
+  heading?: string | null;
+  subheading?: string | null;
+}
+
+export function Hero({ heading, subheading }: HeroProps = {}) {
   const [query, setQuery] = useState("");
   const [foodIndex, setFoodIndex] = useState(0);
   const { addItems } = useCart();
@@ -32,11 +37,19 @@ export function Hero() {
             <Leaf size={14} aria-hidden="true" /> Certified sustainable · Made in India
           </Tag>
           <h1 id="hero-h" className="mt-4 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
-            Great packaging starts with <span className="text-brand-green">what you serve.</span>
+            {heading || (
+              <>
+                Great packaging starts with <span className="text-brand-green">what you serve.</span>
+              </>
+            )}
           </h1>
           <p className="mt-4 max-w-md text-lg text-ink-2">
-            Tell us the food — we&apos;ll show the exact plates, cups and boxes that fit it, with clear
-            minimum orders and pricing back in one business day.
+            {subheading || (
+              <>
+                Tell us the food — we&apos;ll show the exact plates, cups and boxes that fit it, with clear
+                minimum orders and pricing back in one business day.
+              </>
+            )}
           </p>
 
           <div className="mt-7 rounded-3xl border border-line bg-white p-4 shadow-card" role="search">

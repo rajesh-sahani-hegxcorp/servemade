@@ -266,3 +266,15 @@ export async function resolveRelatedProducts(product: Product): Promise<Product[
   const results = await Promise.all(product.relatedSlugs.map((slug) => findProduct(slug)))
   return results.filter((p): p is Product => Boolean(p))
 }
+
+/**
+ * Fetch Homepage global document from Payload.
+ */
+export async function getHomepage(options?: { draft?: boolean }): Promise<any> {
+  const payload = await getPayload({ config })
+  return payload.findGlobal({
+    slug: 'homepage',
+    draft: options?.draft,
+    overrideAccess: true,
+  })
+}
