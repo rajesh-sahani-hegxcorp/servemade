@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { draftMode } from "next/headers";
 import Link from "next/link";
 import { getAllProducts, findProduct, resolveRelatedProducts } from "@/lib/payload-data";
 import { buildProductJsonLd } from "@/lib/jsonld";
@@ -10,6 +11,7 @@ import { ProductConfigurator } from "@/components/product/ProductConfigurator";
 import { ProductTabs } from "@/components/product/ProductTabs";
 import { ProductFAQ } from "@/components/product/ProductFAQ";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
+import { LivePreviewListener } from "@/components/LivePreviewListener";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -23,7 +25,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const product = await findProduct(slug);
+  const { isEnabled: isDraftMode } = await draftMode();
+  const product = await findProduct(slug, { draft: isDraftMode });
   if (!product) return {};
 
   const url = siteUrl(`/products/${product.slug}`);
@@ -47,7 +50,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
-  const product = await findProduct(slug);
+  const { isEnabled: isDraftMode } = await draftMode();
+  const product = await findProduct(slug, { draft: isDraftMode });
   if (!product) notFound();
 
   const related = await resolveRelatedProducts(product);
@@ -55,6 +59,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
   return (
     <div className="pb-20 md:pb-0">
+      {isDraftMode && <LivePreviewListener />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="mx-auto max-w-6xl px-5">

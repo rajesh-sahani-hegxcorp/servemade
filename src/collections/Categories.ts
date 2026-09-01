@@ -3,10 +3,37 @@ import { ValidationError } from 'payload'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
+  versions: {
+    drafts: true,
+  },
   admin: {
     group: 'Catalogue',
     useAsTitle: 'name',
     defaultColumns: ['name', 'slug', 'displayOrder', 'art', 'moq'],
+    livePreview: {
+      url: ({ data }) =>
+        `${process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'}/categories/${data?.slug || ''}?preview=true`,
+      breakpoints: [
+        {
+          label: 'Mobile',
+          name: 'mobile',
+          width: 375,
+          height: 667,
+        },
+        {
+          label: 'Tablet',
+          name: 'tablet',
+          width: 768,
+          height: 1024,
+        },
+        {
+          label: 'Desktop',
+          name: 'desktop',
+          width: 1440,
+          height: 900,
+        },
+      ],
+    },
   },
   access: {
     read: () => true,

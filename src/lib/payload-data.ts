@@ -181,7 +181,10 @@ export async function getAllProducts(): Promise<Product[]> {
 /**
  * Find a single product by its URL slug.
  */
-export async function findProduct(slug: string): Promise<Product | undefined> {
+export async function findProduct(
+  slug: string,
+  options?: { draft?: boolean }
+): Promise<Product | undefined> {
   const payload = await getPayload({ config })
   const res = await payload.find({
     collection: 'products',
@@ -190,6 +193,7 @@ export async function findProduct(slug: string): Promise<Product | undefined> {
     },
     limit: 1,
     depth: 1,
+    draft: options?.draft,
     overrideAccess: true,
   })
 
@@ -200,7 +204,10 @@ export async function findProduct(slug: string): Promise<Product | undefined> {
 /**
  * Find a single category by its URL slug.
  */
-export async function findCategory(slug: string): Promise<ProductCategory | undefined> {
+export async function findCategory(
+  slug: string,
+  options?: { draft?: boolean }
+): Promise<ProductCategory | undefined> {
   const payload = await getPayload({ config })
   const res = await payload.find({
     collection: 'categories',
@@ -209,6 +216,7 @@ export async function findCategory(slug: string): Promise<ProductCategory | unde
     },
     limit: 1,
     depth: 0,
+    draft: options?.draft,
     overrideAccess: true,
   })
 

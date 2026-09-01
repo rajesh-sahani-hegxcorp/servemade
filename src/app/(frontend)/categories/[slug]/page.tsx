@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { draftMode } from "next/headers";
 import { getAllCategories, findCategory, findProductsByCategory } from "@/lib/payload-data";
 import { Tag } from "@/components/ui/Tag";
 import { ProductArt } from "@/components/ui/ProductArt";
 import { ProductCardGrid } from "@/components/product/ProductCardGrid";
+import { LivePreviewListener } from "@/components/LivePreviewListener";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -18,20 +20,23 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const category = await findCategory(slug);
+  const { isEnabled: isDraftMode } = await draftMode();
+  const category = await findCategory(slug, { draft: isDraftMode });
   if (!category) return {};
   return { title: category.name, description: category.description };
 }
 
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
-  const category = await findCategory(slug);
+  const { isEnabled: isDraftMode } = await draftMode();
+  const category = await findCategory(slug, { draft: isDraftMode });
   if (!category) notFound();
 
   const products = await findProductsByCategory(slug);
 
   return (
     <section className="mx-auto max-w-6xl px-5 py-16">
+      {isDraftMode && <LivePreviewListener />}
       <Tag blue>Product category</Tag>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">{category.name}</h1>
       <p className="mt-3 max-w-xl text-ink-2">{category.description}</p>
