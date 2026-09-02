@@ -5,7 +5,11 @@ export const Homepage: GlobalConfig = {
   slug: 'homepage',
   label: 'Homepage',
   versions: {
-    drafts: true,
+    drafts: {
+      autosave: {
+        interval: 800,
+      },
+    },
   },
   admin: {
     group: 'Website',
@@ -96,23 +100,6 @@ export const Homepage: GlobalConfig = {
           type: 'upload',
           relationTo: 'media',
           required: false,
-        },
-      ],
-    },
-    {
-      name: 'stats',
-      type: 'array',
-      required: false,
-      fields: [
-        {
-          name: 'value',
-          type: 'text',
-          required: true,
-        },
-        {
-          name: 'label',
-          type: 'text',
-          required: true,
         },
       ],
     },

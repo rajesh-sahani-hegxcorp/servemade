@@ -6,18 +6,27 @@ import React, { useEffect, useState } from 'react'
 
 export const LivePreviewListener: React.FC = () => {
   const router = useRouter()
-  const [serverURL, setServerURL] = useState<string>('')
+  const [serverURL, setServerURL] = useState<string>(() => {
+    if (typeof window !== 'undefined' && window.location.origin) {
+      return window.location.origin
+    }
+    return process.env.NEXT_PUBLIC_SERVER_URL || ''
+  })
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (!serverURL && typeof window !== 'undefined' && window.location.origin) {
       setServerURL(window.location.origin)
     }
-  }, [])
+  }, [serverURL])
+
+  if (!serverURL) {
+    return null
+  }
 
   return (
     <PayloadLivePreview
       refresh={() => router.refresh()}
-      serverURL={serverURL || process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3001'}
+      serverURL={serverURL}
     />
   )
 }

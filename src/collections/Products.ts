@@ -5,7 +5,11 @@ import { generatePreviewPath } from '@/lib/preview'
 export const Products: CollectionConfig = {
   slug: 'products',
   versions: {
-    drafts: true,
+    drafts: {
+      autosave: {
+        interval: 800,
+      },
+    },
   },
   admin: {
     group: 'Catalogue',
