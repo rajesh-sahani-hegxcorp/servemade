@@ -4,17 +4,31 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Tag";
 import { ProductArt } from "@/components/ui/ProductArt";
 import { getAllCategories } from "@/lib/payload-data";
+import type { ProductCategory } from "@/types";
 
-export async function CategoryTiles() {
-  const categories = await getAllCategories();
+export interface CategoryTilesProps {
+  tag?: string | null;
+  heading?: string | null;
+  categories?: ProductCategory[];
+}
+
+export async function CategoryTiles({
+  tag,
+  heading,
+  categories: passedCategories,
+}: CategoryTilesProps = {}) {
+  const categories =
+    passedCategories && passedCategories.length > 0
+      ? passedCategories
+      : await getAllCategories();
 
   return (
     <section id="products" aria-labelledby="cats-h" className="mx-auto max-w-6xl px-5 py-16">
       <Reveal>
         <div className="mx-auto mb-10 max-w-xl text-center">
-          <Tag blue>Shop by product</Tag>
+          <Tag blue>{tag || "Shop by product"}</Tag>
           <h2 id="cats-h" className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">
-            Everything for the table, the counter and the courier bag.
+            {heading || "Everything for the table, the counter and the courier bag."}
           </h2>
         </div>
       </Reveal>

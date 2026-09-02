@@ -9,7 +9,7 @@ import { FAQ } from "@/components/home/FAQ";
 import { CTA } from "@/components/home/CTA";
 import { buildHomeJsonLd } from "@/lib/jsonld";
 import { LivePreviewListener } from "@/components/LivePreviewListener";
-import { getHomepage } from "@/lib/payload-data";
+import { getHomepage, resolveHomepageCategories } from "@/lib/payload-data";
 
 export default async function HomePage() {
   const { isEnabled: isDraftMode } = await draftMode();
@@ -17,6 +17,10 @@ export default async function HomePage() {
     buildHomeJsonLd(),
     getHomepage({ draft: isDraftMode }),
   ]);
+
+  const categories = await resolveHomepageCategories(
+    homepageData?.categoryShowcase?.featuredCategories
+  );
 
   return (
     <>
@@ -28,7 +32,11 @@ export default async function HomePage() {
         subheading={homepageData?.hero?.subheading}
       />
       <CertMarquee certifications={homepageData?.certifications} />
-      <CategoryTiles />
+      <CategoryTiles
+        tag={homepageData?.categoryShowcase?.tag}
+        heading={homepageData?.categoryShowcase?.heading}
+        categories={categories}
+      />
       <CustomBranding
         tag={homepageData?.customBranding?.tag}
         heading={homepageData?.customBranding?.heading}

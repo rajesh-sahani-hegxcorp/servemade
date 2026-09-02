@@ -268,6 +268,51 @@ export async function resolveRelatedProducts(product: Product): Promise<Product[
 }
 
 /**
+ * Resolve category objects from Homepage categoryShowcase.featuredCategories.
+ * Falls back to getAllCategories() if featuredCategories is empty or undefined.
+ */
+export async function resolveHomepageCategories(
+  featuredCategories?: any[]
+): Promise<ProductCategory[]> {
+  if (featuredCategories && Array.isArray(featuredCategories) && featuredCategories.length > 0) {
+    const populatedCategories: ProductCategory[] = []
+    const idsToFetch: (string | number)[] = []
+
+    for (const item of featuredCategories) {
+      if (item && typeof item === 'object' && item.slug) {
+        populatedCategories.push(mapCategory(item))
+      } else if (item) {
+        idsToFetch.push(typeof item === 'object' ? item.id : item)
+      }
+    }
+
+    if (idsToFetch.length > 0) {
+      const payload = await getPayload({ config })
+      const res = await payload.find({
+        collection: 'categories',
+        where: {
+          id: { in: idsToFetch },
+        },
+        limit: idsToFetch.length,
+        depth: 0,
+        overrideAccess: true,
+      })
+      const mapById = new Map(res.docs.map((doc) => [String(doc.id), mapCategory(doc)]))
+      for (const id of idsToFetch) {
+        const cat = mapById.get(String(id))
+        if (cat) populatedCategories.push(cat)
+      }
+    }
+
+    if (populatedCategories.length > 0) {
+      return populatedCategories
+    }
+  }
+
+  return getAllCategories()
+}
+
+/**
  * Fetch Homepage global document from Payload.
  */
 export async function getHomepage(options?: { draft?: boolean }): Promise<any> {
@@ -275,6 +320,8 @@ export async function getHomepage(options?: { draft?: boolean }): Promise<any> {
   return payload.findGlobal({
     slug: 'homepage',
     draft: options?.draft,
+    depth: 1,
     overrideAccess: true,
   })
 }
+

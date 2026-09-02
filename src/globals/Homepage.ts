@@ -86,6 +86,33 @@ export const Homepage: GlobalConfig = {
       ],
     },
     {
+      name: 'categoryShowcase',
+      type: 'group',
+      fields: [
+        {
+          name: 'tag',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'heading',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'featuredCategories',
+          type: 'relationship',
+          relationTo: 'categories',
+          hasMany: true,
+          required: false,
+          admin: {
+            description:
+              'Select categories to feature on the homepage, in the order they should appear. Leave empty to show all categories in their default order.',
+          },
+        },
+      ],
+    },
+    {
       name: 'trustBadges',
       type: 'array',
       required: false,
