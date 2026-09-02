@@ -6,8 +6,26 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Tag";
 import { FAQS } from "@/data/faqs";
 
-export function FAQ() {
+export interface FAQProps {
+  faqs?: Array<{
+    question?: string | null;
+    answer?: string | null;
+    id?: string | null;
+  }> | null;
+}
+
+export function FAQ({ faqs }: FAQProps = {}) {
   const [openIndex, setOpenIndex] = useState(-1);
+
+  const customFaqs = faqs
+    ?.filter((f) => Boolean(f && f.question && f.question.trim().length > 0))
+    .map((f) => ({
+      question: f.question || "",
+      answer: f.answer || "",
+    }));
+
+  const displayFaqs =
+    customFaqs && customFaqs.length > 0 ? customFaqs : FAQS;
 
   return (
     <section aria-labelledby="faq-h" className="bg-surface-off px-5 py-16">
@@ -22,7 +40,7 @@ export function FAQ() {
         </Reveal>
 
         <div className="space-y-2.5">
-          {FAQS.map((faq, i) => {
+          {displayFaqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
               <div

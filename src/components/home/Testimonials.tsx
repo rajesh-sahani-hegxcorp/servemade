@@ -3,7 +3,30 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Tag";
 import { TESTIMONIALS } from "@/data/testimonials";
 
-export function Testimonials() {
+export interface TestimonialsProps {
+  testimonials?: Array<{
+    quote?: string | null;
+    authorName?: string | null;
+    authorTitle?: string | null;
+    authorPhoto?: any;
+    id?: string | null;
+  }> | null;
+}
+
+export function Testimonials({ testimonials }: TestimonialsProps = {}) {
+  const customTestimonials = testimonials
+    ?.filter((t) => Boolean(t && t.quote && t.quote.trim().length > 0))
+    .map((t) => ({
+      quote: t.quote || "",
+      who: t.authorName || "Anonymous",
+      org: t.authorTitle || "",
+    }));
+
+  const displayTestimonials =
+    customTestimonials && customTestimonials.length > 0
+      ? customTestimonials
+      : TESTIMONIALS;
+
   return (
     <section aria-labelledby="test-h" className="mx-auto max-w-6xl px-5 py-16">
       <Reveal>
@@ -16,8 +39,8 @@ export function Testimonials() {
       </Reveal>
 
       <div className="grid gap-4 md:grid-cols-2">
-        {TESTIMONIALS.map((testimonial, i) => (
-          <Reveal key={testimonial.who} delay={i * 0.07}>
+        {displayTestimonials.map((testimonial, i) => (
+          <Reveal key={`${testimonial.who}-${i}`} delay={i * 0.07}>
             <figure className="rounded-3xl border border-line bg-white p-7 shadow-card">
               <div className="flex gap-1" aria-label="5 out of 5 stars">
                 {[...Array(5)].map((_, s) => (
@@ -26,7 +49,7 @@ export function Testimonials() {
               </div>
               <blockquote className="mt-3 text-lg font-semibold leading-snug">&quot;{testimonial.quote}&quot;</blockquote>
               <figcaption className="mt-4 text-sm font-bold">
-                {testimonial.who} <span className="font-medium text-ink-3">· {testimonial.org}</span>
+                {testimonial.who}{testimonial.org ? <span className="font-medium text-ink-3"> · {testimonial.org}</span> : null}
               </figcaption>
             </figure>
           </Reveal>

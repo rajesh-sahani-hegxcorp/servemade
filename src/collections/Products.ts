@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { ValidationError } from 'payload'
+import { generatePreviewPath } from '@/lib/preview'
 
 export const Products: CollectionConfig = {
   slug: 'products',
@@ -11,8 +12,7 @@ export const Products: CollectionConfig = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'slug', 'category', 'isStandalone', 'hasFlyout', 'moqPieces'],
     livePreview: {
-      url: ({ data }) =>
-        `${process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'}/products/${data?.slug || ''}?preview=true`,
+      url: ({ data }) => generatePreviewPath({ path: `/products/${data?.slug || ''}` }),
       breakpoints: [
         {
           label: 'Mobile',

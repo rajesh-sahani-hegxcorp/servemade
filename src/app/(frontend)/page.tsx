@@ -27,12 +27,20 @@ export default async function HomePage() {
         heading={homepageData?.hero?.heading}
         subheading={homepageData?.hero?.subheading}
       />
-      <CertMarquee />
+      <CertMarquee certifications={homepageData?.certifications} />
       <CategoryTiles />
-      <CustomBranding />
-      <Resources />
-      <Testimonials />
-      <FAQ />
+      <CustomBranding
+        tag={homepageData?.customBranding?.tag}
+        heading={homepageData?.customBranding?.heading}
+        description={homepageData?.customBranding?.description}
+        bullets={homepageData?.customBranding?.bullets}
+        ctaText={homepageData?.customBranding?.ctaText}
+        ctaLink={homepageData?.customBranding?.ctaLink}
+        image={homepageData?.customBranding?.image}
+      />
+      <Resources resources={homepageData?.resources} />
+      <Testimonials testimonials={homepageData?.testimonials} />
+      <FAQ faqs={homepageData?.faqs} />
       <CTA
         heading={homepageData?.ctaSection?.heading}
         text={homepageData?.ctaSection?.text}

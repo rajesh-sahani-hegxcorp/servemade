@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload'
+import { generatePreviewPath } from '@/lib/preview'
 
 export const Homepage: GlobalConfig = {
   slug: 'homepage',
@@ -9,7 +10,7 @@ export const Homepage: GlobalConfig = {
   admin: {
     group: 'Website',
     livePreview: {
-      url: () => `${process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'}/?preview=true`,
+      url: () => generatePreviewPath({ path: '/' }),
       breakpoints: [
         {
           label: 'Mobile',
@@ -69,6 +70,18 @@ export const Homepage: GlobalConfig = {
       ],
     },
     {
+      name: 'certifications',
+      type: 'array',
+      required: false,
+      fields: [
+        {
+          name: 'name',
+          type: 'text',
+          required: true,
+        },
+      ],
+    },
+    {
       name: 'trustBadges',
       type: 'array',
       required: false,
@@ -104,6 +117,92 @@ export const Homepage: GlobalConfig = {
       ],
     },
     {
+      name: 'customBranding',
+      type: 'group',
+      fields: [
+        {
+          name: 'tag',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'heading',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'description',
+          type: 'textarea',
+          required: false,
+        },
+        {
+          name: 'bullets',
+          type: 'array',
+          required: false,
+          fields: [
+            {
+              name: 'text',
+              type: 'text',
+              required: true,
+            },
+          ],
+        },
+        {
+          name: 'ctaText',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'ctaLink',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'image',
+          type: 'upload',
+          relationTo: 'media',
+          required: false,
+        },
+      ],
+    },
+    {
+      name: 'resources',
+      type: 'array',
+      required: false,
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'description',
+          type: 'textarea',
+          required: true,
+        },
+        {
+          name: 'linkText',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'linkUrl',
+          type: 'text',
+          required: false,
+        },
+        {
+          name: 'icon',
+          type: 'select',
+          options: [
+            { label: 'Download', value: 'download' },
+            { label: 'File', value: 'file' },
+            { label: 'Recycle', value: 'recycle' },
+          ],
+          required: false,
+        },
+      ],
+    },
+    {
       name: 'testimonials',
       type: 'array',
       required: false,
@@ -128,6 +227,23 @@ export const Homepage: GlobalConfig = {
           type: 'upload',
           relationTo: 'media',
           required: false,
+        },
+      ],
+    },
+    {
+      name: 'faqs',
+      type: 'array',
+      required: false,
+      fields: [
+        {
+          name: 'question',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'answer',
+          type: 'textarea',
+          required: true,
         },
       ],
     },

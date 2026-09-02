@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { ValidationError } from 'payload'
+import { generatePreviewPath } from '@/lib/preview'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
@@ -11,8 +12,7 @@ export const Categories: CollectionConfig = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'slug', 'displayOrder', 'art', 'moq'],
     livePreview: {
-      url: ({ data }) =>
-        `${process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'}/categories/${data?.slug || ''}?preview=true`,
+      url: ({ data }) => generatePreviewPath({ path: `/categories/${data?.slug || ''}` }),
       breakpoints: [
         {
           label: 'Mobile',

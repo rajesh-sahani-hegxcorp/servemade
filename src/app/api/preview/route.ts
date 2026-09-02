@@ -9,8 +9,9 @@ export async function GET(req: NextRequest) {
   const collection = searchParams.get('collection')
   const path = searchParams.get('path')
 
-  // Validate secret against PAYLOAD_SECRET
-  if (!secret || secret !== process.env.PAYLOAD_SECRET) {
+  // Validate secret against PREVIEW_SECRET (or PAYLOAD_SECRET)
+  const validSecret = process.env.PREVIEW_SECRET || process.env.PAYLOAD_SECRET
+  if (!secret || secret !== validSecret) {
     return new Response('Invalid preview secret', { status: 401 })
   }
 

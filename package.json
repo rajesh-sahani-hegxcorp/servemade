@@ -15,6 +15,10 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:studio": "prisma studio",
+    "payload:migrate:status": "tsx --env-file=.env scripts/run_migrate.js status",
+    "payload:migrate:create": "tsx --env-file=.env scripts/run_migrate.js create",
+    "payload:migrate": "tsx --env-file=.env scripts/run_migrate.js migrate",
+    "payload:migrate:down": "tsx --env-file=.env scripts/run_migrate.js down",
     "postinstall": "prisma generate"
   },
   "dependencies": {

@@ -1,10 +1,45 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download, FileText, Recycle } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Tag";
 import { RESOURCES } from "@/data/resources";
 
-export function Resources() {
+const ICON_MAP: Record<string, LucideIcon> = {
+  download: Download,
+  file: FileText,
+  recycle: Recycle,
+};
+
+export interface ResourcesProps {
+  resources?: Array<{
+    title?: string | null;
+    description?: string | null;
+    linkText?: string | null;
+    linkUrl?: string | null;
+    icon?: string | null;
+    id?: string | null;
+  }> | null;
+}
+
+export function Resources({ resources }: ResourcesProps = {}) {
+  const customResources = resources
+    ?.filter((r) => Boolean(r && r.title && r.title.trim().length > 0))
+    .map((r) => {
+      const iconKey = (r.icon || "file").toLowerCase();
+      const IconComponent = ICON_MAP[iconKey] || FileText;
+      return {
+        icon: IconComponent,
+        title: r.title || "",
+        href: r.linkUrl || "#",
+        description: r.description || "",
+        cta: r.linkText || "Learn more",
+      };
+    });
+
+  const displayResources =
+    customResources && customResources.length > 0 ? customResources : RESOURCES;
+
   return (
     <section id="resources" aria-labelledby="res-h" className="bg-surface-off px-5 py-16">
       <div className="mx-auto max-w-6xl">
@@ -18,7 +53,7 @@ export function Resources() {
         </Reveal>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {RESOURCES.map((resource, i) => {
+          {displayResources.map((resource, i) => {
             const Icon = resource.icon;
             return (
               <Reveal key={resource.title} delay={i * 0.06}>
