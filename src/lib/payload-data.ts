@@ -143,6 +143,14 @@ function mapProduct(doc: any): Product {
   if (doc.cartonVolume) product.cartonVolume = doc.cartonVolume
   if (doc.hsCode) product.hsCode = doc.hsCode
 
+  const derivedShapes = Array.from(new Set(variants.map((v) => v.shape).filter(Boolean))) as string[]
+  if (derivedShapes.length > 0) product.shapeOptions = derivedShapes
+
+  const derivedCompOptions = Array.from(
+    new Set(variants.map((v) => v.compartmentOption).filter(Boolean))
+  ) as string[]
+  if (derivedCompOptions.length > 0) product.compartmentOptions = derivedCompOptions
+
   return product
 }
 

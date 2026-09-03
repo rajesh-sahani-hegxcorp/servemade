@@ -16,6 +16,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/categories/takeaway-boxes",
+        destination: "/categories/biodegradable-containers",
+        permanent: true,
+      },
+      {
         source: "/products/bagasse-square-bowl",
         destination: "/products/bagasse-round-bowl",
         permanent: true,

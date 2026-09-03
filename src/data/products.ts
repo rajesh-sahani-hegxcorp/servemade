@@ -949,7 +949,7 @@ export const PRODUCTS: Product[] = [
         "size": "100 mL",
         "dimension": null,
         "capacityMl": 100,
-        "capacityOz": 3.38,
+        "capacityOz": 3.5,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       },
@@ -957,7 +957,7 @@ export const PRODUCTS: Product[] = [
         "size": "150 mL",
         "dimension": null,
         "capacityMl": 150,
-        "capacityOz": 5.07,
+        "capacityOz": 5,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       },
@@ -965,7 +965,7 @@ export const PRODUCTS: Product[] = [
         "size": "200 mL",
         "dimension": null,
         "capacityMl": 200,
-        "capacityOz": 6.76,
+        "capacityOz": 7,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       }
@@ -1067,7 +1067,7 @@ export const PRODUCTS: Product[] = [
         "size": "240 mL",
         "dimension": null,
         "capacityMl": 240,
-        "capacityOz": 8.12,
+        "capacityOz": 8,
         "qtyPerBox": 1000,
         "qtyPerPkt": 50
       },
@@ -1075,7 +1075,7 @@ export const PRODUCTS: Product[] = [
         "size": "360 mL",
         "dimension": null,
         "capacityMl": 360,
-        "capacityOz": 12.17,
+        "capacityOz": 12,
         "qtyPerBox": 500,
         "qtyPerPkt": 50
       },
@@ -1083,7 +1083,7 @@ export const PRODUCTS: Product[] = [
         "size": "480 mL",
         "dimension": null,
         "capacityMl": 480,
-        "capacityOz": 16.23,
+        "capacityOz": 16,
         "qtyPerBox": 500,
         "qtyPerPkt": 50
       }
@@ -1184,7 +1184,7 @@ export const PRODUCTS: Product[] = [
         "size": "150 mL",
         "dimension": null,
         "capacityMl": 150,
-        "capacityOz": 5.07,
+        "capacityOz": 5,
         "qtyPerBox": 3000,
         "qtyPerPkt": 50
       },
@@ -1192,7 +1192,7 @@ export const PRODUCTS: Product[] = [
         "size": "200 mL",
         "dimension": null,
         "capacityMl": 200,
-        "capacityOz": 6.76,
+        "capacityOz": 7,
         "qtyPerBox": 2500,
         "qtyPerPkt": 50
       },
@@ -1200,7 +1200,7 @@ export const PRODUCTS: Product[] = [
         "size": "250 mL",
         "dimension": null,
         "capacityMl": 250,
-        "capacityOz": 8.45,
+        "capacityOz": 8,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       },
@@ -1208,7 +1208,7 @@ export const PRODUCTS: Product[] = [
         "size": "350 mL",
         "dimension": null,
         "capacityMl": 350,
-        "capacityOz": 11.83,
+        "capacityOz": 12,
         "qtyPerBox": 1000,
         "qtyPerPkt": 50
       },
@@ -1216,7 +1216,7 @@ export const PRODUCTS: Product[] = [
         "size": "480 mL",
         "dimension": null,
         "capacityMl": 480,
-        "capacityOz": 16.23,
+        "capacityOz": 16,
         "qtyPerBox": 500,
         "qtyPerPkt": 50
       }
@@ -1462,8 +1462,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kraft-boat-tray",
     "name": "Kraft Boat Tray",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
+    "categorySlug": "cups-lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Boat Tray",
     "variantType": "capacity",
     "variants": [
@@ -1883,8 +1883,8 @@ export const PRODUCTS: Product[] = [
   {
     "slug": "kraft-paper-bowl-with-pet-lid",
     "name": "Kraft Paper Bowl with PET Lid",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
+    "categorySlug": "cups-lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Paper Bowl with Lid (Kraft)",
     "variantType": "capacity",
     "variants": [

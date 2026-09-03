@@ -67,6 +67,8 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
     items: [
       { name: "Plain Round Container", href: "/products/plain-round-paper-container-with-lid" },
       { name: "Kraft Round Container", href: "/products/kraft-round-paper-container-with-lid" },
+      { name: "Kraft Boat Tray", href: "/products/kraft-boat-tray" },
+      { name: "Kraft Paper Bowl with PET Lid", href: "/products/kraft-paper-bowl-with-pet-lid" },
     ],
   },
   {
@@ -100,8 +102,6 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
         ],
       },
       { name: "Bagasse Clamshell", href: "/products/bagasse-clamshell" },
-      { name: "Kraft Boat Tray", href: "/products/kraft-boat-tray" },
-      { name: "Kraft Paper Bowl with PET Lid", href: "/products/kraft-paper-bowl-with-pet-lid" },
     ],
   },
   {

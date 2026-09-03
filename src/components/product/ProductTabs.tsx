@@ -15,7 +15,11 @@ export function ProductTabs({ product }: { product: Product }) {
   const hasCompartments = Boolean(product.variants && product.variants.some((v) => v.compartments));
   const hasMaterials = Boolean(product.materials && product.materials.length > 1);
   const hasCompartmentOptions = Boolean(product.compartmentOptions && product.compartmentOptions.length > 1);
-  const hasShapeOptions = Boolean(product.shapeOptions && product.shapeOptions.length > 1);
+  const derivedShapeOptions =
+    product.shapeOptions && product.shapeOptions.length > 0
+      ? product.shapeOptions
+      : Array.from(new Set(product.variants?.map((v) => v.shape).filter(Boolean) as string[]));
+  const hasShapeOptions = Boolean(derivedShapeOptions.length > 1);
 
   let sizeList = "";
   if (hasCompartmentOptions) {
@@ -37,7 +41,10 @@ export function ProductTabs({ product }: { product: Product }) {
     product.variants.forEach((v) => {
       const shape = v.shape || "Standard";
       const list = shapeMap.get(shape) || [];
-      const label = v.capacityOz ? `${Math.round(v.capacityOz)} oz` : v.size;
+      const ozNum = v.capacityOz != null ? Number(v.capacityOz) : null;
+      const ozFormatted =
+        ozNum != null ? (Number.isInteger(ozNum) ? `${ozNum}` : `${parseFloat(ozNum.toFixed(1))}`) : null;
+      const label = ozFormatted ? `${ozFormatted} oz` : v.size;
       if (!list.includes(label)) list.push(label);
       shapeMap.set(shape, list);
     });
@@ -61,7 +68,10 @@ export function ProductTabs({ product }: { product: Product }) {
     product.variants.forEach((v) => {
       const mat = v.material || "Standard";
       const list = matMap.get(mat) || [];
-      const label = v.capacityOz ? `${Math.round(v.capacityOz)} oz` : v.size;
+      const ozNum = v.capacityOz != null ? Number(v.capacityOz) : null;
+      const ozFormatted =
+        ozNum != null ? (Number.isInteger(ozNum) ? `${ozNum}` : `${parseFloat(ozNum.toFixed(1))}`) : null;
+      const label = ozFormatted ? `${ozFormatted} oz` : v.size;
       if (!list.includes(label)) list.push(label);
       matMap.set(mat, list);
     });

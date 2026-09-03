@@ -29,6 +29,13 @@ function formatPackedStat(v?: ProductVariant): string {
   return "Standard carton";
 }
 
+function formatOzValue(oz: number | null | undefined): string | null {
+  if (oz == null) return null;
+  const n = Number(oz);
+  if (isNaN(n)) return null;
+  return Number.isInteger(n) ? `${n}` : `${parseFloat(n.toFixed(1))}`;
+}
+
 function getVariantDisplayLabel(v: ProductVariant, variantType: "capacity" | "dimension"): string {
   if (v.compartmentOption) {
     const dim = v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())
@@ -43,14 +50,15 @@ function getVariantDisplayLabel(v: ProductVariant, variantType: "capacity" | "di
     return `${v.compartments} Compartment`;
   }
   if (variantType === "capacity") {
+    const ozFormatted = formatOzValue(v.capacityOz);
     if (v.material) {
-      if (v.capacityOz && v.size && !v.size.includes("oz")) {
-        return `${v.material} — ${Math.round(v.capacityOz)} oz (${v.size})`;
+      if (ozFormatted && v.size && !v.size.includes("oz")) {
+        return `${v.material} — ${ozFormatted} oz (${v.size})`;
       }
       return `${v.material} — ${v.size}`;
     }
-    if (v.capacityOz && v.size && !v.size.includes("oz")) {
-      return `${Math.round(v.capacityOz)} oz (${v.size})`;
+    if (ozFormatted && v.size && !v.size.includes("oz")) {
+      return `${ozFormatted} oz (${v.size})`;
     }
     return v.size;
   }
@@ -64,19 +72,24 @@ export function ProductConfigurator({ product }: { product: Product }) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const derivedShapeOptions =
+    product.shapeOptions && product.shapeOptions.length > 0
+      ? product.shapeOptions
+      : Array.from(new Set(product.variants?.map((v) => v.shape).filter(Boolean) as string[]));
+
   const isCompartmentFamily = Boolean(product.variants && product.variants.some((v) => v.compartments));
   const hasMaterials = Boolean(product.materials && product.materials.length > 1);
   const hasCompartmentOptions = Boolean(product.compartmentOptions && product.compartmentOptions.length > 1);
-  const hasShapeOptions = Boolean(product.shapeOptions && product.shapeOptions.length > 1);
+  const hasShapeOptions = Boolean(derivedShapeOptions.length > 1);
 
   // Initialize state with search params if present
   const initialShape = () => {
     const p = searchParams?.get("shape");
-    if (p && product.shapeOptions) {
-      const match = product.shapeOptions.find((s) => s.toLowerCase() === p.toLowerCase());
+    if (p && derivedShapeOptions.length > 0) {
+      const match = derivedShapeOptions.find((s) => s.toLowerCase() === p.toLowerCase());
       if (match) return match;
     }
-    return product.shapeOptions?.[0] ?? "Round";
+    return derivedShapeOptions[0] ?? "Round";
   };
 
   const initialCompOption = () => {
@@ -131,8 +144,8 @@ export function ProductConfigurator({ product }: { product: Product }) {
     if (!searchParams) return;
 
     const shapeParam = searchParams.get("shape");
-    if (shapeParam && product.shapeOptions) {
-      const match = product.shapeOptions.find((s) => s.toLowerCase() === shapeParam.toLowerCase());
+    if (shapeParam && derivedShapeOptions.length > 0) {
+      const match = derivedShapeOptions.find((s) => s.toLowerCase() === shapeParam.toLowerCase());
       if (match) {
         setSelectedShapeOption(match);
         setSizeIndex(0);
@@ -168,17 +181,21 @@ export function ProductConfigurator({ product }: { product: Product }) {
         setSelectedCompartment(parsed);
       }
     }
-  }, [searchParams, product, isCompartmentFamily]);
+  }, [searchParams, product, isCompartmentFamily, derivedShapeOptions]);
 
-  const isBowlFamily = product.slug === "bagasse-round-bowl" || product.slug === "bagasse-square-bowl" || product.slug === "bagasse-bowl" || Boolean(product.shapeOptions && product.shapeOptions.length > 1);
-  const currentShape = product.shapeOptions ? selectedShapeOption.toLowerCase() : product.slug === "bagasse-square-bowl" ? "square" : "round";
+  const isBowlFamily =
+    product.slug === "bagasse-round-bowl" ||
+    product.slug === "bagasse-square-bowl" ||
+    product.slug === "bagasse-bowl" ||
+    hasShapeOptions;
+  const currentShape = (selectedShapeOption || (product.slug === "bagasse-square-bowl" ? "Square" : "Round")).toLowerCase();
 
   const activeVariants = hasCompartmentOptions
     ? product.variants.filter((v) => v.compartmentOption === selectedCompartmentOption)
     : hasMaterials
     ? product.variants.filter((v) => v.material === selectedMaterial)
     : hasShapeOptions
-    ? product.variants.filter((v) => v.shape === selectedShapeOption)
+    ? product.variants.filter((v) => (v.shape || "Round").toLowerCase() === selectedShapeOption.toLowerCase())
     : product.variants && product.variants.length > 0
     ? product.variants
     : [];
@@ -403,12 +420,8 @@ export function ProductConfigurator({ product }: { product: Product }) {
                 <button
                   type="button"
                   onClick={() => {
-                    if (hasShapeOptions) {
-                      setSelectedShapeOption("Round");
-                      setSizeIndex(0);
-                    } else if (currentShape !== "round") {
-                      router.push("/products/bagasse-round-bowl");
-                    }
+                    setSelectedShapeOption("Round");
+                    setSizeIndex(0);
                   }}
                   className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
                     currentShape === "round"
@@ -421,12 +434,8 @@ export function ProductConfigurator({ product }: { product: Product }) {
                 <button
                   type="button"
                   onClick={() => {
-                    if (hasShapeOptions) {
-                      setSelectedShapeOption("Square");
-                      setSizeIndex(0);
-                    } else if (currentShape !== "square") {
-                      router.push("/products/bagasse-square-bowl");
-                    }
+                    setSelectedShapeOption("Square");
+                    setSizeIndex(0);
                   }}
                   className={`rounded-2xl border-2 px-5 py-3 text-sm font-bold transition-all ${
                     currentShape === "square"
@@ -498,8 +507,9 @@ export function ProductConfigurator({ product }: { product: Product }) {
                 /* Capacity-style pill buttons */
                 <div className="flex flex-wrap gap-2.5" role="group" aria-label="Size capacity">
                   {activeVariants.map((v, i) => {
-                    const pillTitle = v.capacityOz ? `${Math.round(v.capacityOz)} oz` : v.size;
-                    const pillNote = v.capacityMl && v.capacityOz ? `${v.capacityMl} mL` : (v.dimension ?? undefined);
+                    const ozFormatted = formatOzValue(v.capacityOz);
+                    const pillTitle = ozFormatted ? `${ozFormatted} oz` : v.size;
+                    const pillNote = v.capacityMl && ozFormatted ? `${v.capacityMl} mL` : (v.dimension ?? undefined);
                     return (
                       <StepOption
                         key={`${v.material || "m"}-${v.size}-${v.dimension}-${i}`}
