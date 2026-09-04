@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { draftMode } from "next/headers";
 import { Hero } from "@/components/home/Hero";
 import { CertMarquee } from "@/components/home/CertMarquee";
@@ -10,6 +11,23 @@ import { CTA } from "@/components/home/CTA";
 import { buildHomeJsonLd } from "@/lib/jsonld";
 import { LivePreviewListener } from "@/components/LivePreviewListener";
 import { getHomepage, resolveHomepageCategories } from "@/lib/payload-data";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { isEnabled: isDraftMode } = await draftMode();
+  const homepageData = await getHomepage({ draft: isDraftMode });
+
+  const title =
+    homepageData?.meta?.title?.trim() ||
+    "Serve Made — Certified Sustainable Food Packaging, Exported from India";
+  const description =
+    homepageData?.meta?.description?.trim() ||
+    "B2B supplier of compostable plates, cups, takeaway boxes and cutlery. Clear MOQs from 10k pieces, FDA/EU/FSC® certified, quotes within one business day. India → GCC in 5–9 days.";
+
+  return {
+    title,
+    description,
+  };
+}
 
 export default async function HomePage() {
   const { isEnabled: isDraftMode } = await draftMode();

@@ -1,5 +1,6 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { seoPlugin } from '@payloadcms/plugin-seo'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -36,6 +37,15 @@ export default buildConfig({
   },
   collections: [Users, Media, Categories, Products],
   globals: [Homepage],
+  plugins: [
+    seoPlugin({
+      collections: ['products', 'categories'],
+      globals: ['homepage'],
+      uploadsCollection: 'media',
+      generateTitle: ({ doc }: any) => (doc?.name ? `${doc.name}` : ''),
+      generateDescription: ({ doc }: any) => (doc?.tagline || doc?.summary || ''),
+    }),
+  ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'servemade-payload-secret-dev-key-32chars',
   typescript: {

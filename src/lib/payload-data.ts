@@ -33,6 +33,13 @@ function mapCategory(doc: any): ProductCategory {
 
   if (doc.moq) category.moq = doc.moq
   if (doc.image) category.image = doc.image
+  if (doc.meta) {
+    category.meta = {
+      title: doc.meta.title || null,
+      description: doc.meta.description || null,
+      image: doc.meta.image || null,
+    }
+  }
 
   return category
 }
@@ -108,8 +115,10 @@ function mapProduct(doc: any): Product {
       })
     : []
 
+  const slug = typeof doc.slug === 'string' ? doc.slug : typeof doc.slug === 'object' && doc.slug ? (doc.slug.slug || doc.slug.en || '') : String(doc.slug || '')
+
   const product: Product = {
-    slug: doc.slug,
+    slug,
     name: doc.name,
     categorySlug: category?.slug || '',
     categoryName: category?.name || '',
@@ -150,6 +159,14 @@ function mapProduct(doc: any): Product {
     new Set(variants.map((v) => v.compartmentOption).filter(Boolean))
   ) as string[]
   if (derivedCompOptions.length > 0) product.compartmentOptions = derivedCompOptions
+
+  if (doc.meta) {
+    product.meta = {
+      title: doc.meta.title || null,
+      description: doc.meta.description || null,
+      image: doc.meta.image || null,
+    }
+  }
 
   return product
 }

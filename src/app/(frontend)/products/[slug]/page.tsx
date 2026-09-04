@@ -20,7 +20,9 @@ interface Props {
 // Pre-renders every product in the catalogue at build time from Payload.
 export async function generateStaticParams() {
   const products = await getAllProducts();
-  return products.map((p) => ({ slug: p.slug }));
+  return products
+    .filter((p) => typeof p?.slug === "string" && p.slug)
+    .map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -31,16 +33,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const url = siteUrl(`/products/${product.slug}`);
 
+  const title =
+    product.meta?.title?.trim() ||
+    (product.tagline?.trim() ? `${product.name} — ${product.tagline.trim()}` : product.name);
+
+  const description =
+    product.meta?.description?.trim() ||
+    product.tagline?.trim() ||
+    product.summary?.trim() ||
+    product.name;
+
   return {
-    title: `${product.name} — ${product.tagline}`,
-    description: product.tagline,
+    title,
+    description,
     alternates: {
       canonical: url,
       languages: { en: url, ar: siteUrl(`/ar/products/${product.slug}`) },
     },
     openGraph: {
       title: `${product.name} | Serve Made`,
-      description: product.tagline,
+      description,
       type: "website",
       images: [{ url: `/og/${product.slug}.png`, width: 1200, height: 630, alt: product.name }],
     },

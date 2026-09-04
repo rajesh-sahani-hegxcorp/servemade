@@ -23,7 +23,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { isEnabled: isDraftMode } = await draftMode();
   const category = await findCategory(slug, { draft: isDraftMode });
   if (!category) return {};
-  return { title: category.name, description: category.description };
+
+  const title = category.meta?.title?.trim() || category.name;
+  const description =
+    category.meta?.description?.trim() || category.description?.trim() || category.name;
+
+  return { title, description };
 }
 
 export default async function CategoryPage({ params }: Props) {

@@ -20,6 +20,12 @@ export interface FoodProfile {
   names: [string, string, string];
 }
 
+export interface ProductMeta {
+  title?: string | null;
+  description?: string | null;
+  image?: any;
+}
+
 export interface ProductCategory {
   art: ProductArtType;
   name: string;
@@ -27,6 +33,7 @@ export interface ProductCategory {
   description: string;
   moq?: string;
   image?: string;
+  meta?: ProductMeta;
 }
 
 export interface Faq {
@@ -146,5 +153,6 @@ export interface Product {
   relatedSlugs: string[];
   gallery: ProductGallery;
   isDraftCopy?: boolean; // [DRAFT — verify] flag for factual/claims review
+  meta?: ProductMeta;
 }
 
