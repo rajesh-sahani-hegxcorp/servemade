@@ -262,12 +262,18 @@ export function ProductConfigurator({ product }: { product: Product }) {
   return (
     <div className="mx-auto max-w-6xl px-5">
       <div className="grid gap-9 py-7 md:grid-cols-2 md:items-start">
-        <ProductGallery product={product} view={view} onViewChange={setView} />
+        <div data-field-path="gallery">
+          <ProductGallery product={product} view={view} onViewChange={setView} />
+        </div>
 
         <div>
-          <Tag blue>{product.categoryName}</Tag>
-          <h1 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">{product.name}</h1>
-          <div className="mt-2 flex items-center gap-2 text-sm font-semibold text-ink-2">
+          <span data-field-path="category" className="inline-block">
+            <Tag blue>{product.categoryName}</Tag>
+          </span>
+          <h1 className="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl" data-field-path="name">
+            {product.name}
+          </h1>
+          <div className="mt-2 flex items-center gap-2 text-sm font-semibold text-ink-2" data-field-path="ratingLabel">
             <span className="flex gap-0.5" aria-label="Rated 5 out of 5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={15} fill="#2E8B57" stroke="none" aria-hidden="true" />
@@ -277,21 +283,39 @@ export function ProductConfigurator({ product }: { product: Product }) {
           </div>
 
           {/* Answer-first summary (AEO) */}
-          <p className="mt-4 text-ink-2">{product.summary}</p>
+          <p className="mt-4 text-ink-2" data-field-path="summary">
+            {product.summary}
+          </p>
 
           {/* 4-stat spec row with dynamic Packed and placeholder TBD MOQ */}
           <dl className="mt-4 flex flex-wrap gap-2.5">
-            {quickFacts.map((fact) => (
-              <div key={fact.label} className="rounded-2xl border border-line bg-surface-off px-4 py-2 text-center">
-                <dd className="m-0 block text-sm font-extrabold text-brand-blue-dark">{fact.value}</dd>
-                <dt className="text-xs font-semibold text-ink-3">{fact.label}</dt>
-              </div>
-            ))}
+            {quickFacts.map((fact) => {
+              const fieldPath =
+                fact.label === "Minimum order"
+                  ? "moqPieces"
+                  : fact.label === "Production"
+                  ? "leadTime"
+                  : fact.label === "Packed"
+                  ? "cartonPack"
+                  : fact.label === "Custom print"
+                  ? "printing"
+                  : undefined;
+              return (
+                <div
+                  key={fact.label}
+                  {...(fieldPath ? { "data-field-path": fieldPath } : {})}
+                  className="rounded-2xl border border-line bg-surface-off px-4 py-2 text-center"
+                >
+                  <dd className="m-0 block text-sm font-extrabold text-brand-blue-dark">{fact.value}</dd>
+                  <dt className="text-xs font-semibold text-ink-3">{fact.label}</dt>
+                </div>
+              );
+            })}
           </dl>
 
           {/* Meal Tray Compartment Step 1: Compartment Count Selector */}
           {isCompartmentFamily && (
-            <div className="mt-7">
+            <div className="mt-7" data-field-path="variants">
               <StepLabel n={compartmentStepNum} hint="select compartment layout">
                 Choose compartment count
               </StepLabel>
@@ -350,7 +374,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
 
           {/* Compartment Options Step (e.g. Bagasse Round Plate: Plain, 3-Compartment, 4-Compartment) */}
           {hasCompartmentOptions && (
-            <div className="mt-7">
+            <div className="mt-7" data-field-path="variants">
               <StepLabel n={compartmentOptionStepNum} hint="choose plain or divided">
                 Choose compartment
               </StepLabel>
@@ -381,7 +405,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
 
           {/* Material Two-Step Selector (e.g. Round Bowl with Lid, Rectangle Container with Lid) */}
           {hasMaterials && (
-            <div className="mt-7">
+            <div className="mt-7" data-field-path="variants">
               <StepLabel n={materialStepNum} hint="select container material">
                 Choose material
               </StepLabel>
@@ -412,7 +436,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
 
           {/* Bowl Two-Level Step 1: Shape Selector */}
           {isBowlFamily && (
-            <div className="mt-7">
+            <div className="mt-7" data-field-path="variants">
               <StepLabel n={shapeStepNum} hint="choose bowl shape">
                 Choose shape
               </StepLabel>
@@ -451,7 +475,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
 
           {/* Optional Color Selector (e.g. Double Wall Paper Cup) */}
           {product.colors && product.colors.length > 1 && (
-            <div className="mt-7">
+            <div className="mt-7" data-field-path="colors">
               <StepLabel n={colorStepNum} hint="select cup color">
                 Choose cup color
               </StepLabel>
@@ -491,7 +515,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
 
           {/* Size / Dimension selector (not shown for compartment-only family) */}
           {!isCompartmentFamily && (hasMultipleSizes || isBowlFamily || hasMaterials) && (
-            <div className="mt-7">
+            <div className="mt-7" data-field-path="variants">
               <StepLabel
                 n={sizeStepNum}
                 hint={
@@ -572,7 +596,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
           )}
 
           {/* Order quantity ladder */}
-          <div className="mt-6">
+          <div className="mt-6" data-field-path="baseMoq">
             <StepLabel n={qtyStepNum} hint="bigger orders = better rates">
               How many do you need?
             </StepLabel>
@@ -606,7 +630,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
 
           {/* Branding */}
           {brandStepNum > 0 && (
-            <div className="mt-6">
+            <div className="mt-6" data-field-path="printing">
               <StepLabel n={brandStepNum}>Add your branding?</StepLabel>
               <div className="flex flex-wrap gap-2.5" role="group" aria-label="Branding">
                 <StepOption active={!branded} onClick={() => setBranding(false)}>

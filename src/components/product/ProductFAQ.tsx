@@ -8,7 +8,7 @@ export function ProductFAQ({ faqs }: { faqs: Faq[] }) {
   const [openIndex, setOpenIndex] = useState(-1);
 
   return (
-    <section aria-labelledby="faq-h" className="bg-surface-off px-5 py-12">
+    <section aria-labelledby="faq-h" className="bg-surface-off px-5 py-12" data-field-path="faqs">
       <div className="mx-auto max-w-3xl">
         <h2 id="faq-h" className="text-center text-2xl font-extrabold tracking-tight">
           Quick answers

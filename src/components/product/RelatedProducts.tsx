@@ -5,7 +5,7 @@ export function RelatedProducts({ products }: { products: Product[] }) {
   if (products.length === 0) return null;
 
   return (
-    <section aria-labelledby="rel-h" className="mx-auto max-w-6xl px-5 py-14">
+    <section aria-labelledby="rel-h" className="mx-auto max-w-6xl px-5 py-14" data-field-path="relatedSlugs">
       <div className="mx-auto mb-8 max-w-xl text-center">
         <span className="inline-flex rounded-full bg-brand-green-light px-4 py-1 text-sm font-bold text-brand-green-dark">
           Complete the set

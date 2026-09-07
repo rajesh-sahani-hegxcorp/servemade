@@ -97,21 +97,21 @@ export function ProductTabs({ product }: { product: Product }) {
     ? "Sizes / Capacities"
     : "Sizes / Dimensions";
 
-  const productSpecs: [string, string][] = [
-    ["Material", product.material],
-    [specLabel, sizeList],
-    ...(product.heatRating ? ([["Heat rating", product.heatRating]] as [string, string][]) : []),
-    ...(product.lidFit ? ([["Lid fit", product.lidFit]] as [string, string][]) : []),
-    ["Printing", product.printing],
-    ["End of life", product.endOfLife],
+  const productSpecs: [string, string, string?][] = [
+    ["Material", product.material, "material"],
+    [specLabel, sizeList, "variants"],
+    ...(product.heatRating ? ([["Heat rating", product.heatRating, "heatRating"]] as [string, string, string][]) : []),
+    ...(product.lidFit ? ([["Lid fit", product.lidFit, "lidFit"]] as [string, string, string][]) : []),
+    ["Printing", product.printing, "printing"],
+    ["End of life", product.endOfLife, "endOfLife"],
   ];
 
-  const logisticsSpecs: [string, string][] = [
-    ...(product.cartonPack ? ([["Carton pack", product.cartonPack]] as [string, string][]) : []),
-    ...(product.cartonVolume ? ([["Carton volume", product.cartonVolume]] as [string, string][]) : []),
-    ...(product.hsCode ? ([["HS code", product.hsCode]] as [string, string][]) : []),
-    ["Production time", product.leadTime],
-    ["Ships from", product.shipsFrom],
+  const logisticsSpecs: [string, string, string?][] = [
+    ...(product.cartonPack ? ([["Carton pack", product.cartonPack, "cartonPack"]] as [string, string, string][]) : []),
+    ...(product.cartonVolume ? ([["Carton volume", product.cartonVolume, "cartonVolume"]] as [string, string, string][]) : []),
+    ...(product.hsCode ? ([["HS code", product.hsCode, "hsCode"]] as [string, string, string][]) : []),
+    ["Production time", product.leadTime, "leadTime"],
+    ["Ships from", product.shipsFrom, "shipsFrom"],
     ["Shipping options", "FOB · CIF · DDP — your choice"],
   ];
 
@@ -139,7 +139,7 @@ export function ProductTabs({ product }: { product: Product }) {
 
       <div className="mx-auto max-w-6xl px-5 py-11">
         {tab === 0 && (
-          <div className="grid gap-10 md:grid-cols-2" role="tabpanel">
+          <div className="grid gap-10 md:grid-cols-2" role="tabpanel" data-field-path="overview">
             {product.overview.map((col, i) => (
               <div key={col.heading}>
                 <h2 className="text-xl font-extrabold">{col.heading}</h2>
@@ -173,7 +173,7 @@ export function ProductTabs({ product }: { product: Product }) {
         )}
 
         {tab === 2 && (
-          <div role="tabpanel">
+          <div role="tabpanel" data-field-path="baseMoq">
             <h2 className="text-xl font-extrabold">Order quantities & rates</h2>
             <p className="mt-2 max-w-2xl text-sm text-ink-2">
               Simple rule: the more you order, the less each piece costs. Pick the tier that fits your storage and
@@ -205,7 +205,7 @@ export function ProductTabs({ product }: { product: Product }) {
         )}
 
         {tab === 3 && (
-          <div role="tabpanel">
+          <div role="tabpanel" data-field-path="certifications">
             <h2 className="text-xl font-extrabold">Certified & documented</h2>
             <p className="mt-2 max-w-2xl text-sm text-ink-2">
               Every order ships with the certificates your market requires. Full documents are attached to your
@@ -236,14 +236,14 @@ export function ProductTabs({ product }: { product: Product }) {
   );
 }
 
-function SpecTable({ heading, rows }: { heading: string; rows: [string, string][] }) {
+function SpecTable({ heading, rows }: { heading: string; rows: [string, string, string?][] }) {
   return (
     <div>
       <h2 className="mb-3 text-xl font-extrabold">{heading}</h2>
       <table className="w-full overflow-hidden rounded-2xl border border-line text-sm" style={{ borderCollapse: "separate", borderSpacing: 0 }}>
         <tbody>
-          {rows.map(([label, value], i) => (
-            <tr key={label}>
+          {rows.map(([label, value, fieldPath], i) => (
+            <tr key={label} {...(fieldPath ? { "data-field-path": fieldPath } : {})}>
               <th
                 scope="row"
                 className={`w-2/5 bg-surface-off px-4 py-3 text-left font-bold text-ink-2 ${i ? "border-t border-line" : ""}`}

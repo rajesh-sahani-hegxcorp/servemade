@@ -46,10 +46,15 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
           { label: "4-Compartment", href: "/products/bagasse-round-plate?compartment=4-Compartment" },
         ],
       },
-      { name: "Bagasse 3-CP Square Plate", href: "/products/bagasse-3-compartment-square-plate" },
-      { name: "Bagasse 3-CP Meal Plate", href: "/products/bagasse-3-compartment-combo-meal-plate" },
-      { name: "Bagasse 4-CP Meal Tray", href: "/products/bagasse-4-compartment-meal-tray" },
-      { name: "Bagasse 5-CP Meal Tray", href: "/products/bagasse-5-compartment-meal-tray" },
+      {
+        name: "Bagasse Square Plate",
+        href: "/products/bagasse-square-plate",
+        flyoutOptions: [
+          { label: "3-Compartment", href: "/products/bagasse-square-plate?compartment=3-Compartment" },
+          { label: "4-Compartment", href: "/products/bagasse-square-plate?compartment=4-Compartment" },
+          { label: "5-Compartment", href: "/products/bagasse-square-plate?compartment=5-Compartment" },
+        ],
+      },
     ],
   },
   {

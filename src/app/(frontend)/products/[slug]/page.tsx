@@ -12,6 +12,7 @@ import { ProductTabs } from "@/components/product/ProductTabs";
 import { ProductFAQ } from "@/components/product/ProductFAQ";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { LivePreviewListener } from "@/components/LivePreviewListener";
+import { ProductLivePreviewHover } from "@/components/product/ProductLivePreviewHover";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -71,6 +72,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
   return (
     <div className="pb-20 md:pb-0">
+      <ProductLivePreviewHover />
       {isDraftMode && <LivePreviewListener />}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 

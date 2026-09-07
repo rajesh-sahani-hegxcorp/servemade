@@ -30,6 +30,7 @@ export default buildConfig({
         Icon: '@/components/admin/Icon#Icon',
       },
       beforeDashboard: ['@/components/admin/BeforeDashboard#BeforeDashboard'],
+      providers: ['@/components/admin/LivePreviewFieldHighlighter#LivePreviewFieldHighlighter'],
     },
     importMap: {
       baseDir: path.resolve(dirname),

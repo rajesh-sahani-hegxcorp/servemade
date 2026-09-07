@@ -13,11 +13,11 @@ export function ProductBreadcrumb({ product }: { product: Product }) {
         Products
       </Link>
       <ChevronRight size={14} aria-hidden="true" />
-      <Link href={`/categories/${product.categorySlug}`} className="text-ink-2 hover:underline">
+      <Link href={`/categories/${product.categorySlug}`} className="text-ink-2 hover:underline" data-field-path="category">
         {product.categoryName}
       </Link>
       <ChevronRight size={14} aria-hidden="true" />
-      <b className="text-ink" aria-current="page">
+      <b className="text-ink" aria-current="page" data-field-path="name">
         {product.name}
       </b>
     </nav>

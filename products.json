@@ -260,7 +260,7 @@
     ],
     "relatedSlugs": [
       "bagasse-round-plate",
-      "bagasse-3-compartment-combo-meal-plate"
+      "bagasse-square-plate"
     ],
     "gallery": {
       "type": "static",
@@ -467,7 +467,7 @@
     ],
     "relatedSlugs": [
       "bagasse-round-bowl",
-      "bagasse-3-compartment-combo-meal-plate"
+      "bagasse-square-plate"
     ],
     "gallery": {
       "type": "static",
@@ -478,362 +478,6 @@
       "3-Compartment",
       "4-Compartment"
     ]
-  },
-  {
-    "slug": "bagasse-3-compartment-combo-meal-plate",
-    "name": "Bagasse 3-Compartment Combo Meal Plate",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "3 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Compartment meal plate keeping main dishes and gravies distinctly separated.",
-    "summary": "Three-compartment sugarcane bagasse meal plate engineered for combo platters, cafeteria dining, and set meals. Elevated dividers prevent food mixing during transport and service.",
-    "ratingLabel": "Top pick for combo meals",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "3 compartment",
-        "note": "Combo plate"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom embossed rim available",
-    "endOfLife": "100% commercially compostable",
-    "cartonPack": "500 units per carton",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Distinct divider barriers",
-        "body": "High-profile compartment walls keep sauces and sides completely separated for clean presentation.",
-        "bullets": [
-          "3 deep compartments for balanced portion control",
-          "Heat safe and oil resistant",
-          "Plastic-free sustainable dinnerware"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Direct food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Do gravies leak between sections?",
-        "answer": "No, molded internal ridges effectively prevent liquid crossover."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-4-compartment-meal-tray",
-      "bagasse-5-compartment-meal-tray"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "bagasse-4-compartment-meal-tray",
-    "name": "Bagasse 4-Compartment Meal Tray",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "4 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "4-compartment meal tray designed for full-course dining and catering portions.",
-    "summary": "Heavy-duty 4-compartment meal tray made from 100% sugarcane fiber. Perfect for corporate lunches, institutional dining, and multi-dish catering.",
-    "ratingLabel": "High capacity multi-dish tray",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "4 compartment",
-        "note": "Full meal tray"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom branding available",
-    "endOfLife": "100% compostable",
-    "cartonPack": "500 units per carton",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Optimized 4-dish layout",
-        "body": "Engineered with deep wells to hold main dishes, rice/breads, two side gravies, or dessert securely.",
-        "bullets": [
-          "Rigid rim construction",
-          "Leakproof and oil resistant",
-          "100% plant-based compostable"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Direct food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Is this tray microwave safe?",
-        "answer": "Yes, it is microwave safe up to 120°C for reheating."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-3-compartment-combo-meal-plate",
-      "bagasse-5-compartment-meal-tray"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "bagasse-5-compartment-meal-tray",
-    "name": "Bagasse 5-Compartment Meal Tray",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "5 compartment",
-        "dimension": null,
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "5-compartment thali-style meal tray for authentic multi-course food service.",
-    "summary": "Comprehensive 5-compartment bagasse tray crafted from molded sugarcane pulp. Ideal for traditional thalis, executive executive lunches, and banquet catering requiring multiple condiments and dishes.",
-    "ratingLabel": "Top rated for thali service",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "500 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "5 compartment",
-        "note": "Thali meal tray"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom branding available",
-    "endOfLife": "100% compostable",
-    "cartonPack": "500 units per carton",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Thali style portioning",
-        "body": "5 generous wells designed to accommodate rice, bread, dal, curries, yogurt, and sweets without spillover.",
-        "bullets": [
-          "Heavyweight molded bagasse",
-          "Zero plastic or chemical coatings",
-          "Sturdy for one-handed carrying"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Direct food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "Can these hold heavy gravies?",
-        "answer": "Yes, the reinforced ribbed base easily supports heavy meal portions."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-3-compartment-combo-meal-plate",
-      "bagasse-4-compartment-meal-tray"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
-  },
-  {
-    "slug": "bagasse-3-compartment-square-plate",
-    "name": "Bagasse 3-Compartment Square Plate",
-    "categorySlug": "plates-bowls",
-    "categoryName": "Biodegradable Products",
-    "variantType": "dimension",
-    "variants": [
-      {
-        "size": "9 in / 3 compartment",
-        "dimension": "9 in square",
-        "capacityMl": null,
-        "capacityOz": null,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
-      }
-    ],
-    "moqPieces": null,
-    "tagline": "Modern 9-inch square 3-compartment bagasse plate for contemporary dining.",
-    "summary": "Sleek square 3-compartment plate crafted from 100% biodegradable sugarcane bagasse. Contemporary styling suited for modern fast-casual eateries and catered events.",
-    "ratingLabel": "Modern square catering plate",
-    "quickFacts": [
-      {
-        "value": "TBD",
-        "label": "Minimum order"
-      },
-      {
-        "value": "2–3 weeks",
-        "label": "Production time"
-      },
-      {
-        "value": "1,000 / ctn",
-        "label": "Packed"
-      },
-      {
-        "value": "Yes",
-        "label": "Custom print"
-      }
-    ],
-    "sizes": [
-      {
-        "label": "9 in",
-        "note": "3-compartment square"
-      }
-    ],
-    "baseMoq": 20000,
-    "moqUnit": "pieces",
-    "material": "100% biodegradable sugarcane bagasse",
-    "printing": "Custom branding available",
-    "endOfLife": "100% compostable",
-    "cartonPack": "1,000 units per carton",
-    "hsCode": "4823.70",
-    "leadTime": "2–3 weeks",
-    "shipsFrom": "Nhava Sheva (Mumbai), India",
-    "overview": [
-      {
-        "heading": "Square modern silhouette",
-        "body": "Square shape maximizes surface area while maintaining compact plate footprint on tabletop.",
-        "bullets": [
-          "3 separated compartments",
-          "Grease-proof & sturdy",
-          "Eco-friendly sugarcane bagasse"
-        ]
-      }
-    ],
-    "certifications": [
-      {
-        "name": "FDA food-contact",
-        "note": "Food contact"
-      },
-      {
-        "name": "EN 13432",
-        "note": "Compostable"
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What is the size?",
-        "answer": "Measures 9 inches by 9 inches square with 3 compartments."
-      }
-    ],
-    "relatedSlugs": [
-      "bagasse-round-plate",
-      "bagasse-round-bowl"
-    ],
-    "gallery": {
-      "type": "static",
-      "art": "plate"
-    }
   },
   {
     "slug": "bagasse-clamshell",
@@ -947,7 +591,7 @@
         "size": "100 mL",
         "dimension": null,
         "capacityMl": 100,
-        "capacityOz": 3.38,
+        "capacityOz": 3.5,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       },
@@ -955,7 +599,7 @@
         "size": "150 mL",
         "dimension": null,
         "capacityMl": 150,
-        "capacityOz": 5.07,
+        "capacityOz": 5,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       },
@@ -963,7 +607,7 @@
         "size": "200 mL",
         "dimension": null,
         "capacityMl": 200,
-        "capacityOz": 6.76,
+        "capacityOz": 7,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       }
@@ -1065,7 +709,7 @@
         "size": "240 mL",
         "dimension": null,
         "capacityMl": 240,
-        "capacityOz": 8.12,
+        "capacityOz": 8,
         "qtyPerBox": 1000,
         "qtyPerPkt": 50
       },
@@ -1073,7 +717,7 @@
         "size": "360 mL",
         "dimension": null,
         "capacityMl": 360,
-        "capacityOz": 12.17,
+        "capacityOz": 12,
         "qtyPerBox": 500,
         "qtyPerPkt": 50
       },
@@ -1081,7 +725,7 @@
         "size": "480 mL",
         "dimension": null,
         "capacityMl": 480,
-        "capacityOz": 16.23,
+        "capacityOz": 16,
         "qtyPerBox": 500,
         "qtyPerPkt": 50
       }
@@ -1182,7 +826,7 @@
         "size": "150 mL",
         "dimension": null,
         "capacityMl": 150,
-        "capacityOz": 5.07,
+        "capacityOz": 5,
         "qtyPerBox": 3000,
         "qtyPerPkt": 50
       },
@@ -1190,7 +834,7 @@
         "size": "200 mL",
         "dimension": null,
         "capacityMl": 200,
-        "capacityOz": 6.76,
+        "capacityOz": 7,
         "qtyPerBox": 2500,
         "qtyPerPkt": 50
       },
@@ -1198,7 +842,7 @@
         "size": "250 mL",
         "dimension": null,
         "capacityMl": 250,
-        "capacityOz": 8.45,
+        "capacityOz": 8,
         "qtyPerBox": 2000,
         "qtyPerPkt": 50
       },
@@ -1206,7 +850,7 @@
         "size": "350 mL",
         "dimension": null,
         "capacityMl": 350,
-        "capacityOz": 11.83,
+        "capacityOz": 12,
         "qtyPerBox": 1000,
         "qtyPerPkt": 50
       },
@@ -1214,7 +858,7 @@
         "size": "480 mL",
         "dimension": null,
         "capacityMl": 480,
-        "capacityOz": 16.23,
+        "capacityOz": 16,
         "qtyPerBox": 500,
         "qtyPerPkt": 50
       }
@@ -1460,8 +1104,8 @@
   {
     "slug": "kraft-boat-tray",
     "name": "Kraft Boat Tray",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
+    "categorySlug": "cups-lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Boat Tray",
     "variantType": "capacity",
     "variants": [
@@ -1881,8 +1525,8 @@
   {
     "slug": "kraft-paper-bowl-with-pet-lid",
     "name": "Kraft Paper Bowl with PET Lid",
-    "categorySlug": "biodegradable-containers",
-    "categoryName": "Biodegradable Containers",
+    "categorySlug": "cups-lids",
+    "categoryName": "Grab & Go",
     "sourceSheetCategory": "Paper Bowl with Lid (Kraft)",
     "variantType": "capacity",
     "variants": [
@@ -3696,6 +3340,141 @@
     "gallery": {
       "type": "static",
       "art": "box"
+    }
+  },
+  {
+    "slug": "bagasse-square-plate",
+    "name": "Bagasse Square Plate",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
+    "variantType": "dimension",
+    "compartmentOptions": [
+      "3-Compartment",
+      "4-Compartment",
+      "5-Compartment"
+    ],
+    "variants": [
+      {
+        "size": "9 in",
+        "dimension": "9 in square",
+        "compartmentOption": "3-Compartment",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "4 Compartment",
+        "dimension": "4-compartment meal tray",
+        "compartmentOption": "4-Compartment",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "5 Compartment",
+        "dimension": "5-compartment thali tray",
+        "compartmentOption": "5-Compartment",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Rigid, compartmented square bagasse plates and meal trays for catered events and portioned dining.",
+    "summary": "Heavy-duty sugarcane bagasse square plates and meal trays molded with elevated dividing barriers. Available in 3-Compartment, 4-Compartment, and 5-Compartment thali layouts to keep sauces, sides, and curries cleanly separated.",
+    "ratingLabel": "Top pick for multi-dish dining & thali service",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500–1000 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "9 in",
+        "note": "3-CP square"
+      },
+      {
+        "label": "4-CP",
+        "note": "Multi-dish tray"
+      },
+      {
+        "label": "5-CP",
+        "note": "Thali meal tray"
+      }
+    ],
+    "baseMoq": 20000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom branding available on rim",
+    "endOfLife": "100% commercially compostable",
+    "cartonPack": "500–1,000 units per carton",
+    "hsCode": "4823.70",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Partitioned square & thali configurations",
+        "body": "Engineered with deep wells and rigid divider barriers to hold main dishes, breads, and gravies without liquid crossover or structural bending.",
+        "bullets": [
+          "3-Compartment: 9-inch square format for combo platters",
+          "4-Compartment: Executive lunch and catering tray layout",
+          "5-Compartment: Authentic multi-course thali service",
+          "100% plant-based compostable sugarcane fiber"
+        ]
+      },
+      {
+        "heading": "Cut-resistant & heavy-load stability",
+        "body": "High-density molded fibers provide cut resistance and superior rigidity compared to standard paper plates.",
+        "bullets": [
+          "Leakproof and naturally oil resistant",
+          "Microwave safe up to 120°C and freezer safe",
+          "Rigid rim construction for one-handed carrying"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "Direct food contact"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Industrial compostable"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do gravies leak between sections?",
+        "answer": "No, molded internal divider ridges effectively prevent sauces and liquids from crossing over."
+      },
+      {
+        "question": "Are these plates microwave and freezer safe?",
+        "answer": "Yes, they are safe for reheating in microwaves up to 120°C and can be used for freezer storage."
+      }
+    ],
+    "relatedSlugs": [
+      "bagasse-round-plate",
+      "bagasse-round-bowl"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
     }
   }
 ]
