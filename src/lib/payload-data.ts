@@ -350,3 +350,40 @@ export async function getHomepage(options?: { draft?: boolean }): Promise<any> {
   })
 }
 
+/**
+ * Fetch Header global document from Payload.
+ */
+export async function getHeader(options?: { draft?: boolean }): Promise<any> {
+  try {
+    const payload = await getPayload({ config })
+    return await payload.findGlobal({
+      slug: 'header' as any,
+      draft: options?.draft,
+      depth: 1,
+      overrideAccess: true,
+    })
+  } catch (error) {
+    console.error('Failed to fetch header global:', error)
+    return null
+  }
+}
+
+/**
+ * Fetch Footer global document from Payload.
+ */
+export async function getFooter(options?: { draft?: boolean }): Promise<any> {
+  try {
+    const payload = await getPayload({ config })
+    return await payload.findGlobal({
+      slug: 'footer' as any,
+      draft: options?.draft,
+      depth: 1,
+      overrideAccess: true,
+    })
+  } catch (error) {
+    console.error('Failed to fetch footer global:', error)
+    return null
+  }
+}
+
+

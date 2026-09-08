@@ -10,6 +10,8 @@ import { Media } from './collections/Media'
 import { Categories } from './collections/Categories'
 import { Products } from './collections/Products'
 import { Homepage } from './globals/Homepage'
+import { Header } from './globals/Header'
+import { Footer } from './globals/Footer'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -37,7 +39,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Categories, Products],
-  globals: [Homepage],
+  globals: [Homepage, Header, Footer],
   plugins: [
     seoPlugin({
       collections: ['products', 'categories'],

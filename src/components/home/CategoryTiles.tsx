@@ -23,7 +23,12 @@ export async function CategoryTiles({
       : await getAllCategories();
 
   return (
-    <section id="products" aria-labelledby="cats-h" className="mx-auto max-w-6xl px-5 py-16">
+    <section
+      id="products"
+      aria-labelledby="cats-h"
+      className="mx-auto max-w-6xl px-5 py-16"
+      data-field-path="categoryShowcase"
+    >
       <Reveal>
         <div className="mx-auto mb-10 max-w-xl text-center">
           <Tag blue>{tag || "Shop by product"}</Tag>

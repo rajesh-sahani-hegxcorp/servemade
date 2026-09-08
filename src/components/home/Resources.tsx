@@ -41,7 +41,12 @@ export function Resources({ resources }: ResourcesProps = {}) {
     customResources && customResources.length > 0 ? customResources : RESOURCES;
 
   return (
-    <section id="resources" aria-labelledby="res-h" className="bg-surface-off px-5 py-16">
+    <section
+      id="resources"
+      aria-labelledby="res-h"
+      className="bg-surface-off px-5 py-16"
+      data-field-path="resources"
+    >
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <div className="mx-auto mb-10 max-w-xl text-center">

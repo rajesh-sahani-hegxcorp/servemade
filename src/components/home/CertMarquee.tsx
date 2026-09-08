@@ -34,6 +34,7 @@ export function CertMarquee({ certifications }: CertMarqueeProps = {}) {
     <div
       aria-label="Certifications"
       className="overflow-hidden border-y border-line py-4"
+      data-field-path="certifications"
       style={{
         maskImage:
           "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)",

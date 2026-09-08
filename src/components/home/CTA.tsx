@@ -10,7 +10,11 @@ export interface CTAProps {
 
 export function CTA({ heading, text, buttonText, buttonLink }: CTAProps = {}) {
   return (
-    <section aria-label="Get started" className="mx-auto max-w-6xl px-5 py-16">
+    <section
+      aria-label="Get started"
+      className="mx-auto max-w-6xl px-5 py-16"
+      data-field-path="ctaSection"
+    >
       <Reveal>
         <div className="rounded-3xl bg-gradient-to-br from-brand-green-dark to-brand-green px-8 py-12 text-center text-white">
           <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">

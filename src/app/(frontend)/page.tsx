@@ -10,6 +10,7 @@ import { FAQ } from "@/components/home/FAQ";
 import { CTA } from "@/components/home/CTA";
 import { buildHomeJsonLd } from "@/lib/jsonld";
 import { LivePreviewListener } from "@/components/LivePreviewListener";
+import { LivePreviewHover } from "@/components/LivePreviewHover";
 import { getHomepage, resolveHomepageCategories } from "@/lib/payload-data";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -42,6 +43,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <LivePreviewHover />
       {isDraftMode && <LivePreviewListener />}
       {/* Server-rendered so the JSON-LD ships in the initial HTML for crawlers. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

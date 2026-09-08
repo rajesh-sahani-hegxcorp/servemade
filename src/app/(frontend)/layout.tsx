@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { UtilityBar } from "@/components/layout/UtilityBar";
 import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
 import { siteUrl } from "@/lib/utils";
+import { getHeader, getFooter, getAllCategories } from "@/lib/payload-data";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -39,7 +40,13 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const [headerData, footerData, categories] = await Promise.all([
+    getHeader(),
+    getFooter(),
+    getAllCategories(),
+  ]);
+
   return (
     <html lang="en" className={figtree.variable}>
       <body className="min-h-screen font-sans text-base leading-relaxed">
@@ -47,10 +54,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="#main" className="skip-link">
             Skip to content
           </a>
-          <UtilityBar />
-          <Header />
+          <UtilityBar announcementText={headerData?.announcementText} />
+          <Header data={headerData} />
           <main id="main">{children}</main>
-          <Footer />
+          <Footer data={footerData} categories={categories} />
           <WhatsAppFab />
           <Toast />
         </CartProvider>

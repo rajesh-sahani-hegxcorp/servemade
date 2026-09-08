@@ -28,7 +28,11 @@ export function FAQ({ faqs }: FAQProps = {}) {
     customFaqs && customFaqs.length > 0 ? customFaqs : FAQS;
 
   return (
-    <section aria-labelledby="faq-h" className="bg-surface-off px-5 py-16">
+    <section
+      aria-labelledby="faq-h"
+      className="bg-surface-off px-5 py-16"
+      data-field-path="faqs"
+    >
       <div className="mx-auto max-w-3xl">
         <Reveal>
           <div className="mb-8 text-center">

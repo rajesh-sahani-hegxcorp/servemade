@@ -52,7 +52,11 @@ export function CustomBranding({
       : "Custom printed paper hot cup with your brand logo";
 
   return (
-    <section aria-labelledby="brand-h" className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center">
+    <section
+      aria-labelledby="brand-h"
+      className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:items-center"
+      data-field-path="customBranding"
+    >
       <Reveal>
         <div className="relative grid place-items-center rounded-3xl border border-line bg-[radial-gradient(90%_110%_at_50%_108%,#EAF5EF,white_70%)] p-10 shadow-card min-h-[260px]">
           {imageUrl ? (

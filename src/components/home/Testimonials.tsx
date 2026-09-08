@@ -28,7 +28,11 @@ export function Testimonials({ testimonials }: TestimonialsProps = {}) {
       : TESTIMONIALS;
 
   return (
-    <section aria-labelledby="test-h" className="mx-auto max-w-6xl px-5 py-16">
+    <section
+      aria-labelledby="test-h"
+      className="mx-auto max-w-6xl px-5 py-16"
+      data-field-path="testimonials"
+    >
       <Reveal>
         <div className="mb-8">
           <Tag>Partnerships, not transactions</Tag>

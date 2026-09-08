@@ -134,12 +134,42 @@ const MEGA_MENU_COLUMNS: MegaMenuCol[] = [
   },
 ];
 
-export function Header() {
+export interface HeaderData {
+  primaryNav?: { label: string; href: string }[];
+  quoteButtonText?: string;
+  ctaButtonText?: string;
+  megaMenuBanner?: {
+    text?: string;
+    linkText?: string;
+    linkUrl?: string;
+  };
+}
+
+interface HeaderProps {
+  data?: HeaderData | null;
+}
+
+export function Header({ data }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileExpandedCat, setMobileExpandedCat] = useState<string | null>(null);
   const [mobileExpandedItem, setMobileExpandedItem] = useState<string | null>(null);
   const { items } = useCart();
   const count = items.length;
+
+  const primaryNav =
+    data?.primaryNav && data.primaryNav.length > 0
+      ? data.primaryNav
+      : PRIMARY_NAV;
+
+  const quoteButtonText = data?.quoteButtonText?.trim() || "My quote";
+  const ctaButtonText = data?.ctaButtonText?.trim() || "Get a quote";
+  const megaMenuBannerText =
+    data?.megaMenuBanner?.text?.trim() ||
+    "Need custom sizing, shapes, or private-label embossing?";
+  const megaMenuBannerLinkText =
+    data?.megaMenuBanner?.linkText?.trim() || "Explore Custom & Private Label →";
+  const megaMenuBannerLinkUrl =
+    data?.megaMenuBanner?.linkUrl?.trim() || "/custom-packaging";
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur-md">
@@ -153,12 +183,17 @@ export function Header() {
         </Link>
 
         <nav className="ml-auto hidden gap-1 md:flex" aria-label="Primary">
-          {PRIMARY_NAV.map((item) => {
-            if (item.label === "Products") {
+          {primaryNav.map((item) => {
+            const isProducts =
+              item.label.toLowerCase() === "products" ||
+              item.href === "/products" ||
+              item.href === "#products";
+
+            if (isProducts) {
               return (
                 <div key={item.label} className="group">
                   <Link
-                    href="/products"
+                    href={item.href.startsWith("#") ? "/products" : item.href}
                     className="rounded-full px-4 py-2 text-sm font-semibold text-ink-2 transition-colors hover:bg-brand-green-light hover:text-brand-green-dark inline-flex items-center gap-1.5"
                   >
                     {item.label}
@@ -254,13 +289,13 @@ export function Header() {
                       {/* Mega Menu Footer Banner for Custom Packaging */}
                       <div className="mt-6 flex items-center justify-between border-t border-line pt-4 text-xs font-bold">
                         <span className="text-ink-2">
-                          Need custom sizing, shapes, or private-label embossing?
+                          {megaMenuBannerText}
                         </span>
                         <Link
-                          href="/custom-packaging"
+                          href={megaMenuBannerLinkUrl}
                           className="text-brand-green-dark hover:underline flex items-center gap-1"
                         >
-                          Explore Custom & Private Label →
+                          {megaMenuBannerLinkText}
                         </Link>
                       </div>
                     </div>
@@ -284,7 +319,7 @@ export function Header() {
           href="/quote"
           className="relative hidden rounded-full border-2 border-line px-4 py-2 text-sm font-bold sm:block"
         >
-          My quote
+          {quoteButtonText}
           {count > 0 && (
             <span className="absolute -right-1.5 -top-1.5 grid h-5 min-w-5 place-items-center rounded-full bg-brand-green px-1 text-xs font-bold text-white">
               {count}
@@ -296,7 +331,7 @@ export function Header() {
           href="/quote"
           className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-5 py-2 text-sm font-bold text-white shadow-cta transition-transform hover:-translate-y-0.5"
         >
-          Get a quote
+          {ctaButtonText}
         </Link>
 
         <button
@@ -409,16 +444,23 @@ export function Header() {
             </div>
 
             {/* Other Primary Nav Items */}
-            {PRIMARY_NAV.filter((item) => item.label !== "Products").map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="block rounded-xl px-3 py-2.5 font-semibold text-ink-2 hover:bg-brand-green-light hover:text-brand-green-dark"
-              >
-                {item.label}
-              </a>
-            ))}
+            {primaryNav
+              .filter(
+                (item) =>
+                  item.label.toLowerCase() !== "products" &&
+                  item.href !== "/products" &&
+                  item.href !== "#products"
+              )
+              .map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block rounded-xl px-3 py-2.5 font-semibold text-ink-2 hover:bg-brand-green-light hover:text-brand-green-dark"
+                >
+                  {item.label}
+                </a>
+              ))}
           </div>
         </div>
       )}
