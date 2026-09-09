@@ -380,7 +380,7 @@ body {
 }
 
 /* ==========================================================================
-   4. SERVMADE WELCOME DASHBOARD HERO & SUMMARY CARDS
+   4. SERVMADE WELCOME DASHBOARD & HEALTH WIDGETS
    ========================================================================== */
 
 .servemade-dashboard-hero {
@@ -388,6 +388,60 @@ body {
   font-family: inherit;
 }
 
+/* Status Dots & Badge Indicators */
+.servemade-status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  &--green {
+    background-color: var(--servemade-green);
+    box-shadow: 0 0 0 2px var(--servemade-green-light);
+  }
+
+  &--amber {
+    background-color: #d97706;
+    box-shadow: 0 0 0 2px #fef3c7;
+  }
+
+  &--grey {
+    background-color: #64748b;
+    box-shadow: 0 0 0 2px #f1f5f9;
+  }
+}
+
+.servemade-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  line-height: 1.2;
+
+  &--green {
+    background-color: var(--servemade-green-light);
+    color: var(--servemade-green-dark);
+    border: 1px solid rgba(46, 139, 87, 0.2);
+  }
+
+  &--amber {
+    background-color: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+  }
+
+  &--grey {
+    background-color: var(--servemade-surface-off);
+    color: var(--servemade-ink-2);
+    border: 1px solid var(--servemade-line);
+  }
+}
+
+/* Top Banner Header */
 .servemade-dashboard-hero__top {
   background: #ffffff;
   border: 1px solid var(--servemade-line);
@@ -417,32 +471,25 @@ body {
   background-color: var(--servemade-green-light);
   color: var(--servemade-green-dark);
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   padding: 3px 10px;
   border-radius: 9999px;
   margin-bottom: 0.4rem;
 }
 
-.servemade-dashboard-hero__badge-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--servemade-green);
-}
-
 .servemade-dashboard-hero__title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   color: var(--servemade-ink-1);
   margin: 0 0 0.35rem 0;
   line-height: 1.2;
 }
 
 .servemade-dashboard-hero__desc {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: var(--servemade-ink-2);
   margin: 0;
@@ -469,7 +516,7 @@ body {
 
   &__icon {
     font-size: 14px;
-    font-weight: 900;
+    font-weight: 800;
   }
 
   &__arrow {
@@ -519,7 +566,166 @@ body {
   }
 }
 
-/* Summary Cards Grid */
+/* ==========================================================================
+   PRIMARY FOCUS: CATALOGUE HEALTH & PENDING ITEMS PANEL
+   ========================================================================== */
+
+.servemade-health-panel {
+  background: #ffffff;
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-lg);
+  padding: 1.35rem 1.5rem;
+  margin-top: 1rem;
+  box-shadow: var(--servemade-shadow-sm);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--servemade-line);
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon-wrap {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background-color: var(--servemade-green-light);
+    color: var(--servemade-green-dark);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--servemade-ink-1);
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  &__subtitle {
+    font-size: 0.8rem;
+    color: var(--servemade-ink-3);
+    margin: 2px 0 0 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+}
+
+.servemade-health-card {
+  background: var(--servemade-surface-off);
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-md);
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 0.4rem;
+  }
+
+  &__heading {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--servemade-ink-1);
+  }
+
+  &__desc {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--servemade-ink-2);
+    margin: 0 0 0.65rem 0;
+  }
+
+  &__action {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+}
+
+.servemade-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--servemade-green-dark);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.servemade-attention-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.servemade-attention-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid var(--servemade-line);
+  border-radius: var(--servemade-radius-sm);
+  padding: 6px 10px;
+  font-size: 12px;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__name {
+    font-weight: 700;
+    color: var(--servemade-ink-1);
+    font-size: 12.5px;
+  }
+
+  &__note {
+    font-size: 11px;
+    color: var(--servemade-ink-3);
+  }
+}
+
+/* ==========================================================================
+   SECONDARY: 3 NAVIGATION SHORTCUT CARDS
+   ========================================================================== */
+
 .servemade-dashboard-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -541,7 +747,7 @@ body {
   text-decoration: none;
   color: inherit;
   box-shadow: var(--servemade-shadow-sm);
-  transition: all 0.2s ease-out;
+  transition: all 0.15s ease-out;
 
   &:hover {
     transform: translateY(-2px);
@@ -549,78 +755,46 @@ body {
     border-color: var(--servemade-green);
   }
 
-  &--attention {
-    border-left: 3px solid #e11d48;
-  }
-
-  &__header {
+  &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.65rem;
   }
 
-  &__icon-wrap {
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    display: grid;
-    place-items: center;
-
-    &--green {
-      background-color: var(--servemade-green-light);
-      color: var(--servemade-green);
-    }
-
-    &--blue {
-      background-color: var(--servemade-blue-light);
-      color: var(--servemade-blue);
-    }
-
-    &--amber {
-      background-color: #fef5ea;
-      color: #d97706;
-    }
-
-    &--red {
-      background-color: #ffe4e6;
-      color: #e11d48;
-    }
-
-    &--purple {
-      background-color: #f3e8ff;
-      color: #7e22ce;
-    }
+  &__stat {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 0;
   }
 
-  &__pill {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--servemade-ink-2);
-    background-color: var(--servemade-surface-off);
-    border: 1px solid var(--servemade-line);
-    padding: 2px 8px;
-    border-radius: 9999px;
+  &__count {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--servemade-ink-1);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
 
-    &--warning {
-      background-color: #fff1f2;
-      color: #e11d48;
-      border-color: #fecdd3;
-    }
+  &__count-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--servemade-ink-3);
   }
 
   &__title {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     font-weight: 700;
     color: var(--servemade-ink-1);
-    margin: 0 0 0.35rem 0;
+    margin: 0 0 0.3rem 0;
   }
 
   &__text {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     line-height: 1.45;
     color: var(--servemade-ink-2);
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.85rem 0;
     flex: 1;
   }
 
@@ -643,132 +817,43 @@ body {
   }
 }
 
-/* Homepage Status Preview Line */
-.servemade-hero-status {
-  margin-top: 0.35rem;
-  margin-bottom: 0.5rem;
-}
+/* ==========================================================================
+   RECENT ACTIVITY PANEL
+   ========================================================================== */
 
-.servemade-hero-status__badge {
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
-  display: inline-block;
-
-  &--set {
-    background: var(--servemade-green-light);
-    color: var(--servemade-green-dark);
-  }
-
-  &--unset {
-    background: #fef2f2;
-    color: #b91c1c;
-  }
-}
-
-/* Secondary 2-Column Grid (Needs Attention & Recent Activity) */
-.servemade-dashboard-grid-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Needs Attention Widget Details */
-.servemade-attention-section {
-  background: var(--servemade-surface-off);
-  border: 1px solid var(--servemade-line);
-  border-radius: var(--servemade-radius-sm);
-  padding: 10px 12px;
-  margin-top: 0.5rem;
-}
-
-.servemade-attention-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-
-.servemade-attention-tag {
-  font-size: 11.5px;
-  font-weight: 800;
-  color: var(--servemade-ink-1);
-}
-
-.servemade-attention-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.servemade-attention-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.servemade-recent-panel {
   background: #ffffff;
   border: 1px solid var(--servemade-line);
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-size: 12px;
+  border-radius: var(--servemade-radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+  box-shadow: var(--servemade-shadow-sm);
 
-  &__main {
+  &__header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
   }
 
-  &__name {
+  &__title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__title {
+    font-size: 0.98rem;
     font-weight: 700;
     color: var(--servemade-ink-1);
-  }
-
-  &__note {
-    font-size: 10.5px;
-    color: var(--servemade-ink-3);
+    margin: 0;
   }
 }
 
-.servemade-attention-badge {
-  font-size: 9.5px;
-  font-weight: 700;
-  background: #f1f5f9;
-  color: #475569;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-.servemade-attention-desc {
-  font-size: 11.5px;
-  line-height: 1.4;
-  color: var(--servemade-ink-2);
-  margin: 0 0 6px 0;
-}
-
-.servemade-attention-link {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: var(--servemade-green-dark);
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-/* Recent Activity List */
 .servemade-recent-list {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-top: 0.5rem;
 }
 
 .servemade-recent-item {
@@ -806,9 +891,20 @@ body {
   &__time {
     font-size: 11px;
     color: var(--servemade-ink-3);
-    font-weight: 600;
+    font-weight: 500;
     flex-shrink: 0;
   }
+}
+
+.servemade-type-badge {
+  font-size: 10px;
+  font-weight: 700;
+  background: #ffffff;
+  color: var(--servemade-green-dark);
+  border: 1px solid var(--servemade-line);
+  padding: 1px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
 }
 
 /* ==========================================================================

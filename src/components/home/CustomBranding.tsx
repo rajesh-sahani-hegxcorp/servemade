@@ -37,19 +37,23 @@ export function CustomBranding({
   const displayBullets =
     customBullets && customBullets.length > 0 ? customBullets : DEFAULT_FEATURES;
 
-  const displayTag = tag || "Custom & private label";
+  const displayTag =
+    tag && tag.trim() !== "vscsdv" ? tag : "Custom branding";
   const displayHeading = heading || "Your brand, from logo to loading dock.";
   const displayDescription =
-    description ||
-    "Send us a logo — our design team handles artwork, proofs and print setup, then we manufacture, inspect and ship under your name. Design to delivery, one accountable partner.";
+    description && description.trim() !== "vxcvcvvxcvxv"
+      ? description
+      : "Print your logo on cups, containers, and bags — MOQs from small trial batches to full container loads.";
   const displayCtaText = ctaText || "Start a branded order";
   const displayCtaLink = ctaLink || "/custom-packaging";
 
-  const imageUrl = typeof image === "string" ? image : image?.url;
+  const imageUrl =
+    (typeof image === "string" ? image : image?.url) ||
+    "/images/branding-showcase.png";
   const imageAlt =
     typeof image === "object" && image?.alt
       ? image.alt
-      : "Custom printed paper hot cup with your brand logo";
+      : "Custom branded sustainable paper cups";
 
   return (
     <section
@@ -58,20 +62,17 @@ export function CustomBranding({
       data-field-path="customBranding"
     >
       <Reveal>
-        <div className="relative grid place-items-center rounded-3xl border border-line bg-[radial-gradient(90%_110%_at_50%_108%,#EAF5EF,white_70%)] p-10 shadow-card min-h-[260px]">
-          {imageUrl ? (
-            <div className="relative h-[220px] w-full max-w-[280px]">
-              <Image
-                src={imageUrl}
-                alt={imageAlt}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 280px"
-              />
-            </div>
-          ) : (
-            <ProductArt type="cup" height={220} label="Custom printed paper hot cup with your brand logo" />
-          )}
+        <div className="relative flex items-center justify-center rounded-3xl border border-line bg-[radial-gradient(90%_110%_at_50%_108%,#EAF5EF,white_70%)] p-6 sm:p-8 shadow-card">
+          <div className="relative aspect-square w-full max-w-[360px] md:max-w-[400px] overflow-hidden rounded-2xl">
+            <Image
+              src={imageUrl}
+              alt={imageAlt}
+              fill
+              className="object-contain object-center rounded-2xl"
+              sizes="(max-width: 768px) 100vw, 400px"
+              priority
+            />
+          </div>
         </div>
       </Reveal>
 
@@ -107,3 +108,4 @@ export function CustomBranding({
     </section>
   );
 }
+

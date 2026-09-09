@@ -33,7 +33,6 @@ export const BeforeDashboard = async () => {
     id: string | number
     title: string
     type: 'Product' | 'Category' | 'Global'
-    badgeColor: 'green' | 'blue' | 'amber'
     editUrl: string
     updatedAt: string
     timeFormatted: string
@@ -132,7 +131,6 @@ export const BeforeDashboard = async () => {
         id: p.id,
         title: p.name,
         type: 'Product' as const,
-        badgeColor: 'green' as const,
         editUrl: `/admin/collections/products/${p.id}`,
         updatedAt: p.updatedAt,
       })),
@@ -140,7 +138,6 @@ export const BeforeDashboard = async () => {
         id: c.id,
         title: c.name,
         type: 'Category' as const,
-        badgeColor: 'blue' as const,
         editUrl: `/admin/collections/categories/${c.id}`,
         updatedAt: c.updatedAt,
       })),
@@ -151,7 +148,6 @@ export const BeforeDashboard = async () => {
         id: 'homepage',
         title: 'Homepage Global',
         type: 'Global' as const,
-        badgeColor: 'amber' as const,
         editUrl: '/admin/globals/homepage',
         updatedAt: homepageDoc.updatedAt,
       })
@@ -178,12 +174,12 @@ export const BeforeDashboard = async () => {
       <div className="servemade-dashboard-hero__top">
         <div className="servemade-dashboard-hero__intro">
           <div className="servemade-dashboard-hero__badge">
-            <span className="servemade-dashboard-hero__badge-dot" />
+            <span className="servemade-status-dot servemade-status-dot--green" />
             Servemade Management Hub
           </div>
           <h1 className="servemade-dashboard-hero__title">Welcome to Servemade Admin</h1>
           <p className="servemade-dashboard-hero__desc">
-            Manage your certified compostable product catalogue, variants, category structures, and live website content from one central workspace.
+            Manage your certified compostable product catalogue, category structures, and live website content from one central workspace.
           </p>
         </div>
 
@@ -203,19 +199,93 @@ export const BeforeDashboard = async () => {
         </div>
       </div>
 
-      {/* 3. Primary Navigation Cards (Catalogue, Categories, Homepage with Hero Status) */}
-      <div className="servemade-dashboard-cards">
-        <Link href="/admin/collections/products" className="servemade-dash-card">
-          <div className="servemade-dash-card__header">
-            <div className="servemade-dash-card__icon-wrap servemade-dash-card__icon-wrap--green">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m7.5 4.27 9 5.15" />
-                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                <path d="m3.3 7 8.7 5 8.7-5" />
-                <path d="M12 22V12" />
+      {/* 3. PRIMARY FOCUS: Catalogue Health & Pending Items */}
+      <div className="servemade-health-panel">
+        <div className="servemade-health-panel__header">
+          <div className="servemade-health-panel__title-group">
+            <div className="servemade-health-panel__icon-wrap">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
-            <span className="servemade-dash-card__pill">{productsCount} Products</span>
+            <div>
+              <h2 className="servemade-health-panel__title">Catalogue Health &amp; Pending Items</h2>
+              <p className="servemade-health-panel__subtitle">Action items requiring review and updates</p>
+            </div>
+          </div>
+          <span className="servemade-status-badge servemade-status-badge--amber">
+            <span className="servemade-status-dot servemade-status-dot--amber" />
+            <span>{EXCLUDED_PRODUCTS.length} Pending reviews</span>
+          </span>
+        </div>
+
+        <div className="servemade-health-panel__grid">
+          {/* Excluded Products Section */}
+          <div className="servemade-health-card">
+            <div className="servemade-health-card__top">
+              <span className="servemade-health-card__heading">Excluded Products</span>
+              <span className="servemade-status-badge servemade-status-badge--amber">
+                <span className="servemade-status-dot servemade-status-dot--amber" />
+                <span>{EXCLUDED_PRODUCTS.length} Not in live navigation</span>
+              </span>
+            </div>
+            <p className="servemade-health-card__desc">
+              These items exist in product data but are pending category placement:
+            </p>
+            <ul className="servemade-attention-list">
+              {EXCLUDED_PRODUCTS.map((prod) => (
+                <li key={prod.slug} className="servemade-attention-item">
+                  <div className="servemade-attention-item__main">
+                    <span className="servemade-attention-item__name">{prod.name}</span>
+                    <span className="servemade-attention-item__note">{prod.note}</span>
+                  </div>
+                  <span className="servemade-status-badge servemade-status-badge--grey">Not in Payload</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Missing Photos / Photography Section */}
+          <div className="servemade-health-card">
+            <div className="servemade-health-card__top">
+              <span className="servemade-health-card__heading">Photography &amp; Media</span>
+              {missingImagesCount > 0 ? (
+                <span className="servemade-status-badge servemade-status-badge--amber">
+                  <span className="servemade-status-dot servemade-status-dot--amber" />
+                  <span>{missingImagesCount} Products using vector artwork</span>
+                </span>
+              ) : (
+                <span className="servemade-status-badge servemade-status-badge--green">
+                  <span className="servemade-status-dot servemade-status-dot--green" />
+                  <span>All products photographed</span>
+                </span>
+              )}
+            </div>
+            <p className="servemade-health-card__desc">
+              All {missingImagesCount} active products currently render fallback vector illustrations. Upload real photographic media to replace artwork.
+            </p>
+            <div className="servemade-health-card__action">
+              <Link href="/admin/collections/products" className="servemade-link-btn">
+                View Products Collection →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 4. SECONDARY FOCUS: 3 Navigation Shortcut Cards */}
+      <div className="servemade-dashboard-cards">
+        {/* Products Shortcut Card */}
+        <Link href="/admin/collections/products" className="servemade-dash-card">
+          <div className="servemade-dash-card__top">
+            <div className="servemade-dash-card__stat">
+              <span className="servemade-dash-card__count">{productsCount}</span>
+              <span className="servemade-dash-card__count-label">Products</span>
+            </div>
+            <span className="servemade-status-badge servemade-status-badge--green">
+              <span className="servemade-status-dot servemade-status-dot--green" />
+              <span>Active</span>
+            </span>
           </div>
           <h3 className="servemade-dash-card__title">Product Catalogue</h3>
           <p className="servemade-dash-card__text">
@@ -226,157 +296,88 @@ export const BeforeDashboard = async () => {
           </span>
         </Link>
 
+        {/* Categories Shortcut Card */}
         <Link href="/admin/collections/categories" className="servemade-dash-card">
-          <div className="servemade-dash-card__header">
-            <div className="servemade-dash-card__icon-wrap servemade-dash-card__icon-wrap--blue">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z" />
-                <path d="M7 7h.01" />
-              </svg>
+          <div className="servemade-dash-card__top">
+            <div className="servemade-dash-card__stat">
+              <span className="servemade-dash-card__count">{categoriesCount}</span>
+              <span className="servemade-dash-card__count-label">Categories</span>
             </div>
-            <span className="servemade-dash-card__pill">{categoriesCount} Categories</span>
+            <span className="servemade-status-badge servemade-status-badge--green">
+              <span className="servemade-status-dot servemade-status-dot--green" />
+              <span>Live</span>
+            </span>
           </div>
           <h3 className="servemade-dash-card__title">Product Categories</h3>
           <p className="servemade-dash-card__text">
-            Organize Biodegradable Tableware, Paper Cups, Containers, Bags &amp; Cutlery.
+            Organize tableware, cups, containers, bags &amp; cutlery structures.
           </p>
           <span className="servemade-dash-card__action">
             Manage Categories <span className="servemade-dash-card__arrow">→</span>
           </span>
         </Link>
 
+        {/* Homepage Shortcut Card */}
         <Link href="/admin/globals/homepage" className="servemade-dash-card">
-          <div className="servemade-dash-card__header">
-            <div className="servemade-dash-card__icon-wrap servemade-dash-card__icon-wrap--amber">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                <path d="M2 12h20" />
-              </svg>
+          <div className="servemade-dash-card__top">
+            <div className="servemade-dash-card__stat">
+              <span className="servemade-dash-card__count">Global</span>
+              <span className="servemade-dash-card__count-label">Content</span>
             </div>
-            <span className="servemade-dash-card__pill">Global</span>
+            {heroHeading ? (
+              <span className="servemade-status-badge servemade-status-badge--green">
+                <span className="servemade-status-dot servemade-status-dot--green" />
+                <span>Hero configured</span>
+              </span>
+            ) : (
+              <span className="servemade-status-badge servemade-status-badge--amber">
+                <span className="servemade-status-dot servemade-status-dot--amber" />
+                <span>Hero not configured</span>
+              </span>
+            )}
           </div>
           <h3 className="servemade-dash-card__title">Homepage Content</h3>
           <p className="servemade-dash-card__text">
             Customize hero copy, trust badges, stats, client testimonials &amp; CTA sections.
           </p>
-
-          {/* Status Preview Line */}
-          <div className="servemade-hero-status">
-            {heroHeading ? (
-              <span className="servemade-hero-status__badge servemade-hero-status__badge--set">
-                Hero: ✓ Set ({heroHeading.length > 28 ? `${heroHeading.slice(0, 28)}…` : heroHeading})
-              </span>
-            ) : (
-              <span className="servemade-hero-status__badge servemade-hero-status__badge--unset">
-                Hero: ○ Not configured
-              </span>
-            )}
-          </div>
-
-          <span className="servemade-dash-card__action" style={{ marginTop: '0.75rem' }}>
+          <span className="servemade-dash-card__action">
             Edit Homepage <span className="servemade-dash-card__arrow">→</span>
           </span>
         </Link>
       </div>
 
-      {/* 4. Secondary Widgets: Needs Attention & Recent Activity */}
-      <div className="servemade-dashboard-grid-2">
-        {/* Needs Attention Widget */}
-        <div className="servemade-dash-card servemade-dash-card--attention">
-          <div className="servemade-dash-card__header">
-            <div className="servemade-dash-card__icon-wrap servemade-dash-card__icon-wrap--red">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="12" />
-                <line x1="12" y1="16" x2="12.01" y2="16" />
-              </svg>
-            </div>
-            <span className="servemade-dash-card__pill servemade-dash-card__pill--warning">
-              Needs Attention
-            </span>
+      {/* 5. Recent Activity Panel */}
+      <div className="servemade-recent-panel">
+        <div className="servemade-recent-panel__header">
+          <div className="servemade-recent-panel__title-wrap">
+            <span className="servemade-status-dot servemade-status-dot--grey" />
+            <h3 className="servemade-recent-panel__title">Recently Updated Content</h3>
           </div>
-
-          <h3 className="servemade-dash-card__title">Catalogue Health &amp; Pending Items</h3>
-          
-          <div className="servemade-attention-section">
-            <div className="servemade-attention-header">
-              <span className="servemade-attention-tag">
-                {EXCLUDED_PRODUCTS.length} Excluded from Live Site
-              </span>
-            </div>
-            <ul className="servemade-attention-list">
-              {EXCLUDED_PRODUCTS.map((prod) => (
-                <li key={prod.slug} className="servemade-attention-item">
-                  <div className="servemade-attention-item__main">
-                    <span className="servemade-attention-item__name">{prod.name}</span>
-                    <span className="servemade-attention-item__note">{prod.note}</span>
-                  </div>
-                  <span className="servemade-attention-badge">Not in Payload</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="servemade-attention-section" style={{ marginTop: '0.85rem' }}>
-            <div className="servemade-attention-header">
-              <span className="servemade-attention-tag">
-                {missingImagesCount} Products Missing Photos
-              </span>
-            </div>
-            <p className="servemade-attention-desc">
-              All {missingImagesCount} active products currently render stylized vector illustrations. Upload photographic media to display real photography.
-            </p>
-            <Link
-              href="/admin/collections/products"
-              className="servemade-attention-link"
-            >
-              View Products Collection →
-            </Link>
-          </div>
+          <Link href="/admin/collections/products" className="servemade-dash-card__action">
+            View All Catalogue Items <span className="servemade-dash-card__arrow">→</span>
+          </Link>
         </div>
 
-        {/* Recent Activity Widget */}
-        <div className="servemade-dash-card">
-          <div className="servemade-dash-card__header">
-            <div className="servemade-dash-card__icon-wrap servemade-dash-card__icon-wrap--purple">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-            </div>
-            <span className="servemade-dash-card__pill">Recent Activity</span>
-          </div>
-
-          <h3 className="servemade-dash-card__title">Recently Updated Content</h3>
-          
-          <div className="servemade-recent-list">
-            {recentActivities.length > 0 ? (
-              recentActivities.map((item) => (
-                <Link
-                  key={`${item.type}-${item.id}`}
-                  href={item.editUrl}
-                  className="servemade-recent-item"
-                >
-                  <div className="servemade-recent-item__left">
-                    <span className={`servemade-search-badge servemade-search-badge--${item.type.toLowerCase()}`}>
-                      {item.type}
-                    </span>
-                    <span className="servemade-recent-item__title">{item.title}</span>
-                  </div>
-                  <span className="servemade-recent-item__time">{item.timeFormatted}</span>
-                </Link>
-              ))
-            ) : (
-              <p className="servemade-attention-desc">No recent document updates found.</p>
-            )}
-          </div>
-
-          <div style={{ marginTop: 'auto', paddingTop: '0.75rem' }}>
-            <Link href="/admin/collections/products" className="servemade-dash-card__action">
-              View All Catalogue Items <span className="servemade-dash-card__arrow">→</span>
-            </Link>
-          </div>
+        <div className="servemade-recent-list">
+          {recentActivities.length > 0 ? (
+            recentActivities.map((item) => (
+              <Link
+                key={`${item.type}-${item.id}`}
+                href={item.editUrl}
+                className="servemade-recent-item"
+              >
+                <div className="servemade-recent-item__left">
+                  <span className="servemade-type-badge">
+                    {item.type}
+                  </span>
+                  <span className="servemade-recent-item__title">{item.title}</span>
+                </div>
+                <span className="servemade-recent-item__time">{item.timeFormatted}</span>
+              </Link>
+            ))
+          ) : (
+            <p className="servemade-attention-desc">No recent document updates found.</p>
+          )}
         </div>
       </div>
     </div>
