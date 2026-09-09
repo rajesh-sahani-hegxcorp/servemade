@@ -8,6 +8,15 @@ import type { Product } from "@/types";
 
 const TAB_LABELS = ["Overview", "Specifications", "Order quantities", "Certifications"] as const;
 
+function isRealDimensionSpec(dim?: string | null, compOption?: string | null): boolean {
+  if (!dim) return false;
+  const clean = dim.trim().toLowerCase();
+  if (!clean || ["not stated", "round", "rectangular", "square", "boat"].includes(clean)) return false;
+  if (clean.includes("compartment") || clean.includes("thali") || clean.includes("meal tray")) return false;
+  if (compOption && clean.replace(/[^a-z0-9]/g, "") === compOption.toLowerCase().replace(/[^a-z0-9]/g, "")) return false;
+  return /[0-9]/.test(clean) || clean.includes("in") || clean.includes("mm") || clean.includes("cm") || clean.includes("oz") || clean.includes("ml");
+}
+
 export function ProductTabs({ product }: { product: Product }) {
   const [tab, setTab] = useState(0);
   const tiers = buildQuantityTiers(product.baseMoq);
@@ -27,14 +36,16 @@ export function ProductTabs({ product }: { product: Product }) {
     product.variants.forEach((v) => {
       const opt = v.compartmentOption || "Standard";
       const list = optMap.get(opt) || [];
-      const label = v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())
-        ? v.dimension
-        : v.size;
-      if (!list.includes(label)) list.push(label);
+      const label = isRealDimensionSpec(v.dimension, v.compartmentOption)
+        ? v.dimension!
+        : isRealDimensionSpec(v.size, v.compartmentOption)
+        ? v.size
+        : null;
+      if (label && !list.includes(label)) list.push(label);
       optMap.set(opt, list);
     });
     sizeList = Array.from(optMap.entries())
-      .map(([opt, sizes]) => `${opt}: ${sizes.join(", ")}`)
+      .map(([opt, sizes]) => (sizes.length > 0 ? `${opt} (${sizes.join(", ")})` : opt))
       .join(" · ");
   } else if (hasShapeOptions) {
     const shapeMap = new Map<string, string[]>();

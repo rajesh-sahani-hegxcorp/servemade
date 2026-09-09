@@ -36,12 +36,24 @@ function formatOzValue(oz: number | null | undefined): string | null {
   return Number.isInteger(n) ? `${n}` : `${parseFloat(n.toFixed(1))}`;
 }
 
+function isRealDimensionSpec(dim?: string | null, compOption?: string | null): boolean {
+  if (!dim) return false;
+  const clean = dim.trim().toLowerCase();
+  if (!clean || ["not stated", "round", "rectangular", "square", "boat"].includes(clean)) return false;
+  if (clean.includes("compartment") || clean.includes("thali") || clean.includes("meal tray")) return false;
+  if (compOption && clean.replace(/[^a-z0-9]/g, "") === compOption.toLowerCase().replace(/[^a-z0-9]/g, "")) return false;
+  return /[0-9]/.test(clean) || clean.includes("in") || clean.includes("mm") || clean.includes("cm") || clean.includes("oz") || clean.includes("ml");
+}
+
 function getVariantDisplayLabel(v: ProductVariant, variantType: "capacity" | "dimension"): string {
   if (v.compartmentOption) {
-    const dim = v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())
-      ? v.dimension
-      : v.size;
-    return `${v.compartmentOption} (${dim})`;
+    if (isRealDimensionSpec(v.dimension, v.compartmentOption)) {
+      return `${v.compartmentOption} (${v.dimension})`;
+    }
+    if (isRealDimensionSpec(v.size, v.compartmentOption)) {
+      return `${v.compartmentOption} (${v.size})`;
+    }
+    return v.compartmentOption;
   }
   if (v.compartments) {
     if (v.compartments === 2 && v.shape) {
@@ -62,8 +74,8 @@ function getVariantDisplayLabel(v: ProductVariant, variantType: "capacity" | "di
     }
     return v.size;
   }
-  if (v.dimension && !["not stated", "round", "rectangular", "square", "boat"].includes(v.dimension.toLowerCase())) {
-    return v.dimension;
+  if (isRealDimensionSpec(v.dimension)) {
+    return v.dimension!;
   }
   return v.size;
 }
