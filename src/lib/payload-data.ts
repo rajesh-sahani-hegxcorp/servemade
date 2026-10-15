@@ -12,6 +12,7 @@ import type {
   ProductGallery,
   ProductArtType,
 } from '@/types'
+import { PRODUCTS } from '@/data/products'
 
 /**
  * Maps a raw Payload Category document into the application's ProductCategory type.
@@ -111,6 +112,18 @@ function mapProduct(doc: any): Product {
         if (v.shape) item.shape = v.shape
         if (v.compartments != null) item.compartments = Number(v.compartments)
         if (v.compartmentOption) item.compartmentOption = v.compartmentOption
+        if (v.weightPerPieceG != null) item.weightPerPieceG = Number(v.weightPerPieceG)
+        if (v.pcsPerPkt != null) item.pcsPerPkt = Number(v.pcsPerPkt)
+        if (v.pktsPerCase != null) item.pktsPerCase = Number(v.pktsPerCase)
+        if (v.qtyPerCase != null) item.qtyPerCase = Number(v.qtyPerCase)
+        if (v.netWeightPerCaseKg != null) item.netWeightPerCaseKg = Number(v.netWeightPerCaseKg)
+        if (v.caseMm) item.caseMm = v.caseMm
+        if (v.caseCbm != null) item.caseCbm = Number(v.caseCbm)
+        if (v.piecesPer20ft != null) item.piecesPer20ft = Number(v.piecesPer20ft)
+        if (v.piecesPer40ftHC != null) item.piecesPer40ftHC = Number(v.piecesPer40ftHC)
+        if (v.managerLabel) item.managerLabel = v.managerLabel
+        if (v.source) item.source = v.source
+        if (v.packing) item.packing = v.packing
         return item
       })
     : []
@@ -200,7 +213,47 @@ export async function getAllProducts(): Promise<Product[]> {
     overrideAccess: true,
   })
 
-  return res.docs.map(mapProduct)
+  const mapped = res.docs.map(mapProduct)
+  for (const doc of mapped) {
+    const staticProd = PRODUCTS.find((p) => p.slug === doc.slug)
+    if (staticProd) {
+      doc.variants = doc.variants.map((v, i) => {
+        const sv = staticProd.variants[i]
+        if (sv) {
+          return {
+            ...v,
+            qtyPerBox: sv.qtyPerBox ?? v.qtyPerBox,
+            qtyPerPkt: sv.qtyPerPkt ?? v.qtyPerPkt,
+            weightPerPieceG: sv.weightPerPieceG ?? v.weightPerPieceG,
+            pcsPerPkt: sv.pcsPerPkt ?? v.pcsPerPkt,
+            pktsPerCase: sv.pktsPerCase ?? v.pktsPerCase,
+            qtyPerCase: sv.qtyPerCase ?? v.qtyPerCase,
+            netWeightPerCaseKg: sv.netWeightPerCaseKg ?? v.netWeightPerCaseKg,
+            caseMm: sv.caseMm ?? v.caseMm,
+            caseCbm: sv.caseCbm ?? v.caseCbm,
+            piecesPer20ft: sv.piecesPer20ft ?? v.piecesPer20ft,
+            piecesPer40ftHC: sv.piecesPer40ftHC ?? v.piecesPer40ftHC,
+            capacityMl: sv.capacityMl ?? v.capacityMl,
+            capacityOz: sv.capacityOz ?? v.capacityOz,
+            managerLabel: sv.managerLabel ?? v.managerLabel,
+            source: sv.source ?? v.source,
+            packing: sv.packing ?? v.packing,
+          }
+        }
+        return v
+      })
+    }
+  }
+
+  const mappedSlugs = new Set(mapped.map((p) => p.slug))
+  for (const p of PRODUCTS) {
+    if (!mappedSlugs.has(p.slug)) {
+      mapped.push(p)
+      mappedSlugs.add(p.slug)
+    }
+  }
+
+  return mapped
 }
 
 /**
@@ -222,8 +275,39 @@ export async function findProduct(
     overrideAccess: true,
   })
 
-  if (!res.docs.length) return undefined
-  return mapProduct(res.docs[0])
+  if (!res.docs.length) {
+    return PRODUCTS.find((p) => p.slug === slug)
+  }
+  const mapped = mapProduct(res.docs[0])
+  const staticProd = PRODUCTS.find((p) => p.slug === slug)
+  if (staticProd) {
+    mapped.variants = mapped.variants.map((v, i) => {
+      const sv = staticProd.variants[i]
+      if (sv) {
+        return {
+          ...v,
+          qtyPerBox: sv.qtyPerBox ?? v.qtyPerBox,
+          qtyPerPkt: sv.qtyPerPkt ?? v.qtyPerPkt,
+          weightPerPieceG: sv.weightPerPieceG ?? v.weightPerPieceG,
+          pcsPerPkt: sv.pcsPerPkt ?? v.pcsPerPkt,
+          pktsPerCase: sv.pktsPerCase ?? v.pktsPerCase,
+          qtyPerCase: sv.qtyPerCase ?? v.qtyPerCase,
+          netWeightPerCaseKg: sv.netWeightPerCaseKg ?? v.netWeightPerCaseKg,
+          caseMm: sv.caseMm ?? v.caseMm,
+          caseCbm: sv.caseCbm ?? v.caseCbm,
+          piecesPer20ft: sv.piecesPer20ft ?? v.piecesPer20ft,
+          piecesPer40ftHC: sv.piecesPer40ftHC ?? v.piecesPer40ftHC,
+          capacityMl: sv.capacityMl ?? v.capacityMl,
+          capacityOz: sv.capacityOz ?? v.capacityOz,
+          managerLabel: sv.managerLabel ?? v.managerLabel,
+          source: sv.source ?? v.source,
+          packing: sv.packing ?? v.packing,
+        }
+      }
+      return v
+    })
+  }
+  return mapped
 }
 
 /**

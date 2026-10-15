@@ -131,8 +131,24 @@
         "shape": "Round",
         "capacityMl": 180,
         "capacityOz": 6,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 50
+        "qtyPerBox": 4000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 80,
+        "weightPerPieceG": 5,
+        "netWeightPerCaseKg": 20,
+        "caseMm": [
+          476,
+          451,
+          483
+        ],
+        "caseCbm": 0.104,
+        "piecesPer20ft": 1080000,
+        "piecesPer40ftHC": 2620000,
+        "packing": "50 pcs x 80 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 4000,
+        "pcsPerPkt": 50,
+        "managerLabel": "6oz (180ml)"
       },
       {
         "size": "8 oz",
@@ -140,17 +156,49 @@
         "shape": "Round",
         "capacityMl": 240,
         "capacityOz": 8,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 50
+        "qtyPerBox": 4000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 80,
+        "weightPerPieceG": 5.5,
+        "netWeightPerCaseKg": 22,
+        "caseMm": [
+          476,
+          451,
+          483
+        ],
+        "caseCbm": 0.104,
+        "piecesPer20ft": 1080000,
+        "piecesPer40ftHC": 2620000,
+        "packing": "50 pcs x 80 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 4000,
+        "pcsPerPkt": 50,
+        "managerLabel": "8oz (240ml)"
       },
       {
         "size": "12 oz",
         "dimension": "round",
         "shape": "Round",
-        "capacityMl": 350,
+        "capacityMl": 360,
         "capacityOz": 12,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 50
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 7.5,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          490,
+          325,
+          625
+        ],
+        "caseCbm": 0.1,
+        "piecesPer20ft": 562000,
+        "piecesPer40ftHC": 1366000,
+        "packing": "50 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 2000,
+        "pcsPerPkt": 50,
+        "managerLabel": "12oz (360ml)"
       },
       {
         "size": "4 oz",
@@ -158,8 +206,24 @@
         "shape": "Square",
         "capacityMl": 120,
         "capacityOz": 4,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 50
+        "qtyPerBox": 4000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 80,
+        "weightPerPieceG": 3.5,
+        "netWeightPerCaseKg": 14,
+        "caseMm": [
+          440,
+          410,
+          410
+        ],
+        "caseCbm": 0.074,
+        "piecesPer20ft": 1512000,
+        "piecesPer40ftHC": 3676000,
+        "packing": "50 pcs x 80 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 4000,
+        "pcsPerPkt": 50,
+        "managerLabel": "4oz (120ml)"
       }
     ],
     "moqPieces": null,
@@ -284,8 +348,24 @@
         "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 6.5,
+        "netWeightPerCaseKg": 13,
+        "caseMm": [
+          476,
+          314,
+          314
+        ],
+        "caseCbm": 0.047,
+        "piecesPer20ft": 1192000,
+        "piecesPer40ftHC": 2896000,
+        "packing": "50 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 2000,
+        "pcsPerPkt": 50,
+        "managerLabel": "6\" round"
       },
       {
         "size": "7 in",
@@ -293,8 +373,24 @@
         "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
-        "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerBox": 1800,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 72,
+        "weightPerPieceG": 7.5,
+        "netWeightPerCaseKg": 13.5,
+        "caseMm": [
+          540,
+          360,
+          330
+        ],
+        "caseCbm": 0.064,
+        "piecesPer20ft": 784800,
+        "piecesPer40ftHC": 1906200,
+        "packing": "25 pcs x 72 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1800,
+        "pcsPerPkt": 25,
+        "managerLabel": "7\" round"
       },
       {
         "size": "9 in",
@@ -302,8 +398,24 @@
         "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 15,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          455,
+          330,
+          230
+        ],
+        "caseCbm": 0.035,
+        "piecesPer20ft": 810000,
+        "piecesPer40ftHC": 1969000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "9\" round"
       },
       {
         "size": "10 in",
@@ -311,8 +423,24 @@
         "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 17,
+        "netWeightPerCaseKg": 17,
+        "caseMm": [
+          495,
+          381,
+          514
+        ],
+        "caseCbm": 0.097,
+        "piecesPer20ft": 288000,
+        "piecesPer40ftHC": 701000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "10\" round"
       },
       {
         "size": "11 in",
@@ -321,7 +449,23 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 20,
+        "netWeightPerCaseKg": 20,
+        "caseMm": [
+          555,
+          230,
+          555
+        ],
+        "caseCbm": 0.071,
+        "piecesPer20ft": 395000,
+        "piecesPer40ftHC": 959000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "11\" round"
       },
       {
         "size": "12 in",
@@ -329,8 +473,24 @@
         "compartmentOption": "Plain",
         "capacityMl": null,
         "capacityOz": null,
-        "qtyPerBox": 500,
-        "qtyPerPkt": 25
+        "qtyPerBox": 600,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 24,
+        "weightPerPieceG": 25,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          605,
+          305,
+          400
+        ],
+        "caseCbm": 0.074,
+        "piecesPer20ft": 227400,
+        "piecesPer40ftHC": 552600,
+        "packing": "25 pcs x 24 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 600,
+        "pcsPerPkt": 25,
+        "managerLabel": "12\" round"
       },
       {
         "size": "9 in",
@@ -339,7 +499,23 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 15,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          445,
+          360,
+          457
+        ],
+        "caseCbm": 0.073,
+        "piecesPer20ft": 382000,
+        "piecesPer40ftHC": 928000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "9\" 3cp"
       },
       {
         "size": "10 in",
@@ -348,7 +524,23 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 17,
+        "netWeightPerCaseKg": 17,
+        "caseMm": [
+          500,
+          400,
+          525
+        ],
+        "caseCbm": 0.105,
+        "piecesPer20ft": 266000,
+        "piecesPer40ftHC": 647000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "10\" 3cp"
       },
       {
         "size": "11 in",
@@ -357,7 +549,23 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 800,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "pktsPerCase": 32,
+        "weightPerPieceG": 20,
+        "netWeightPerCaseKg": 16,
+        "caseMm": [
+          570,
+          282,
+          565
+        ],
+        "caseCbm": 0.091,
+        "piecesPer20ft": 246400,
+        "piecesPer40ftHC": 598400,
+        "packing": "25 pcs x 32 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 800,
+        "pcsPerPkt": 25,
+        "managerLabel": "11\" 4cp"
       },
       {
         "size": "12 in",
@@ -366,7 +574,23 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 600,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "pktsPerCase": 24,
+        "weightPerPieceG": 25,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          605,
+          305,
+          400
+        ],
+        "caseCbm": 0.074,
+        "piecesPer20ft": 227400,
+        "piecesPer40ftHC": 552600,
+        "packing": "25 pcs x 24 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 600,
+        "pcsPerPkt": 25,
+        "managerLabel": "12\" 4cp"
       }
     ],
     "moqPieces": null,
@@ -3361,7 +3585,23 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 1000,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 15,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          445,
+          360,
+          457
+        ],
+        "caseCbm": 0.073,
+        "piecesPer20ft": 382000,
+        "piecesPer40ftHC": 928000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "3cp square"
       },
       {
         "size": "4 Compartment",
@@ -3370,7 +3610,16 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 500,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "weightPerPieceG": 23,
+        "packing": "25 pcs x 20 pkts",
+        "pcsPerPkt": 25,
+        "pktsPerCase": 20,
+        "qtyPerCase": 500,
+        "netWeightPerCaseKg": 11.5,
+        "caseMm": null,
+        "managerLabel": "4cp meal tray",
+        "source": "manager-sheet-oct-2026"
       },
       {
         "size": "5 Compartment",
@@ -3379,7 +3628,16 @@
         "capacityMl": null,
         "capacityOz": null,
         "qtyPerBox": 500,
-        "qtyPerPkt": 25
+        "qtyPerPkt": 25,
+        "weightPerPieceG": 31,
+        "packing": "25 pcs x 20 pkts",
+        "pcsPerPkt": 25,
+        "pktsPerCase": 20,
+        "qtyPerCase": 500,
+        "netWeightPerCaseKg": 15.5,
+        "caseMm": null,
+        "managerLabel": "5cp meal tray",
+        "source": "manager-sheet-oct-2026"
       }
     ],
     "moqPieces": null,
@@ -3475,6 +3733,1261 @@
     "gallery": {
       "type": "static",
       "art": "plate"
+    }
+  },
+  {
+    "slug": "ecolates-bowl",
+    "name": "Ecolates Bowl",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Table ware",
+    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
+    "variantType": "capacity",
+    "variants": [
+      {
+        "size": "180 mL",
+        "dimension": null,
+        "capacityMl": 180,
+        "capacityOz": 6.09,
+        "qtyPerBox": 4000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 80,
+        "weightPerPieceG": 5,
+        "netWeightPerCaseKg": 20,
+        "caseMm": [
+          476,
+          451,
+          483
+        ],
+        "caseCbm": 0.104,
+        "piecesPer20ft": 1080000,
+        "piecesPer40ftHC": 2620000,
+        "packing": "50 pcs x 80 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 4000,
+        "pcsPerPkt": 50,
+        "managerLabel": "6oz (180ml)"
+      },
+      {
+        "size": "240 mL",
+        "dimension": null,
+        "capacityMl": 240,
+        "capacityOz": 8.12,
+        "qtyPerBox": 4000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 80,
+        "weightPerPieceG": 5.5,
+        "netWeightPerCaseKg": 22,
+        "caseMm": [
+          476,
+          451,
+          483
+        ],
+        "caseCbm": 0.104,
+        "piecesPer20ft": 1080000,
+        "piecesPer40ftHC": 2620000,
+        "packing": "50 pcs x 80 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 4000,
+        "pcsPerPkt": 50,
+        "managerLabel": "8oz (240ml)"
+      },
+      {
+        "size": "360 mL",
+        "dimension": null,
+        "capacityMl": 360,
+        "capacityOz": 12.17,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 7.5,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          490,
+          325,
+          625
+        ],
+        "caseCbm": 0.1,
+        "piecesPer20ft": 562000,
+        "piecesPer40ftHC": 1366000,
+        "packing": "50 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 2000,
+        "pcsPerPkt": 50,
+        "managerLabel": "12oz (360ml)"
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable ecolates bowl for eco-conscious businesses.",
+    "summary": "Premium quality ecolates bowl crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
+    "ratingLabel": "Highly rated by hospitality groups",
+    "quickFacts": [
+      {
+        "value": "2,00,000 pieces",
+        "label": "Minimum order"
+      },
+      {
+        "value": "3–4 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "4,000 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "180 mL",
+        "note": "6.09 fl oz"
+      },
+      {
+        "label": "240 mL",
+        "note": "8.12 fl oz"
+      },
+      {
+        "label": "360 mL",
+        "note": "12.17 fl oz"
+      }
+    ],
+    "baseMoq": 200000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom design printing available (up to 4 colours)",
+    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "cartonPack": "4,000 units per carton",
+    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "hsCode": "4823.70",
+    "leadTime": "3–4 weeks (+ print design approval)",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Why choose our Ecolates Bowl",
+        "body": "Our ecolates bowl offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "bullets": [
+          "100% natural, plastic-free raw materials",
+          "Leak-proof, oil and water resistant design",
+          "Pairs perfectly with compatible lids and accessories",
+          "Fully complies with international safety and compostability standards"
+        ]
+      },
+      {
+        "heading": "Logistics and Shipping details",
+        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
+        "bullets": [
+          "Carefully packaged in robust export-grade cartons",
+          "Inspect reports and product quality sheets provided before dispatch",
+          "Assigned manager to handle customs clearance support"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "US FDA compliant"
+      },
+      {
+        "name": "EU 10/2011",
+        "note": "European standard"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable certification"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these ecolates bowl safe for hot foods?",
+        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
+      },
+      {
+        "question": "Can we print our restaurant brand logo on them?",
+        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+      }
+    ],
+    "relatedSlugs": [
+      "ecolates-square-kiwi-bowl",
+      "ecolates-clamshell",
+      "ecolates-round-plate"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "ecolates-round-plate",
+    "name": "Ecolates Round Plate",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Table ware",
+    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "4 in",
+        "dimension": "4 in diameter",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 4800,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "6 in",
+        "dimension": "6 in diameter",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 6.5,
+        "netWeightPerCaseKg": 13,
+        "caseMm": [
+          476,
+          314,
+          314
+        ],
+        "caseCbm": 0.047,
+        "piecesPer20ft": 1192000,
+        "piecesPer40ftHC": 2896000,
+        "packing": "50 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 2000,
+        "pcsPerPkt": 50,
+        "managerLabel": "6\" round"
+      },
+      {
+        "size": "7 in",
+        "dimension": "7 in diameter",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 1800,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 72,
+        "weightPerPieceG": 7.5,
+        "netWeightPerCaseKg": 13.5,
+        "caseMm": [
+          540,
+          360,
+          330
+        ],
+        "caseCbm": 0.064,
+        "piecesPer20ft": 784800,
+        "piecesPer40ftHC": 1906200,
+        "packing": "25 pcs x 72 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1800,
+        "pcsPerPkt": 25,
+        "managerLabel": "7\" round"
+      },
+      {
+        "size": "9 in",
+        "dimension": "9 in diameter",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 15,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          455,
+          330,
+          230
+        ],
+        "caseCbm": 0.035,
+        "piecesPer20ft": 810000,
+        "piecesPer40ftHC": 1969000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "9\" round"
+      },
+      {
+        "size": "10 in",
+        "dimension": "10 in diameter",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 17,
+        "netWeightPerCaseKg": 17,
+        "caseMm": [
+          495,
+          381,
+          514
+        ],
+        "caseCbm": 0.097,
+        "piecesPer20ft": 288000,
+        "piecesPer40ftHC": 701000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "10\" round"
+      },
+      {
+        "size": "11 in",
+        "dimension": "11 in diameter",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 40,
+        "weightPerPieceG": 20,
+        "netWeightPerCaseKg": 20,
+        "caseMm": [
+          555,
+          230,
+          555
+        ],
+        "caseCbm": 0.071,
+        "piecesPer20ft": 395000,
+        "piecesPer40ftHC": 959000,
+        "packing": "25 pcs x 40 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 1000,
+        "pcsPerPkt": 25,
+        "managerLabel": "11\" round"
+      },
+      {
+        "size": "12 in",
+        "dimension": "12 in diameter",
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 600,
+        "qtyPerPkt": 25,
+        "pktsPerCase": 24,
+        "weightPerPieceG": 25,
+        "netWeightPerCaseKg": 15,
+        "caseMm": [
+          605,
+          305,
+          400
+        ],
+        "caseCbm": 0.074,
+        "piecesPer20ft": 227400,
+        "piecesPer40ftHC": 552600,
+        "packing": "25 pcs x 24 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 600,
+        "pcsPerPkt": 25,
+        "managerLabel": "12\" round"
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable ecolates round plate for eco-conscious businesses.",
+    "summary": "Premium quality ecolates round plate crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
+    "ratingLabel": "Highly rated by hospitality groups",
+    "quickFacts": [
+      {
+        "value": "1,20,000 pieces",
+        "label": "Minimum order"
+      },
+      {
+        "value": "3–4 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "4,800 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "4 in",
+        "note": "4 in diameter"
+      },
+      {
+        "label": "6 in",
+        "note": "6 in diameter"
+      },
+      {
+        "label": "7 in",
+        "note": "7 in diameter"
+      },
+      {
+        "label": "9 in",
+        "note": "9 in diameter"
+      },
+      {
+        "label": "10 in",
+        "note": "10 in diameter"
+      },
+      {
+        "label": "11 in",
+        "note": "11 in diameter"
+      },
+      {
+        "label": "12 in",
+        "note": "12 in diameter"
+      }
+    ],
+    "baseMoq": 120000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom design printing available (up to 4 colours)",
+    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "cartonPack": "4,800 units per carton",
+    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "hsCode": "4823.70",
+    "leadTime": "3–4 weeks (+ print design approval)",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Why choose our Ecolates Round Plate",
+        "body": "Our ecolates round plate offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "bullets": [
+          "100% natural, plastic-free raw materials",
+          "Leak-proof, oil and water resistant design",
+          "Pairs perfectly with compatible lids and accessories",
+          "Fully complies with international safety and compostability standards"
+        ]
+      },
+      {
+        "heading": "Logistics and Shipping details",
+        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
+        "bullets": [
+          "Carefully packaged in robust export-grade cartons",
+          "Inspect reports and product quality sheets provided before dispatch",
+          "Assigned manager to handle customs clearance support"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "US FDA compliant"
+      },
+      {
+        "name": "EU 10/2011",
+        "note": "European standard"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable certification"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these ecolates round plate safe for hot foods?",
+        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
+      },
+      {
+        "question": "Can we print our restaurant brand logo on them?",
+        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+      }
+    ],
+    "relatedSlugs": [
+      "ecolates-square-kiwi-bowl",
+      "ecolates-bowl",
+      "ecolates-clamshell"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "chuk-bowl",
+    "name": "Chuk Bowl",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Table ware",
+    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
+    "variantType": "capacity",
+    "variants": [
+      {
+        "size": "120 mL",
+        "dimension": null,
+        "capacityMl": 120,
+        "capacityOz": 4.06,
+        "qtyPerBox": 4000,
+        "qtyPerPkt": 50,
+        "pktsPerCase": 80,
+        "weightPerPieceG": 3.5,
+        "netWeightPerCaseKg": 14,
+        "caseMm": [
+          440,
+          410,
+          410
+        ],
+        "caseCbm": 0.074,
+        "piecesPer20ft": 1512000,
+        "piecesPer40ftHC": 3676000,
+        "packing": "50 pcs x 80 pkts",
+        "source": "manager-sheet-oct-2026",
+        "qtyPerCase": 4000,
+        "pcsPerPkt": 50,
+        "managerLabel": "4oz (120ml)"
+      },
+      {
+        "size": "180 mL",
+        "dimension": null,
+        "capacityMl": 180,
+        "capacityOz": 6.09,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      },
+      {
+        "size": "250 mL",
+        "dimension": null,
+        "capacityMl": 250,
+        "capacityOz": 8.45,
+        "qtyPerBox": 1000,
+        "qtyPerPkt": 25
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable chuk bowl for eco-conscious businesses.",
+    "summary": "Premium quality chuk bowl crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
+    "ratingLabel": "Highly rated by hospitality groups",
+    "quickFacts": [
+      {
+        "value": "25,000 pieces",
+        "label": "Minimum order"
+      },
+      {
+        "value": "3–4 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "1,000 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "120 mL",
+        "note": "4.06 fl oz"
+      },
+      {
+        "label": "180 mL",
+        "note": "6.09 fl oz"
+      },
+      {
+        "label": "250 mL",
+        "note": "8.45 fl oz"
+      }
+    ],
+    "baseMoq": 25000,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom design printing available (up to 4 colours)",
+    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "cartonPack": "1,000 units per carton",
+    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "hsCode": "4823.70",
+    "leadTime": "3–4 weeks (+ print design approval)",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Why choose our Chuk Bowl",
+        "body": "Our chuk bowl offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "bullets": [
+          "100% natural, plastic-free raw materials",
+          "Leak-proof, oil and water resistant design",
+          "Pairs perfectly with compatible lids and accessories",
+          "Fully complies with international safety and compostability standards"
+        ]
+      },
+      {
+        "heading": "Logistics and Shipping details",
+        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
+        "bullets": [
+          "Carefully packaged in robust export-grade cartons",
+          "Inspect reports and product quality sheets provided before dispatch",
+          "Assigned manager to handle customs clearance support"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "US FDA compliant"
+      },
+      {
+        "name": "EU 10/2011",
+        "note": "European standard"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable certification"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these chuk bowl safe for hot foods?",
+        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
+      },
+      {
+        "question": "Can we print our restaurant brand logo on them?",
+        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+      }
+    ],
+    "relatedSlugs": [
+      "chuk-square-bowl",
+      "chuk-plate",
+      "chuk-3-compartment-combo-meal-plate"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "cornstarch-oracle-meal-tray-with-lid",
+    "name": "Cornstarch Oracle Meal Tray with Lid",
+    "categorySlug": "biodegradable-containers",
+    "categoryName": "Takeaway Containers",
+    "sourceSheetCategory": "Biodegradable Container - Cornstarch",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "3 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 450,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "4 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 210,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "5 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 300,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "8 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 180,
+        "qtyPerPkt": 50
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable cornstarch oracle meal tray with lid for eco-conscious businesses.",
+    "summary": "Premium quality cornstarch oracle meal tray with lid crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
+    "ratingLabel": "Highly rated by hospitality groups",
+    "quickFacts": [
+      {
+        "value": "22,500 pieces",
+        "label": "Minimum order"
+      },
+      {
+        "value": "3–4 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "450 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "3 compartment",
+        "note": ""
+      },
+      {
+        "label": "4 compartment",
+        "note": ""
+      },
+      {
+        "label": "5 compartment",
+        "note": ""
+      },
+      {
+        "label": "8 compartment",
+        "note": ""
+      }
+    ],
+    "baseMoq": 22500,
+    "moqUnit": "pieces",
+    "material": "Plant-based cornstarch resin",
+    "printing": "Custom design printing available (up to 4 colours)",
+    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "cartonPack": "450 units per carton",
+    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "hsCode": "4823.70",
+    "leadTime": "3–4 weeks (+ print design approval)",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Why choose our Cornstarch Oracle Meal Tray with Lid",
+        "body": "Our cornstarch oracle meal tray with lid offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "bullets": [
+          "100% natural, plastic-free raw materials",
+          "Leak-proof, oil and water resistant design",
+          "Pairs perfectly with compatible lids and accessories",
+          "Fully complies with international safety and compostability standards"
+        ]
+      },
+      {
+        "heading": "Logistics and Shipping details",
+        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
+        "bullets": [
+          "Carefully packaged in robust export-grade cartons",
+          "Inspect reports and product quality sheets provided before dispatch",
+          "Assigned manager to handle customs clearance support"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "US FDA compliant"
+      },
+      {
+        "name": "EU 10/2011",
+        "note": "European standard"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable certification"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these cornstarch oracle meal tray with lid safe for hot foods?",
+        "answer": "Yes, our cornstarch products can handle warm foods up to 85°C. For boiling hot liquids, sugarcane bagasse products are recommended."
+      },
+      {
+        "question": "Can we print our restaurant brand logo on them?",
+        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+      }
+    ],
+    "relatedSlugs": [
+      "cornstarch-round-container-with-lid",
+      "cornstarch-rectangular-container-with-lid",
+      "cornstarch-2-compartment-rectangular-container-with-lid"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "clam"
+    }
+  },
+  {
+    "slug": "chuk-4-compartment-meal-tray",
+    "name": "Chuk 4-Compartment Meal Tray",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
+    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "4 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25,
+        "weightPerPieceG": 23,
+        "packing": "25 pcs x 20 pkts",
+        "pcsPerPkt": 25,
+        "pktsPerCase": 20,
+        "qtyPerCase": 500,
+        "netWeightPerCaseKg": 11.5,
+        "caseMm": null,
+        "managerLabel": "4cp meal tray",
+        "source": "manager-sheet-oct-2026"
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable chuk 4-compartment meal tray for eco-conscious businesses.",
+    "summary": "Premium quality chuk 4-compartment meal tray crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
+    "ratingLabel": "Highly rated by hospitality groups",
+    "quickFacts": [
+      {
+        "value": "12,500 pieces",
+        "label": "Minimum order"
+      },
+      {
+        "value": "3–4 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "4 compartment",
+        "note": ""
+      }
+    ],
+    "baseMoq": 12500,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom design printing available (up to 4 colours)",
+    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "cartonPack": "500 units per carton",
+    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "hsCode": "4823.70",
+    "leadTime": "3–4 weeks (+ print design approval)",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Why choose our Chuk 4-Compartment Meal Tray",
+        "body": "Our chuk 4-compartment meal tray offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "bullets": [
+          "100% natural, plastic-free raw materials",
+          "Leak-proof, oil and water resistant design",
+          "Pairs perfectly with compatible lids and accessories",
+          "Fully complies with international safety and compostability standards"
+        ]
+      },
+      {
+        "heading": "Logistics and Shipping details",
+        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
+        "bullets": [
+          "Carefully packaged in robust export-grade cartons",
+          "Inspect reports and product quality sheets provided before dispatch",
+          "Assigned manager to handle customs clearance support"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "US FDA compliant"
+      },
+      {
+        "name": "EU 10/2011",
+        "note": "European standard"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable certification"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these chuk 4-compartment meal tray safe for hot foods?",
+        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
+      },
+      {
+        "question": "Can we print our restaurant brand logo on them?",
+        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+      }
+    ],
+    "relatedSlugs": [
+      "chuk-square-bowl",
+      "chuk-bowl",
+      "chuk-plate"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "chuk-5-compartment-meal-tray",
+    "name": "Chuk 5-Compartment Meal Tray",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
+    "sourceSheetCategory": "Biodegradable Plate/Bowl - Chuk",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "5 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25,
+        "weightPerPieceG": 31,
+        "packing": "25 pcs x 20 pkts",
+        "pcsPerPkt": 25,
+        "pktsPerCase": 20,
+        "qtyPerCase": 500,
+        "netWeightPerCaseKg": 15.5,
+        "caseMm": null,
+        "managerLabel": "5cp meal tray",
+        "source": "manager-sheet-oct-2026"
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable chuk 5-compartment meal tray for eco-conscious businesses.",
+    "summary": "Premium quality chuk 5-compartment meal tray crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
+    "ratingLabel": "Highly rated by hospitality groups",
+    "quickFacts": [
+      {
+        "value": "12,500 pieces",
+        "label": "Minimum order"
+      },
+      {
+        "value": "3–4 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "5 compartment",
+        "note": ""
+      }
+    ],
+    "baseMoq": 12500,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom design printing available (up to 4 colours)",
+    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "cartonPack": "500 units per carton",
+    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "hsCode": "4823.70",
+    "leadTime": "3–4 weeks (+ print design approval)",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Why choose our Chuk 5-Compartment Meal Tray",
+        "body": "Our chuk 5-compartment meal tray offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "bullets": [
+          "100% natural, plastic-free raw materials",
+          "Leak-proof, oil and water resistant design",
+          "Pairs perfectly with compatible lids and accessories",
+          "Fully complies with international safety and compostability standards"
+        ]
+      },
+      {
+        "heading": "Logistics and Shipping details",
+        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
+        "bullets": [
+          "Carefully packaged in robust export-grade cartons",
+          "Inspect reports and product quality sheets provided before dispatch",
+          "Assigned manager to handle customs clearance support"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "US FDA compliant"
+      },
+      {
+        "name": "EU 10/2011",
+        "note": "European standard"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable certification"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these chuk 5-compartment meal tray safe for hot foods?",
+        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
+      },
+      {
+        "question": "Can we print our restaurant brand logo on them?",
+        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+      }
+    ],
+    "relatedSlugs": [
+      "chuk-square-bowl",
+      "chuk-bowl",
+      "chuk-plate"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "ecolates-5-compartment-meal-tray",
+    "name": "Ecolates 5-Compartment Meal Tray",
+    "categorySlug": "plates-bowls",
+    "categoryName": "Biodegradable Products",
+    "sourceSheetCategory": "Biodegradable Plate/Bowl - Ecolates",
+    "variantType": "dimension",
+    "variants": [
+      {
+        "size": "5 compartment",
+        "dimension": null,
+        "capacityMl": null,
+        "capacityOz": null,
+        "qtyPerBox": 500,
+        "qtyPerPkt": 25,
+        "weightPerPieceG": 31,
+        "packing": "25 pcs x 20 pkts",
+        "pcsPerPkt": 25,
+        "pktsPerCase": 20,
+        "qtyPerCase": 500,
+        "netWeightPerCaseKg": 15.5,
+        "caseMm": null,
+        "managerLabel": "5cp meal tray",
+        "source": "manager-sheet-oct-2026"
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Certified compostable ecolates 5-compartment meal tray for eco-conscious businesses.",
+    "summary": "Premium quality ecolates 5-compartment meal tray crafted from sustainable, renewable resources. Designed to meet the demands of modern commercial food service while minimizing environmental impact. Certified safe for direct food contact.",
+    "ratingLabel": "Highly rated by hospitality groups",
+    "quickFacts": [
+      {
+        "value": "12,500 pieces",
+        "label": "Minimum order"
+      },
+      {
+        "value": "3–4 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "500 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "5 compartment",
+        "note": ""
+      }
+    ],
+    "baseMoq": 12500,
+    "moqUnit": "pieces",
+    "material": "100% biodegradable sugarcane bagasse",
+    "printing": "Custom design printing available (up to 4 colours)",
+    "endOfLife": "Commercially compostable (EN 13432 certified)",
+    "cartonPack": "500 units per carton",
+    "cartonVolume": "0.10 – 0.15 m³ depending on size",
+    "hsCode": "4823.70",
+    "leadTime": "3–4 weeks (+ print design approval)",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "Why choose our Ecolates 5-Compartment Meal Tray",
+        "body": "Our ecolates 5-compartment meal tray offers high heat resistance and sturdy construction, preventing bending or leakage during food service. Ideal for takeouts, delivery orders, and dining environments.",
+        "bullets": [
+          "100% natural, plastic-free raw materials",
+          "Leak-proof, oil and water resistant design",
+          "Pairs perfectly with compatible lids and accessories",
+          "Fully complies with international safety and compostability standards"
+        ]
+      },
+      {
+        "heading": "Logistics and Shipping details",
+        "body": "We support shipping terms including FOB, CIF, and DDP to various countries. Every order is inspected at four stages of the manufacturing process to guarantee high quality.",
+        "bullets": [
+          "Carefully packaged in robust export-grade cartons",
+          "Inspect reports and product quality sheets provided before dispatch",
+          "Assigned manager to handle customs clearance support"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FDA food-contact",
+        "note": "US FDA compliant"
+      },
+      {
+        "name": "EU 10/2011",
+        "note": "European standard"
+      },
+      {
+        "name": "EN 13432",
+        "note": "Compostable certification"
+      },
+      {
+        "name": "ISO 9001",
+        "note": "Quality management"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are these ecolates 5-compartment meal tray safe for hot foods?",
+        "answer": "Yes, they are highly heat resistant and can withstand hot foods and liquids up to 100°C."
+      },
+      {
+        "question": "Can we print our restaurant brand logo on them?",
+        "answer": "Absolutely! We provide high-quality custom printing. Send us your design files and we'll create a digital mockup for approval."
+      }
+    ],
+    "relatedSlugs": [
+      "ecolates-square-kiwi-bowl",
+      "ecolates-bowl",
+      "ecolates-clamshell"
+    ],
+    "gallery": {
+      "type": "static",
+      "art": "plate"
+    }
+  },
+  {
+    "slug": "paper-hot-cups",
+    "name": "Paper Hot Cups",
+    "categorySlug": "paper-cups",
+    "categoryName": "Paper Cups",
+    "variantType": "capacity",
+    "variants": [
+      {
+        "size": "100 mL",
+        "dimension": null,
+        "capacityMl": 100,
+        "capacityOz": 3.5,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "150 mL",
+        "dimension": null,
+        "capacityMl": 150,
+        "capacityOz": 5,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50
+      },
+      {
+        "size": "200 mL",
+        "dimension": null,
+        "capacityMl": 200,
+        "capacityOz": 7,
+        "qtyPerBox": 2000,
+        "qtyPerPkt": 50
+      }
+    ],
+    "moqPieces": null,
+    "tagline": "Single wall and double wall paper hot cups for cafés, takeaway, and corporate catering.",
+    "summary": "Premium food-safe paper hot cups designed for coffee, tea, and warm beverages. Sturdy construction, leakproof rolled rims, and full-colour custom print available.",
+    "ratingLabel": "Economical daily coffee & tea cup",
+    "quickFacts": [
+      {
+        "value": "TBD",
+        "label": "Minimum order"
+      },
+      {
+        "value": "2–3 weeks",
+        "label": "Production time"
+      },
+      {
+        "value": "2,000 / ctn",
+        "label": "Packed"
+      },
+      {
+        "value": "Yes",
+        "label": "Custom print"
+      }
+    ],
+    "sizes": [
+      {
+        "label": "3.5 oz",
+        "note": "100 mL · Espresso"
+      },
+      {
+        "label": "5 oz",
+        "note": "150 mL · Small"
+      },
+      {
+        "label": "7 oz",
+        "note": "200 mL · Standard"
+      }
+    ],
+    "baseMoq": 50000,
+    "moqUnit": "pieces",
+    "material": "FSC® certified paperboard, water-based food-safe lining",
+    "printing": "Full-colour custom CMYK / Pantone print available",
+    "endOfLife": "100% recyclable & compostable",
+    "heatRating": "Up to 90°C",
+    "cartonPack": "2,000 units per carton",
+    "cartonVolume": "0.08 m³",
+    "hsCode": "4823.69",
+    "leadTime": "2–3 weeks",
+    "shipsFrom": "Nhava Sheva (Mumbai), India",
+    "overview": [
+      {
+        "heading": "FSC® certified virgin board",
+        "body": "Made with sustainable high-yield virgin paperboard with a sealed base preventing leaks.",
+        "bullets": [
+          "Available in 3.5oz, 5oz, and 7oz sizes",
+          "Smooth rolled lip for comfortable drinking and secure lid fit",
+          "High-definition custom graphic print capabilities"
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "FSC certified",
+        "note": "Responsible forestry"
+      },
+      {
+        "name": "FDA food-contact",
+        "note": "Direct food contact"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are lids available for single wall cups?",
+        "answer": "Yes, matched recyclable and compostable sip lids are available for all cup diameters."
+      }
+    ],
+    "relatedSlugs": [
+      "double-wall-paper-cup",
+      "ripple-paper-cup"
+    ],
+    "gallery": {
+      "type": "cup"
     }
   }
 ]

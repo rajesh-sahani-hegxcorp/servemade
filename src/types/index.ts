@@ -83,6 +83,18 @@ export interface ProductVariant {
   shape?: string; // "Round" | "Rectangle"
   compartments?: number; // 2 | 3 | 4 | 5
   compartmentOption?: string; // "Plain" | "3-Compartment" | "4-Compartment"
+  weightPerPieceG?: number;
+  pcsPerPkt?: number;
+  pktsPerCase?: number;
+  qtyPerCase?: number;
+  netWeightPerCaseKg?: number;
+  caseMm?: [number, number, number] | null;
+  caseCbm?: number;
+  piecesPer20ft?: number;
+  piecesPer40ftHC?: number;
+  managerLabel?: string;
+  source?: string;
+  packing?: string;
 }
 
 export interface SpecRow {

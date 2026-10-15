@@ -46,7 +46,10 @@ export function QuoteForm({ source, heading, submitLabel }: Props) {
           country: form.get("country"),
           message: form.get("message"),
           source,
-          items: items.map((item) => ({ label: item.label })),
+          items: items.map((item) => ({
+            label: item.label,
+            ...(item.quantityHint ? { quantityHint: item.quantityHint } : {}),
+          })),
         }),
       });
 
@@ -84,9 +87,14 @@ export function QuoteForm({ source, heading, submitLabel }: Props) {
             {items.map((item) => (
               <li
                 key={item.id}
-                className="flex items-center gap-1.5 rounded-full bg-brand-green-light px-3 py-1.5 text-sm font-semibold text-brand-green-dark"
+                className="flex items-center gap-2 rounded-2xl bg-brand-green-light px-3.5 py-1.5 text-sm font-semibold text-brand-green-dark"
               >
-                {item.label}
+                <span>{item.label}</span>
+                {item.quantityHint && (
+                  <span className="rounded-full bg-brand-green/20 px-2 py-0.5 text-xs font-bold text-brand-green-dark">
+                    {item.quantityHint}
+                  </span>
+                )}
                 <button
                   type="button"
                   onClick={() => removeItem(item.id)}

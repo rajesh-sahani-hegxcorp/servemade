@@ -631,7 +631,7 @@ body {
     margin-top: 1rem;
 
     @media (min-width: 768px) {
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

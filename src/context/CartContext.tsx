@@ -5,12 +5,15 @@ import { createContext, useCallback, useContext, useMemo, useState, type ReactNo
 export interface CartItem {
   id: string;
   label: string;
+  quantityHint?: string;
 }
+
+export type AddItemInput = string | { label: string; quantityHint?: string };
 
 interface CartContextValue {
   items: CartItem[];
   /** Adds one or more labelled line items and shows a confirmation toast. */
-  addItems: (labels: string[], message: string) => void;
+  addItems: (inputs: AddItemInput[], message: string) => void;
   /** Removes a single line item by id (used on the /quote page). */
   removeItem: (id: string) => void;
   /** Clears every line item (used after a quote request is submitted). */
@@ -37,8 +40,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const addItems = useCallback(
-    (labels: string[], message: string) => {
-      setItems((prev) => [...prev, ...labels.map((label) => ({ id: nextId(), label }))]);
+    (inputs: AddItemInput[], message: string) => {
+      setItems((prev) => [
+        ...prev,
+        ...inputs.map((input) => {
+          if (typeof input === "string") {
+            return { id: nextId(), label: input };
+          }
+          return { id: nextId(), label: input.label, quantityHint: input.quantityHint };
+        }),
+      ]);
       notify(message);
     },
     [notify]

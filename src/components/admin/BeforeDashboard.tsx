@@ -23,6 +23,10 @@ function formatRelativeTime(dateString?: string): string {
   return 'Just now'
 }
 
+function isBlank(val?: string | null): boolean {
+  return !val || val.trim() === ''
+}
+
 export const BeforeDashboard = async () => {
   let productsCount = 25
   let categoriesCount = 6
@@ -37,6 +41,18 @@ export const BeforeDashboard = async () => {
     updatedAt: string
     timeFormatted: string
   }> = []
+
+  let productsMissingSeo = 0
+  let categoriesMissingSeo = 0
+  let homepageMissingSeo = false
+  let totalSeoIssues = 0
+
+  interface BrokenLinkIssue {
+    source: string
+    url: string
+    reason: string
+  }
+  let brokenLinks: BrokenLinkIssue[] = []
 
   // Excluded Products List (pending category placement decision)
   const EXCLUDED_PRODUCTS = [
@@ -63,7 +79,7 @@ export const BeforeDashboard = async () => {
   try {
     const payload = await getPayload({ config })
 
-    const [productsRes, categoriesRes, homepageDoc] = await Promise.all([
+    const [productsRes, categoriesRes, homepageDoc, headerDoc, footerDoc] = await Promise.all([
       payload.find({
         collection: 'products',
         limit: 100,
@@ -80,6 +96,14 @@ export const BeforeDashboard = async () => {
         slug: 'homepage',
         overrideAccess: true,
       }),
+      payload.findGlobal({
+        slug: 'header' as any,
+        overrideAccess: true,
+      }),
+      payload.findGlobal({
+        slug: 'footer' as any,
+        overrideAccess: true,
+      }),
     ])
 
     productsCount = productsRes.docs.length
@@ -90,10 +114,77 @@ export const BeforeDashboard = async () => {
       (p: any) => !p.images || (Array.isArray(p.images) && p.images.length === 0)
     ).length
 
-    // 2. Homepage hero status
+    // 2. SEO Completeness check
+    productsMissingSeo = productsRes.docs.filter(
+      (p: any) => isBlank(p.meta?.title) || isBlank(p.meta?.description)
+    ).length
+
+    categoriesMissingSeo = categoriesRes.docs.filter(
+      (c: any) => isBlank(c.meta?.title) || isBlank(c.meta?.description)
+    ).length
+
+    homepageMissingSeo = isBlank((homepageDoc as any)?.meta?.title) || isBlank((homepageDoc as any)?.meta?.description)
+    totalSeoIssues = productsMissingSeo + categoriesMissingSeo + (homepageMissingSeo ? 1 : 0)
+
+    // 3. Broken internal links check (scoped to /products/[slug] and /categories/[slug])
+    const productSlugs = new Set<string>(productsRes.docs.map((p: any) => p.slug).filter(Boolean))
+    const categorySlugs = new Set<string>(categoriesRes.docs.map((c: any) => c.slug).filter(Boolean))
+
+    function validateInternalLink(url: string | undefined | null, sourceName: string) {
+      if (!url || typeof url !== 'string') return
+      const match = url.trim().match(/^\/(products|categories)\/([a-z0-9-]+)$/)
+      if (!match) return // Skip non-matching patterns (e.g. #industries, /privacy, /custom-packaging)
+
+      const [, type, slug] = match
+      if (!type || !slug) return
+      if (type === 'products' && !productSlugs.has(slug)) {
+        brokenLinks.push({
+          source: sourceName,
+          url,
+          reason: `Product "${slug}" does not exist in catalogue`,
+        })
+      } else if (type === 'categories' && !categorySlugs.has(slug)) {
+        brokenLinks.push({
+          source: sourceName,
+          url,
+          reason: `Category "${slug}" does not exist in catalogue`,
+        })
+      }
+    }
+
+    // A. Header: megaMenuBanner.linkUrl
+    validateInternalLink((headerDoc as any)?.megaMenuBanner?.linkUrl, 'Header > Mega Menu Banner')
+
+    // B. Footer: columns[].links[].href
+    if (Array.isArray((footerDoc as any)?.columns)) {
+      (footerDoc as any).columns.forEach((col: any) => {
+        const heading = col?.heading || 'Footer Column'
+        if (Array.isArray(col?.links)) {
+          col.links.forEach((l: any) => {
+            const label = l?.label || 'Link'
+            validateInternalLink(l?.href, `Footer > ${heading} > "${label}"`)
+          })
+        }
+      })
+    }
+
+    // C. Homepage: hero.ctaLink, customBranding.ctaLink, resources[].linkUrl, ctaSection.buttonLink
+    validateInternalLink((homepageDoc as any)?.hero?.ctaLink, 'Homepage > Hero CTA')
+    validateInternalLink((homepageDoc as any)?.customBranding?.ctaLink, 'Homepage > Custom Branding CTA')
+
+    if (Array.isArray((homepageDoc as any)?.resources)) {
+      (homepageDoc as any).resources.forEach((r: any, idx: number) => {
+        const title = r?.title || `Resource #${idx + 1}`
+        validateInternalLink(r?.linkUrl, `Homepage > Resources > "${title}"`)
+      })
+    }
+
+    validateInternalLink((homepageDoc as any)?.ctaSection?.buttonLink, 'Homepage > Bottom CTA')
+
+    // 4. Homepage hero status
     heroHeading = homepageDoc?.hero?.heading || ''
 
-    // 3. Search items for QuickSearch
+    // 5. Search items for QuickSearch
     const pItems: SearchItem[] = productsRes.docs.map((p: any) => ({
       id: p.id,
       name: p.name,
@@ -125,7 +216,7 @@ export const BeforeDashboard = async () => {
       },
     ]
 
-    // 4. Recent Activities (top 5 sorted by updatedAt)
+    // 6. Recent Activities (top 5 sorted by updatedAt)
     const combinedDocs: any[] = [
       ...productsRes.docs.map((p: any) => ({
         id: p.id,
@@ -164,6 +255,12 @@ export const BeforeDashboard = async () => {
   } catch (err) {
     console.error('Failed to load dashboard statistics:', err)
   }
+
+  const totalPendingActionCount =
+    EXCLUDED_PRODUCTS.length +
+    (missingImagesCount > 0 ? 1 : 0) +
+    (totalSeoIssues > 0 ? 1 : 0) +
+    (brokenLinks.length > 0 ? 1 : 0)
 
   return (
     <div className="servemade-dashboard-hero">
@@ -215,12 +312,12 @@ export const BeforeDashboard = async () => {
           </div>
           <span className="servemade-status-badge servemade-status-badge--amber">
             <span className="servemade-status-dot servemade-status-dot--amber" />
-            <span>{EXCLUDED_PRODUCTS.length} Pending reviews</span>
+            <span>{totalPendingActionCount} Pending reviews</span>
           </span>
         </div>
 
         <div className="servemade-health-panel__grid">
-          {/* Excluded Products Section */}
+          {/* 1. Excluded Products Section */}
           <div className="servemade-health-card">
             <div className="servemade-health-card__top">
               <span className="servemade-health-card__heading">Excluded Products</span>
@@ -245,7 +342,7 @@ export const BeforeDashboard = async () => {
             </ul>
           </div>
 
-          {/* Missing Photos / Photography Section */}
+          {/* 2. Missing Photos / Photography Section */}
           <div className="servemade-health-card">
             <div className="servemade-health-card__top">
               <span className="servemade-health-card__heading">Photography &amp; Media</span>
@@ -267,6 +364,81 @@ export const BeforeDashboard = async () => {
             <div className="servemade-health-card__action">
               <Link href="/admin/collections/products" className="servemade-link-btn">
                 View Products Collection →
+              </Link>
+            </div>
+          </div>
+
+          {/* 3. SEO Completeness Section */}
+          <div className="servemade-health-card">
+            <div className="servemade-health-card__top">
+              <span className="servemade-health-card__heading">SEO Completeness</span>
+              {totalSeoIssues > 0 ? (
+                <span className="servemade-status-badge servemade-status-badge--amber">
+                  <span className="servemade-status-dot servemade-status-dot--amber" />
+                  <span>{totalSeoIssues} Items missing metadata</span>
+                </span>
+              ) : (
+                <span className="servemade-status-badge servemade-status-badge--green">
+                  <span className="servemade-status-dot servemade-status-dot--green" />
+                  <span>All metadata complete</span>
+                </span>
+              )}
+            </div>
+            <p className="servemade-health-card__desc">
+              {totalSeoIssues > 0
+                ? `${productsMissingSeo} products, ${categoriesMissingSeo} categories, and Homepage ${
+                    homepageMissingSeo ? 'lack custom meta tags' : 'meta configured'
+                  }. Add custom titles and descriptions for search rankings.`
+                : 'All published products, categories, and homepage global have custom meta titles and descriptions.'}
+            </p>
+            <div className="servemade-health-card__action">
+              <Link href="/admin/collections/products" className="servemade-link-btn">
+                Review SEO Metadata →
+              </Link>
+            </div>
+          </div>
+
+          {/* 4. Broken Internal Links Section */}
+          <div className="servemade-health-card">
+            <div className="servemade-health-card__top">
+              <span className="servemade-health-card__heading">Internal Link Integrity</span>
+              {brokenLinks.length > 0 ? (
+                <span className="servemade-status-badge servemade-status-badge--amber">
+                  <span className="servemade-status-dot servemade-status-dot--amber" />
+                  <span>{brokenLinks.length} Broken product/category links</span>
+                </span>
+              ) : (
+                <span className="servemade-status-badge servemade-status-badge--green">
+                  <span className="servemade-status-dot servemade-status-dot--green" />
+                  <span>All internal links valid</span>
+                </span>
+              )}
+            </div>
+            {brokenLinks.length > 0 ? (
+              <>
+                <p className="servemade-health-card__desc">
+                  Found {brokenLinks.length} link(s) pointing to non-existent catalogue items:
+                </p>
+                <ul className="servemade-attention-list">
+                  {brokenLinks.map((issue, idx) => (
+                    <li key={idx} className="servemade-attention-item">
+                      <div className="servemade-attention-item__main">
+                        <span className="servemade-attention-item__name">{issue.source}</span>
+                        <span className="servemade-attention-item__note">{issue.url} — {issue.reason}</span>
+                      </div>
+                      <span className="servemade-status-badge servemade-status-badge--amber">404</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p className="servemade-health-card__desc">
+                All manually-entered URLs in Header, Footer, and Homepage linking to /products/[slug] or /categories/[slug] match active catalogue items.
+              </p>
+            )}
+            <div className="servemade-health-card__action">
+              <Link href="/admin/globals/homepage" className="servemade-link-btn">
+                Manage Navigation &amp; Links →
               </Link>
             </div>
           </div>
