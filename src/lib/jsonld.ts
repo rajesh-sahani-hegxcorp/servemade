@@ -13,7 +13,7 @@ function buildOrganizationJsonLd() {
     "@id": ORG_ID(),
     name: "Serve Made",
     url: siteUrl(),
-    logo: siteUrl("/logo.png"),
+    logo: siteUrl("/brand/servemade-logo.png"),
     description:
       "Serve Made is an India-based B2B exporter of certified compostable food packaging — bagasse tableware, paper cups, takeaway boxes, bags, cutlery and straws — serving importers, distributors and food-service groups across the GCC and beyond.",
     address: { "@type": "PostalAddress", addressCountry: "IN", addressLocality: "Mumbai" },

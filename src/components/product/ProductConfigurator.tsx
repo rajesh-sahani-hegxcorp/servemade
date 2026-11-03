@@ -7,6 +7,7 @@ import { Star, Clock, Package, ShieldCheck } from "lucide-react";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { StepLabel } from "@/components/product/StepLabel";
 import { StepOption } from "@/components/product/StepOption";
+import { OrderCalculator } from "@/components/product/OrderCalculator";
 import { MobileStickyBar } from "@/components/product/MobileStickyBar";
 import { Tag } from "@/components/ui/Tag";
 import { SHIPPING_OPTIONS, type ShippingOption } from "@/data/shippingOptions";
@@ -149,7 +150,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
   const [shipping, setShipping] = useState<ShippingOption["value"]>("FOB");
   const [branded, setBranded] = useState(false);
   const [view, setView] = useState<CupView>("plain");
-  const [rawCartons, setRawCartons] = useState<string>("");
+  const [rawCartons, setRawCartons] = useState<string>("1");
   const [rawPieces, setRawPieces] = useState<string>("");
   const { addItems } = useCart();
 
@@ -263,7 +264,9 @@ export function ProductConfigurator({ product }: { product: Product }) {
   const brandStepNum = product.printing !== "Not printable — natural fibre finish only" ? stepCounter++ : 0;
 
   const hasCartonData = tableCartonVariants.length > 0;
-  const cartonCount = rawCartons.trim() ? parseInt(rawCartons.trim(), 10) : null;
+  const parsedCartons = parseInt(rawCartons.trim(), 10);
+  const activeCartons = isNaN(parsedCartons) || parsedCartons < 1 ? 1 : Math.min(9999, parsedCartons);
+  const cartonCount = rawCartons.trim() ? activeCartons : null;
   const piecesCount = rawPieces.trim() ? parseInt(rawPieces.trim(), 10) : null;
 
   const caseQty = selectedVariant?.qtyPerCase ?? selectedVariant?.qtyPerBox ?? 0;
@@ -283,11 +286,7 @@ export function ProductConfigurator({ product }: { product: Product }) {
       : null;
 
   function handleStepCartons(delta: number) {
-    if (!rawCartons.trim()) {
-      setRawCartons("1");
-      return;
-    }
-    const current = parseInt(rawCartons.trim(), 10) || 0;
+    const current = parseInt(rawCartons.trim(), 10) || 1;
     const next = Math.max(1, Math.min(9999, current + delta));
     setRawCartons(String(next));
   }
@@ -302,25 +301,33 @@ export function ProductConfigurator({ product }: { product: Product }) {
     setRawCartons(String(num));
   }
 
+  function handleCartonsBlur() {
+    if (!rawCartons.trim() || parseInt(rawCartons.trim(), 10) < 1) {
+      setRawCartons("1");
+    }
+  }
+
+  const displayCartons = activeCartons;
+  const effectiveTotalPieces = activeCartons && caseQty > 0 ? activeCartons * caseQty : totalPieces;
+
   const quantitySummary = hasCartonData
-    ? cartonCount && cartonCount > 0
-      ? totalPieces > 0
-        ? `${cartonCount} cartons (${totalPieces.toLocaleString()} pcs)`
-        : `${cartonCount} cartons`
-      : "not set"
+    ? displayCartons > 0
+      ? effectiveTotalPieces > 0
+        ? `${displayCartons} ${displayCartons === 1 ? "carton" : "cartons"} (${effectiveTotalPieces.toLocaleString("en-IN")} pcs)`
+        : `${displayCartons} ${displayCartons === 1 ? "carton" : "cartons"}`
+      : "1 carton"
     : piecesCount && piecesCount > 0
-    ? `${piecesCount.toLocaleString()} pcs`
+    ? `${piecesCount.toLocaleString("en-IN")} pcs`
     : "not set";
 
-  const quantityHint =
-    hasCartonData && cartonCount && cartonCount > 0
-      ? (totalPieces > 0
-          ? `${cartonCount} cartons (${totalPieces.toLocaleString()} pcs)`
-          : `${cartonCount} cartons`
-        ).slice(0, 60)
-      : !hasCartonData && piecesCount && piecesCount > 0
-      ? `${piecesCount.toLocaleString()} pcs`.slice(0, 60)
-      : undefined;
+  const quantityHint = hasCartonData
+    ? (effectiveTotalPieces > 0
+        ? `${displayCartons} ${displayCartons === 1 ? "carton" : "cartons"} (${effectiveTotalPieces.toLocaleString("en-IN")} pcs)`
+        : `${displayCartons} ${displayCartons === 1 ? "carton" : "cartons"}`
+      ).slice(0, 60)
+    : piecesCount && piecesCount > 0
+    ? `${piecesCount.toLocaleString("en-IN")} pcs`.slice(0, 60)
+    : undefined;
 
   function setBranding(next: boolean) {
     setBranded(next);
@@ -680,162 +687,19 @@ export function ProductConfigurator({ product }: { product: Product }) {
             </div>
           )}
 
-          {/* Step 2: How many do you need? */}
+          {/* Step: How many do you need? */}
           <div className="mt-6" data-field-path="baseMoq">
             <StepLabel n={qtyStepNum}>How many do you need?</StepLabel>
-
-            {/* If carton data exists, show the Packing details table card */}
-            {hasCartonData && (
-              <div className="mt-2.5 rounded-2xl border border-line bg-surface-off p-4 sm:p-5">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-[11px] tabular-nums sm:text-xs">
-                    <thead>
-                      <tr className="border-b border-line text-ink-3">
-                        <th className="whitespace-nowrap py-1.5 px-1.5 sm:px-2 font-bold">Item description</th>
-                        <th className="whitespace-nowrap py-1.5 px-1.5 sm:px-2 font-bold">Weight (g)</th>
-                        <th className="whitespace-nowrap py-1.5 px-1.5 sm:px-2 font-bold">Packing (pc × pkt)</th>
-                        <th className="whitespace-nowrap py-1.5 px-1.5 sm:px-2 font-bold">Qty per case (pc)</th>
-                        <th className="whitespace-nowrap py-1.5 px-1.5 sm:px-2 font-bold">Length (mm)</th>
-                        <th className="whitespace-nowrap py-1.5 px-1.5 sm:px-2 font-bold">Width (mm)</th>
-                        <th className="whitespace-nowrap py-1.5 px-1.5 sm:px-2 font-bold">Height (mm)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-line/60">
-                      {tableCartonVariants.map((v, i) => {
-                        const isSelected =
-                          v === selectedVariant ||
-                          (v.size === selectedVariant?.size &&
-                            v.dimension === selectedVariant?.dimension &&
-                            v.compartmentOption === selectedVariant?.compartmentOption &&
-                            v.shape === selectedVariant?.shape);
-
-                        const weightStr = v.weightPerPieceG != null ? `${v.weightPerPieceG}` : "";
-                        const packingStr =
-                          v.pcsPerPkt && v.pktsPerCase
-                            ? `${v.pcsPerPkt} × ${v.pktsPerCase}`
-                            : v.qtyPerPkt && v.pktsPerCase
-                            ? `${v.qtyPerPkt} × ${v.pktsPerCase}`
-                            : v.packing
-                            ? v.packing
-                                .replace(/\bpcs?\b/gi, "")
-                                .replace(/\bpkts?\b/gi, "")
-                                .replace(/\s*x\s*/gi, " × ")
-                                .trim()
-                            : "";
-                        const qtyCaseStr =
-                          v.qtyPerCase != null
-                            ? v.qtyPerCase.toLocaleString()
-                            : v.qtyPerBox != null
-                            ? v.qtyPerBox.toLocaleString()
-                            : "";
-                        const lengthStr = v.caseMm && v.caseMm[0] != null ? `${v.caseMm[0]}` : "—";
-                        const widthStr = v.caseMm && v.caseMm[1] != null ? `${v.caseMm[1]}` : "—";
-                        const heightStr = v.caseMm && v.caseMm[2] != null ? `${v.caseMm[2]}` : "—";
-
-                        return (
-                          <tr
-                            key={v.managerLabel || `${v.size}-${i}`}
-                            className={`transition-colors ${
-                              isSelected
-                                ? "bg-brand-green-light text-brand-green-dark"
-                                : "text-ink-2 hover:bg-surface-off/60"
-                            }`}
-                          >
-                            <td className="whitespace-nowrap py-1.5 px-1.5 sm:px-2">{v.managerLabel || v.size}</td>
-                            <td className="whitespace-nowrap py-1.5 px-1.5 sm:px-2">{weightStr}</td>
-                            <td className="whitespace-nowrap py-1.5 px-1.5 sm:px-2">{packingStr}</td>
-                            <td className="whitespace-nowrap py-1.5 px-1.5 sm:px-2">{qtyCaseStr}</td>
-                            <td className="whitespace-nowrap py-1.5 px-1.5 sm:px-2">{lengthStr}</td>
-                            <td className="whitespace-nowrap py-1.5 px-1.5 sm:px-2">{widthStr}</td>
-                            <td className="whitespace-nowrap py-1.5 px-1.5 sm:px-2">{heightStr}</td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
-
-            {/* Quantity inputs below table */}
-            {hasCartonData ? (
-              <div className="mt-4">
-                <label className="block text-xs font-bold uppercase tracking-wide text-ink-3">
-                  Cartons
-                </label>
-                <div className="mt-1.5 flex flex-col sm:flex-row sm:items-center gap-3">
-                  <div className="flex w-full sm:w-auto items-center justify-between rounded-2xl border-2 border-line bg-white p-1">
-                    <button
-                      type="button"
-                      onClick={() => handleStepCartons(-1)}
-                      aria-label="Decrease cartons"
-                      className="flex h-10 w-10 items-center justify-center rounded-xl text-lg font-bold text-ink-2 hover:bg-surface-off hover:text-ink active:scale-95 transition-all"
-                    >
-                      −
-                    </button>
-                    <input
-                      type="text"
-                      inputMode="numeric"
-                      pattern="[0-9]*"
-                      value={rawCartons}
-                      onChange={(e) => handleCartonsInput(e.target.value)}
-                      placeholder="e.g. 10"
-                      className="h-10 w-24 sm:w-28 text-center text-sm font-bold text-ink outline-none bg-transparent"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => handleStepCartons(1)}
-                      aria-label="Increase cartons"
-                      className="flex h-10 w-10 items-center justify-center rounded-xl text-lg font-bold text-ink-2 hover:bg-surface-off hover:text-ink active:scale-95 transition-all"
-                    >
-                      +
-                    </button>
-                  </div>
-
-                  {cartonCount != null && cartonCount > 0 && totalPieces > 0 && (
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold text-ink-2">
-                      <span className="flex items-center gap-1.5">
-                        <strong className="text-ink font-bold">{totalPieces.toLocaleString()} pcs</strong>
-                      </span>
-                      {netWeightKg > 0 && (
-                        <span className="flex items-center gap-1.5">
-                          <span className="text-line">•</span>
-                          <span>
-                            <strong className="text-ink font-bold">
-                              {netWeightKg % 1 === 0 ? netWeightKg.toLocaleString() : netWeightKg.toFixed(1)} kg
-                            </strong>{" "}
-                            net, excl. carton
-                          </span>
-                        </span>
-                      )}
-                      {volumeCbm != null && (
-                        <span className="flex items-center gap-1.5">
-                          <span className="text-line">•</span>
-                          <span>
-                            <strong className="text-ink font-bold">{volumeCbm.toFixed(2)} CBM</strong>
-                          </span>
-                        </span>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ) : (
-              <div className="mt-2.5 max-w-xs">
-                <label className="block text-xs font-bold uppercase tracking-wide text-ink-3 mb-1.5">
-                  Quantity (pieces)
-                </label>
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  pattern="[0-9]*"
-                  value={rawPieces}
-                  onChange={(e) => setRawPieces(e.target.value.replace(/[^0-9]/g, "").slice(0, 8))}
-                  placeholder="e.g. 10,000"
-                  className="h-11 w-full rounded-2xl border-2 border-line bg-white px-4 text-sm font-bold text-ink outline-none transition-all hover:border-brand-green/40 focus:border-brand-green"
-                />
-              </div>
-            )}
+            <OrderCalculator
+              variant={selectedVariant}
+              cartons={rawCartons}
+              onCartonsChange={handleCartonsInput}
+              onStepCartons={handleStepCartons}
+              onCartonsBlur={handleCartonsBlur}
+              rawPieces={rawPieces}
+              onPiecesChange={setRawPieces}
+              hasCartonData={hasCartonData}
+            />
           </div>
 
           {/* Shipping */}

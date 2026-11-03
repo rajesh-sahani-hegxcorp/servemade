@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY_DESCRIPTION, FOOTER_COLUMNS } from "@/data/site";
 import type { ProductCategory } from "@/types";
 
@@ -76,13 +77,15 @@ export function Footer({ data, categories }: FooterProps) {
     <footer className="bg-ink px-5 pb-6 pt-12 text-sm text-white">
       <div className="mx-auto grid max-w-6xl gap-8 pb-8 text-[#C4CBD0] md:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2 text-xl font-extrabold text-white">
-            <svg width="26" height="26" viewBox="0 0 30 30" role="img" aria-label="Serve Made logo">
-              <rect width="30" height="30" rx="9" fill="#2E8B57" />
-              <path d="M9 21c0-6.5 4-10.5 12-12-1.5 8.5-5.5 12-12 12Z" fill="#fff" />
-            </svg>
-            Serve Made
-          </div>
+          <Link href="/" className="inline-block" aria-label="Servemade home">
+            <Image
+              src="/brand/servemade-logo-white.png"
+              alt="Servemade"
+              width={232}
+              height={36}
+              className="h-[36px] w-auto object-contain"
+            />
+          </Link>
           {/* GEO: same entity description as the Organization JSON-LD, in crawlable prose. */}
           <p className="mt-3 max-w-xs">{companyDescription}</p>
 
