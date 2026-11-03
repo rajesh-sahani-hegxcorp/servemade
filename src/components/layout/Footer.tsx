@@ -75,7 +75,7 @@ export function Footer({ data, categories }: FooterProps) {
 
   return (
     <footer className="bg-ink px-5 pb-6 pt-12 text-sm text-white">
-      <div className="mx-auto grid max-w-6xl gap-8 pb-8 text-[#C4CBD0] md:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-8 pb-8 text-[#C4CBD0] sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="/" className="inline-block" aria-label="Servemade home">
             <Image

@@ -175,7 +175,7 @@ export function Header({ data }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-24 max-w-6xl items-center gap-5 px-5">
-        <Link href="/" className="flex items-center" aria-label="Servemade home">
+        <Link href="/" className="flex items-center shrink-0" aria-label="Servemade home">
           <Image
             src="/brand/servemade-logo.png"
             alt="Servemade"
@@ -186,7 +186,7 @@ export function Header({ data }: HeaderProps) {
           />
         </Link>
 
-        <nav className="ml-auto hidden gap-1 md:flex" aria-label="Primary">
+        <nav className="ml-auto hidden gap-1 lg:flex" aria-label="Primary">
           {primaryNav.map((item) => {
             const isProducts =
               item.label.toLowerCase() === "products" ||
